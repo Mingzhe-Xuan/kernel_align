@@ -321,28 +321,47 @@ By default:
 
 The reference homogeneous experiments use sequential Planner &rarr; Critic &rarr; Refiner &rarr; Judger collaboration and a hierarchical specialist configuration.
 
-The launchers are plain Bash scripts with no scheduler or machine-specific dependency:
+`run.sh` is a generic Bash launcher with no scheduler or machine-specific dependency. By default, it runs the baseline, TextMAS, and all homogeneous latent-alignment variants for Qwen3-8B on HumanEval+:
 
 ```bash
-bash run_homo.sh
-bash run_hetero.sh
+bash run.sh
 ```
 
-Both batches execute sequentially. Select one configuration with a one-based index when distributing work externally:
+Select one homogeneous configuration through environment variables:
 
 ```bash
-bash run_homo.sh --index 1
-bash run_hetero.sh --index 1
+SINGLE_CONFIG=true \
+CONFIG_METHOD=latent_mas \
+CONFIG_PROMPT=sequential \
+CONFIG_ALIGNMENT=kernel \
+MODEL_NAME=Qwen/Qwen3-8B \
+TASK=medqa \
+MAX_SAMPLES=-1 \
+bash run.sh
 ```
 
-Runtime settings remain environment-driven:
+For cross-model communication, select `latent_mas_hybrid` and provide the ordered sender and receiver checkpoints through `AGENT_MODELS`:
 
 ```bash
-CUDA_VISIBLE_DEVICES=0 MAX_SAMPLES=5 TIMES=1 bash run_homo.sh --index 1
-PYTHON_BIN=python VENV_PATH=/path/to/venv bash run_hetero.sh --index 1
+SINGLE_CONFIG=true \
+CONFIG_METHOD=latent_mas_hybrid \
+CONFIG_PROMPT=sequential \
+CONFIG_ALIGNMENT=kernel \
+MODEL_NAME=Qwen/Qwen3-8B \
+AGENT_MODELS="Qwen/Qwen3-8B Qwen/Qwen3-14B" \
+TASK=medqa \
+MAX_SAMPLES=-1 \
+bash run.sh
 ```
 
-`run.sh` uses `.venv` automatically when present. `PYTHON_BIN`, `VENV_PATH`, `RESULT_ROOT`, `LOG_ROOT`, and `STATE_ROOT` may be overridden. GPU allocation, parallelism, and process supervision are intentionally delegated to the calling environment.
+Runtime settings remain environment-driven. For example:
+
+```bash
+CUDA_VISIBLE_DEVICES=0 MAX_SAMPLES=5 TIMES=1 bash run.sh
+PYTHON_BIN=python VENV_PATH=/path/to/venv bash run.sh
+```
+
+`run.sh` uses `.venv` automatically when present. `PYTHON_BIN`, `VENV_PATH`, `RESULT_ROOT`, `LOG_ROOT`, and `STATE_FILE` may be overridden. GPU allocation, parallelism, and process supervision are intentionally delegated to the calling environment.
 
 ## Repository layout
 
@@ -350,8 +369,6 @@ PYTHON_BIN=python VENV_PATH=/path/to/venv bash run_hetero.sh --index 1
 .
 |-- run.py                    # Experiment entry point
 |-- run.sh                    # Generic Bash experiment launcher
-|-- run_homo.sh               # Homogeneous reference batch
-|-- run_hetero.sh             # Cross-model reference batch
 |-- src/
 |   |-- alignment.py          # Alignment operators
 |   |-- data.py               # Dataset loaders

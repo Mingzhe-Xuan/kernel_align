@@ -1,0 +1,702 @@
+[
+  {
+    "id": "dev-gpqa-001",
+    "question": "A hydrogenic ion is in a state with orbital angular momentum l = 1 and electron spin s = 1/2. A weak perturbation has the form H' = A L·S/ħ², where A > 0, and the unperturbed level is otherwise degenerate in j. Ignoring all other perturbations, what is the first-order energy shift of the j = 1/2 multiplet?",
+    "choices": [
+      "-A",
+      "-A/2",
+      "+A/2",
+      "+A"
+    ],
+    "solution": "For coupled angular momenta, L·S = [J² - L² - S²]/2. Thus the dimensionless eigenvalue is [j(j+1) - l(l+1) - s(s+1)]/2. With j = 1/2, l = 1, and s = 1/2, this is [3/4 - 2 - 3/4]/2 = -1. Therefore the first-order shift is -A.",
+    "answer": "-A",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-002",
+    "question": "An enzyme obeys Michaelis-Menten kinetics with Vmax = 100 micromol min^-1 and Km = 10 micromolar. An inhibitor binds free enzyme with dissociation constant Ki = 5 micromolar and enzyme-substrate complex with dissociation constant Ki' = 10 micromolar. At inhibitor concentration 10 micromolar, rapid inhibitor binding gives the mixed-inhibition rate law v = Vmax[S]/(alpha Km + alpha'[S]), where alpha = 1 + [I]/Ki and alpha' = 1 + [I]/Ki'. Which pair gives the apparent Vmax and apparent Km?",
+    "choices": [
+      "50 micromol min^-1 and 15 micromolar",
+      "50 micromol min^-1 and 30 micromolar",
+      "100 micromol min^-1 and 15 micromolar",
+      "33.3 micromol min^-1 and 20 micromolar"
+    ],
+    "solution": "Here alpha = 1 + 10/5 = 3 and alpha' = 1 + 10/10 = 2. Dividing the denominator by alpha' puts the rate law in Michaelis-Menten form: v = (Vmax/alpha')[S]/[(alpha/alpha')Km + [S]]. Hence apparent Vmax = 100/2 = 50 micromol min^-1 and apparent Km = (3/2)(10) = 15 micromolar.",
+    "answer": "50 micromol min^-1 and 15 micromolar",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-003",
+    "question": "Across a mitochondrial inner membrane at 310 K, the matrix is at pH 7.8 and electrical potential -150 mV relative to the intermembrane space, which is at pH 7.0 and defined as 0 mV. For one mole of protons moving from the intermembrane space into the matrix, use delta G = RT ln([H+]matrix/[H+]outside) + F(delta psi), with R = 8.314 J mol^-1 K^-1 and F = 96485 C mol^-1. What is delta G to the nearest kilojoule per mole?",
+    "choices": [
+      "-19 kJ mol^-1",
+      "-10 kJ mol^-1",
+      "+10 kJ mol^-1",
+      "+19 kJ mol^-1"
+    ],
+    "solution": "The concentration ratio is 10^-7.8/10^-7.0 = 10^-0.8. The chemical term is (8.314)(310)ln(10^-0.8) = -4.75 kJ mol^-1. The electrical term is (96485)(-0.150) = -14.47 kJ mol^-1. Their sum is -19.22 kJ mol^-1, which rounds to -19 kJ mol^-1.",
+    "answer": "-19 kJ mol^-1",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-004",
+    "question": "A test particle moves on the innermost stable circular orbit of a nonrotating black hole of mass 10 solar masses. In Schwarzschild spacetime this orbit has radius r = 6GM/c² and angular frequency measured at infinity Omega = sqrt(GM/r³). If the dominant quadrupolar gravitational-wave frequency is fGW = Omega/pi, what frequency is expected? Use G times one solar mass = 1.327 x 10^20 m³ s^-2 and c = 2.998 x 10^8 m s^-1.",
+    "choices": [
+      "22 Hz",
+      "220 Hz",
+      "440 Hz",
+      "1320 Hz"
+    ],
+    "solution": "Substituting r = 6GM/c² gives Omega = c³/[6^(3/2)GM]. For M = 10 solar masses, GM = 1.327 x 10^21 m³ s^-2. Therefore fGW = c³/[pi 6^(3/2)GM] = approximately 440 Hz. The 220 Hz distractor is the orbital-cycle frequency Omega/(2pi), whereas quadrupole radiation is emitted mainly at twice that frequency.",
+    "answer": "440 Hz",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-005",
+    "question": "At 300 K, two solid polymorphs are in equilibrium. Transforming polymorph alpha to polymorph beta has molar enthalpy change +6.0 kJ mol^-1 and molar volume change +2.0 cm³ mol^-1. Assume these changes remain constant over a small temperature interval. According to the Clapeyron equation, approximately how must the equilibrium pressure change when temperature is raised by 15 K?",
+    "choices": [
+      "Decrease by 150 MPa",
+      "Decrease by 50 MPa",
+      "Increase by 50 MPa",
+      "Increase by 150 MPa"
+    ],
+    "solution": "The Clapeyron slope is dP/dT = delta S/delta V = delta H/(T delta V). Using delta H = 6000 J mol^-1, T = 300 K, and delta V = 2.0 x 10^-6 m³ mol^-1 gives dP/dT = 1.0 x 10^7 Pa K^-1 = 10 MPa K^-1. Both delta H and delta V are positive, so the slope is positive. Over 15 K, delta P is approximately +150 MPa.",
+    "answer": "Increase by 150 MPa",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-006",
+    "question": "For an electron with orbital quantum number l=1 and spin s=1/2, an interaction is H'=A L·S/hbar^2. What is the dimensionless coefficient of A for the j=0.5 level?",
+    "choices": [
+      "0.5",
+      "0",
+      "-1",
+      "1"
+    ],
+    "solution": "[j(j+1)-l(l+1)-s(s+1)]/2 with j=l-1/2 equals -(l+1)/2=-1.",
+    "answer": "-1",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-007",
+    "question": "What is the maximum Carnot efficiency of a heat engine operating between 600 K and 300 K?",
+    "choices": [
+      "100.0%",
+      "50.0%",
+      "60.0%",
+      "40.0%"
+    ],
+    "solution": "Carnot efficiency is 1-Tc/Th=1-300/600=0.500.",
+    "answer": "50.0%",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-008",
+    "question": "A first-order reaction has a half-life of 2 minutes. What fraction of reactant remains after 6 minutes?",
+    "choices": [
+      "1/8",
+      "1/3",
+      "3/4",
+      "1/6"
+    ],
+    "solution": "6/2=3 half-lives pass, leaving (1/2)^3=1/8.",
+    "answer": "1/8",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-009",
+    "question": "In a Hardy-Weinberg population, a recessive phenotype has frequency 0.04. What is the expected heterozygote frequency?",
+    "choices": [
+      "0.42",
+      "0.22",
+      "0.04",
+      "0.32"
+    ],
+    "solution": "q^2=0.04, so q=0.20, p=0.80, and 2pq=0.32.",
+    "answer": "0.32",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-010",
+    "question": "An enzyme obeys Michaelis-Menten kinetics with Vmax=80 micromolar/min and Km=2 micromolar. What is v when [S]=2 micromolar?",
+    "choices": [
+      "20 micromolar/min",
+      "160 micromolar/min",
+      "40 micromolar/min",
+      "80 micromolar/min"
+    ],
+    "solution": "When [S]=Km, v=Vmax[S]/(Km+[S])=Vmax/2.",
+    "answer": "40 micromolar/min",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-011",
+    "question": "Two negligible-mass planets orbit the same star in circular orbits. If the second orbit's radius is 4 times the first, what is the ratio P2/P1?",
+    "choices": [
+      "2",
+      "8",
+      "4",
+      "16"
+    ],
+    "solution": "Kepler's third law gives P proportional to a^(3/2), hence P2/P1=4^(3/2)=8.",
+    "answer": "8",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-012",
+    "question": "An isolated parallel-plate capacitor remains connected to an ideal voltage source while its plate separation is multiplied by 2. Neglecting fringing, by what factor does its stored energy change?",
+    "choices": [
+      "1/2",
+      "1/4",
+      "2",
+      "4"
+    ],
+    "solution": "At fixed voltage U=CV^2/2 and C is proportional to 1/d, so U changes by 1/2.",
+    "answer": "1/2",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-013",
+    "question": "A buffer has [A-]/[HA]=10. According to Henderson-Hasselbalch, how far is its pH above pKa?",
+    "choices": [
+      "10 pH units",
+      "1/10 pH unit",
+      "It is below pKa",
+      "1 pH unit(s)"
+    ],
+    "solution": "pH-pKa=log10([A-]/[HA])=log10(10)=1.",
+    "answer": "1 pH unit(s)",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-014",
+    "question": "A random variable X is binomial with n=4 and success probability p=2/4. What is E[X]?",
+    "choices": [
+      "0.5",
+      "4",
+      "2",
+      "2.5"
+    ],
+    "solution": "For a binomial variable E[X]=np=4*(2/4)=2.",
+    "answer": "2",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-015",
+    "question": "For an electron with orbital quantum number l=2 and spin s=1/2, an interaction is H'=A L·S/hbar^2. What is the dimensionless coefficient of A for the j=1.5 level?",
+    "choices": [
+      "0",
+      "-1.5",
+      "1.5",
+      "1"
+    ],
+    "solution": "[j(j+1)-l(l+1)-s(s+1)]/2 with j=l-1/2 equals -(l+1)/2=-1.5.",
+    "answer": "-1.5",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-016",
+    "question": "What is the maximum Carnot efficiency of a heat engine operating between 700 K and 300 K?",
+    "choices": [
+      "57.1%",
+      "67.1%",
+      "47.1%",
+      "100.0%"
+    ],
+    "solution": "Carnot efficiency is 1-Tc/Th=1-300/700=0.571.",
+    "answer": "57.1%",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-017",
+    "question": "A first-order reaction has a half-life of 3 minutes. What fraction of reactant remains after 12 minutes?",
+    "choices": [
+      "1/4",
+      "1",
+      "1/8",
+      "1/16"
+    ],
+    "solution": "12/3=4 half-lives pass, leaving (1/2)^4=1/16.",
+    "answer": "1/16",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-018",
+    "question": "In a Hardy-Weinberg population, a recessive phenotype has frequency 0.09. What is the expected heterozygote frequency?",
+    "choices": [
+      "0.32",
+      "0.09",
+      "0.42",
+      "0.52"
+    ],
+    "solution": "q^2=0.09, so q=0.30, p=0.70, and 2pq=0.42.",
+    "answer": "0.42",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-019",
+    "question": "An enzyme obeys Michaelis-Menten kinetics with Vmax=100 micromolar/min and Km=3 micromolar. What is v when [S]=3 micromolar?",
+    "choices": [
+      "200 micromolar/min",
+      "50 micromolar/min",
+      "100 micromolar/min",
+      "25 micromolar/min"
+    ],
+    "solution": "When [S]=Km, v=Vmax[S]/(Km+[S])=Vmax/2.",
+    "answer": "50 micromolar/min",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-020",
+    "question": "Two negligible-mass planets orbit the same star in circular orbits. If the second orbit's radius is 5 times the first, what is the ratio P2/P1?",
+    "choices": [
+      "11.1803",
+      "5",
+      "25",
+      "2.23607"
+    ],
+    "solution": "Kepler's third law gives P proportional to a^(3/2), hence P2/P1=5^(3/2)=11.1803.",
+    "answer": "11.1803",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-021",
+    "question": "An isolated parallel-plate capacitor remains connected to an ideal voltage source while its plate separation is multiplied by 3. Neglecting fringing, by what factor does its stored energy change?",
+    "choices": [
+      "1/9",
+      "3",
+      "9",
+      "1/3"
+    ],
+    "solution": "At fixed voltage U=CV^2/2 and C is proportional to 1/d, so U changes by 1/3.",
+    "answer": "1/3",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-022",
+    "question": "A buffer has [A-]/[HA]=100. According to Henderson-Hasselbalch, how far is its pH above pKa?",
+    "choices": [
+      "1/100 pH unit",
+      "It is below pKa",
+      "2 pH unit(s)",
+      "100 pH units"
+    ],
+    "solution": "pH-pKa=log10([A-]/[HA])=log10(100)=2.",
+    "answer": "2 pH unit(s)",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-023",
+    "question": "A random variable X is binomial with n=5 and success probability p=3/5. What is E[X]?",
+    "choices": [
+      "5",
+      "3",
+      "2.5",
+      "0.6"
+    ],
+    "solution": "For a binomial variable E[X]=np=5*(3/5)=3.",
+    "answer": "3",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-024",
+    "question": "For an electron with orbital quantum number l=3 and spin s=1/2, an interaction is H'=A L·S/hbar^2. What is the dimensionless coefficient of A for the j=2.5 level?",
+    "choices": [
+      "-2",
+      "2",
+      "1.5",
+      "0"
+    ],
+    "solution": "[j(j+1)-l(l+1)-s(s+1)]/2 with j=l-1/2 equals -(l+1)/2=-2.",
+    "answer": "-2",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-025",
+    "question": "What is the maximum Carnot efficiency of a heat engine operating between 800 K and 300 K?",
+    "choices": [
+      "72.5%",
+      "52.5%",
+      "100.0%",
+      "62.5%"
+    ],
+    "solution": "Carnot efficiency is 1-Tc/Th=1-300/800=0.625.",
+    "answer": "62.5%",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-026",
+    "question": "A first-order reaction has a half-life of 4 minutes. What fraction of reactant remains after 12 minutes?",
+    "choices": [
+      "3/4",
+      "1/6",
+      "1/8",
+      "1/3"
+    ],
+    "solution": "12/4=3 half-lives pass, leaving (1/2)^3=1/8.",
+    "answer": "1/8",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-027",
+    "question": "In a Hardy-Weinberg population, a recessive phenotype has frequency 0.16. What is the expected heterozygote frequency?",
+    "choices": [
+      "0.16",
+      "0.48",
+      "0.58",
+      "0.38"
+    ],
+    "solution": "q^2=0.16, so q=0.40, p=0.60, and 2pq=0.48.",
+    "answer": "0.48",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-028",
+    "question": "An enzyme obeys Michaelis-Menten kinetics with Vmax=120 micromolar/min and Km=4 micromolar. What is v when [S]=4 micromolar?",
+    "choices": [
+      "60 micromolar/min",
+      "120 micromolar/min",
+      "30 micromolar/min",
+      "240 micromolar/min"
+    ],
+    "solution": "When [S]=Km, v=Vmax[S]/(Km+[S])=Vmax/2.",
+    "answer": "60 micromolar/min",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-029",
+    "question": "Two negligible-mass planets orbit the same star in circular orbits. If the second orbit's radius is 6 times the first, what is the ratio P2/P1?",
+    "choices": [
+      "6",
+      "36",
+      "2.44949",
+      "14.6969"
+    ],
+    "solution": "Kepler's third law gives P proportional to a^(3/2), hence P2/P1=6^(3/2)=14.6969.",
+    "answer": "14.6969",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-030",
+    "question": "An isolated parallel-plate capacitor remains connected to an ideal voltage source while its plate separation is multiplied by 4. Neglecting fringing, by what factor does its stored energy change?",
+    "choices": [
+      "4",
+      "16",
+      "1/4",
+      "1/16"
+    ],
+    "solution": "At fixed voltage U=CV^2/2 and C is proportional to 1/d, so U changes by 1/4.",
+    "answer": "1/4",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-031",
+    "question": "A buffer has [A-]/[HA]=1000. According to Henderson-Hasselbalch, how far is its pH above pKa?",
+    "choices": [
+      "It is below pKa",
+      "3 pH unit(s)",
+      "1000 pH units",
+      "1/1000 pH unit"
+    ],
+    "solution": "pH-pKa=log10([A-]/[HA])=log10(1000)=3.",
+    "answer": "3 pH unit(s)",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-032",
+    "question": "A random variable X is binomial with n=6 and success probability p=2/6. What is E[X]?",
+    "choices": [
+      "2",
+      "4.5",
+      "0.333333",
+      "6"
+    ],
+    "solution": "For a binomial variable E[X]=np=6*(2/6)=2.",
+    "answer": "2",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-033",
+    "question": "For an electron with orbital quantum number l=4 and spin s=1/2, an interaction is H'=A L·S/hbar^2. What is the dimensionless coefficient of A for the j=3.5 level?",
+    "choices": [
+      "2.5",
+      "2",
+      "0",
+      "-2.5"
+    ],
+    "solution": "[j(j+1)-l(l+1)-s(s+1)]/2 with j=l-1/2 equals -(l+1)/2=-2.5.",
+    "answer": "-2.5",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-034",
+    "question": "What is the maximum Carnot efficiency of a heat engine operating between 900 K and 300 K?",
+    "choices": [
+      "56.7%",
+      "100.0%",
+      "66.7%",
+      "76.7%"
+    ],
+    "solution": "Carnot efficiency is 1-Tc/Th=1-300/900=0.667.",
+    "answer": "66.7%",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-035",
+    "question": "A first-order reaction has a half-life of 5 minutes. What fraction of reactant remains after 20 minutes?",
+    "choices": [
+      "1/8",
+      "1/16",
+      "1/4",
+      "1"
+    ],
+    "solution": "20/5=4 half-lives pass, leaving (1/2)^4=1/16.",
+    "answer": "1/16",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-036",
+    "question": "In a Hardy-Weinberg population, a recessive phenotype has frequency 0.25. What is the expected heterozygote frequency?",
+    "choices": [
+      "0.50",
+      "0.60",
+      "0.40",
+      "0.25"
+    ],
+    "solution": "q^2=0.25, so q=0.50, p=0.50, and 2pq=0.50.",
+    "answer": "0.50",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-037",
+    "question": "An enzyme obeys Michaelis-Menten kinetics with Vmax=140 micromolar/min and Km=5 micromolar. What is v when [S]=5 micromolar?",
+    "choices": [
+      "140 micromolar/min",
+      "35 micromolar/min",
+      "280 micromolar/min",
+      "70 micromolar/min"
+    ],
+    "solution": "When [S]=Km, v=Vmax[S]/(Km+[S])=Vmax/2.",
+    "answer": "70 micromolar/min",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-038",
+    "question": "Two negligible-mass planets orbit the same star in circular orbits. If the second orbit's radius is 7 times the first, what is the ratio P2/P1?",
+    "choices": [
+      "49",
+      "2.64575",
+      "18.5203",
+      "7"
+    ],
+    "solution": "Kepler's third law gives P proportional to a^(3/2), hence P2/P1=7^(3/2)=18.5203.",
+    "answer": "18.5203",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-039",
+    "question": "An isolated parallel-plate capacitor remains connected to an ideal voltage source while its plate separation is multiplied by 5. Neglecting fringing, by what factor does its stored energy change?",
+    "choices": [
+      "25",
+      "1/5",
+      "1/25",
+      "5"
+    ],
+    "solution": "At fixed voltage U=CV^2/2 and C is proportional to 1/d, so U changes by 1/5.",
+    "answer": "1/5",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-040",
+    "question": "A buffer has [A-]/[HA]=10000. According to Henderson-Hasselbalch, how far is its pH above pKa?",
+    "choices": [
+      "4 pH unit(s)",
+      "10000 pH units",
+      "1/10000 pH unit",
+      "It is below pKa"
+    ],
+    "solution": "pH-pKa=log10([A-]/[HA])=log10(10000)=4.",
+    "answer": "4 pH unit(s)",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-041",
+    "question": "A random variable X is binomial with n=7 and success probability p=3/7. What is E[X]?",
+    "choices": [
+      "4.5",
+      "0.428571",
+      "7",
+      "3"
+    ],
+    "solution": "For a binomial variable E[X]=np=7*(3/7)=3.",
+    "answer": "3",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-042",
+    "question": "For an electron with orbital quantum number l=5 and spin s=1/2, an interaction is H'=A L·S/hbar^2. What is the dimensionless coefficient of A for the j=4.5 level?",
+    "choices": [
+      "2.5",
+      "0",
+      "-3",
+      "3"
+    ],
+    "solution": "[j(j+1)-l(l+1)-s(s+1)]/2 with j=l-1/2 equals -(l+1)/2=-3.",
+    "answer": "-3",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-043",
+    "question": "What is the maximum Carnot efficiency of a heat engine operating between 1000 K and 300 K?",
+    "choices": [
+      "100.0%",
+      "70.0%",
+      "80.0%",
+      "60.0%"
+    ],
+    "solution": "Carnot efficiency is 1-Tc/Th=1-300/1000=0.700.",
+    "answer": "70.0%",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-044",
+    "question": "A first-order reaction has a half-life of 6 minutes. What fraction of reactant remains after 18 minutes?",
+    "choices": [
+      "1/8",
+      "1/3",
+      "3/4",
+      "1/6"
+    ],
+    "solution": "18/6=3 half-lives pass, leaving (1/2)^3=1/8.",
+    "answer": "1/8",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-045",
+    "question": "In a Hardy-Weinberg population, a recessive phenotype has frequency 0.36. What is the expected heterozygote frequency?",
+    "choices": [
+      "0.58",
+      "0.38",
+      "0.36",
+      "0.48"
+    ],
+    "solution": "q^2=0.36, so q=0.60, p=0.40, and 2pq=0.48.",
+    "answer": "0.48",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-046",
+    "question": "An enzyme obeys Michaelis-Menten kinetics with Vmax=160 micromolar/min and Km=6 micromolar. What is v when [S]=6 micromolar?",
+    "choices": [
+      "40 micromolar/min",
+      "320 micromolar/min",
+      "80 micromolar/min",
+      "160 micromolar/min"
+    ],
+    "solution": "When [S]=Km, v=Vmax[S]/(Km+[S])=Vmax/2.",
+    "answer": "80 micromolar/min",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-047",
+    "question": "Two negligible-mass planets orbit the same star in circular orbits. If the second orbit's radius is 8 times the first, what is the ratio P2/P1?",
+    "choices": [
+      "2.82843",
+      "22.6274",
+      "8",
+      "64"
+    ],
+    "solution": "Kepler's third law gives P proportional to a^(3/2), hence P2/P1=8^(3/2)=22.6274.",
+    "answer": "22.6274",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-048",
+    "question": "An isolated parallel-plate capacitor remains connected to an ideal voltage source while its plate separation is multiplied by 6. Neglecting fringing, by what factor does its stored energy change?",
+    "choices": [
+      "1/6",
+      "1/36",
+      "6",
+      "36"
+    ],
+    "solution": "At fixed voltage U=CV^2/2 and C is proportional to 1/d, so U changes by 1/6.",
+    "answer": "1/6",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-049",
+    "question": "A buffer has [A-]/[HA]=100000. According to Henderson-Hasselbalch, how far is its pH above pKa?",
+    "choices": [
+      "100000 pH units",
+      "1/100000 pH unit",
+      "It is below pKa",
+      "5 pH unit(s)"
+    ],
+    "solution": "pH-pKa=log10([A-]/[HA])=log10(100000)=5.",
+    "answer": "5 pH unit(s)",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  },
+  {
+    "id": "dev-gpqa-050",
+    "question": "A random variable X is binomial with n=8 and success probability p=2/8. What is E[X]?",
+    "choices": [
+      "0.25",
+      "8",
+      "2",
+      "6.5"
+    ],
+    "solution": "For a binomial variable E[X]=np=8*(2/8)=2.",
+    "answer": "2",
+    "source": "original",
+    "style": "GPQA-Diamond"
+  }
+]

@@ -1,0 +1,402 @@
+[
+  {
+    "id": "dev-gsm8k-001",
+    "question": "A school library receives 8 boxes with 24 books in each box. The librarian puts 37 books on the reference shelves and divides all the remaining books equally among 5 rolling carts. How many books go on each cart?",
+    "solution": "The library receives 8 * 24 = 192 books. After 37 books go on the reference shelves, 192 - 37 = 155 books remain. Dividing them equally among 5 carts gives 155 / 5 = 31 books per cart. The final answer is 31.",
+    "answer": "31",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-002",
+    "question": "For a field trip, a school reserves 5 buses with 36 seats each. A total of 148 students and 12 teachers ride the buses. How many seats are empty?",
+    "solution": "The buses have 5 * 36 = 180 seats altogether. There are 148 + 12 = 160 riders. Therefore, 180 - 160 = 20 seats are empty. The final answer is 20.",
+    "answer": "20",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-003",
+    "question": "A bakery makes 6 trays of 18 muffins each. It donates one-third of all the muffins, then packs the rest equally into boxes that hold 8 muffins each. How many boxes does the bakery fill?",
+    "solution": "The bakery makes 6 * 18 = 108 muffins. It donates 108 / 3 = 36 muffins, leaving 108 - 36 = 72 muffins. Packing 8 muffins in each box fills 72 / 8 = 9 boxes. The final answer is 9.",
+    "answer": "9",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-004",
+    "question": "A rectangular community garden is 18 meters long and 12 meters wide. A 36-square-meter section is used for herbs. Of the area that remains, two-fifths is planted with tomatoes. How many square meters are planted with tomatoes?",
+    "solution": "The garden's area is 18 * 12 = 216 square meters. After reserving 36 square meters for herbs, 216 - 36 = 180 square meters remain. Tomatoes use 2/5 of that area, so 180 * 2 / 5 = 72 square meters are planted with tomatoes. The final answer is 72.",
+    "answer": "72",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-005",
+    "question": "Mia has $45 saved. She earns $18 per day for 4 days helping a neighbor, then spends $39 on a backpack. Her aunt adds an amount equal to half of what Mia has left after buying the backpack. How many dollars does Mia have in the end?",
+    "solution": "Mia earns 18 * 4 = 72 dollars. She then has 45 + 72 = 117 dollars. After buying the backpack, she has 117 - 39 = 78 dollars left. Her aunt adds 78 / 2 = 39 dollars, so Mia ends with 78 + 39 = 117 dollars. The final answer is 117.",
+    "answer": "117",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-006",
+    "question": "A pantry receives 5 crates with 18 cans each. It uses 10 cans and shares the rest equally among 4 shelters. How many cans does each shelter receive?",
+    "solution": "There are 5 * 18 = 90 cans. After using 10, 80 remain. Each shelter gets 80 / 4 = 20 cans. The final answer is 20.",
+    "answer": "20",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-007",
+    "question": "Mina buys 7 notebooks at $4 each and pays with $50. How much change does she receive?",
+    "solution": "The notebooks cost 7 * $4 = $28. Her change is $50 - $28 = $22. The final answer is 22.",
+    "answer": "22",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-008",
+    "question": "Leo has a 155-page book. He reads 30 pages on Monday, then reads the same number of pages on each of the next 5 days and finishes the book. How many pages does he read on each later day?",
+    "solution": "After Monday, 155 - 30 = 125 pages remain. He reads 125 / 5 = 25 pages per day. The final answer is 25.",
+    "answer": "25",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-009",
+    "question": "A cyclist rides at 12 miles per hour for 3 hours, then rides 8 more miles. How many miles does the cyclist travel in all?",
+    "solution": "The timed part covers 12 * 3 = 36 miles. Adding 8 gives 44 miles. The final answer is 44.",
+    "answer": "44",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-010",
+    "question": "Tickets cost $10 for each adult and $6 for each child. A group buys 3 adult tickets and 8 child tickets. What is the total cost?",
+    "solution": "Adult tickets cost 3 * $10 = $30. Child tickets cost 8 * $6 = $48. Together they cost $78. The final answer is 78.",
+    "answer": "78",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-011",
+    "question": "Nora has 40 stickers. She gives away 7 and later earns 15 more. How many stickers does she have then?",
+    "solution": "After giving some away she has 40 - 7 = 33. After earning more she has 33 + 15 = 48. The final answer is 48.",
+    "answer": "48",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-012",
+    "question": "A hall has 6 rows of 14 seats. If 9 seats are empty, how many seats are occupied?",
+    "solution": "The hall has 6 * 14 = 84 seats. Thus 84 - 9 = 75 are occupied. The final answer is 75.",
+    "answer": "75",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-013",
+    "question": "A kitchen has 8 liters of soup, with 4 cups in each liter. After serving 3 cups, how many cups remain?",
+    "solution": "Initially there are 8 * 4 = 32 cups. After serving 3, 29 cups remain. The final answer is 29.",
+    "answer": "29",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-014",
+    "question": "Each of 4 gift bags contains 12 red beads and 8 blue beads. How many beads are in all the bags?",
+    "solution": "Each bag has 12 + 8 = 20 beads. All bags have 4 * 20 = 80 beads. The final answer is 80.",
+    "answer": "80",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-015",
+    "question": "A pantry receives 6 crates with 20 cans each. It uses 15 cans and shares the rest equally among 5 shelters. How many cans does each shelter receive?",
+    "solution": "There are 6 * 20 = 120 cans. After using 15, 105 remain. Each shelter gets 105 / 5 = 21 cans. The final answer is 21.",
+    "answer": "21",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-016",
+    "question": "Mina buys 8 notebooks at $5 each and pays with $70. How much change does she receive?",
+    "solution": "The notebooks cost 8 * $5 = $40. Her change is $70 - $40 = $30. The final answer is 30.",
+    "answer": "30",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-017",
+    "question": "Leo has a 215-page book. He reads 35 pages on Monday, then reads the same number of pages on each of the next 6 days and finishes the book. How many pages does he read on each later day?",
+    "solution": "After Monday, 215 - 35 = 180 pages remain. He reads 180 / 6 = 30 pages per day. The final answer is 30.",
+    "answer": "30",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-018",
+    "question": "A cyclist rides at 14 miles per hour for 4 hours, then rides 12 more miles. How many miles does the cyclist travel in all?",
+    "solution": "The timed part covers 14 * 4 = 56 miles. Adding 12 gives 68 miles. The final answer is 68.",
+    "answer": "68",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-019",
+    "question": "Tickets cost $11 for each adult and $7 for each child. A group buys 4 adult tickets and 10 child tickets. What is the total cost?",
+    "solution": "Adult tickets cost 4 * $11 = $44. Child tickets cost 10 * $7 = $70. Together they cost $114. The final answer is 114.",
+    "answer": "114",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-020",
+    "question": "Nora has 50 stickers. She gives away 9 and later earns 18 more. How many stickers does she have then?",
+    "solution": "After giving some away she has 50 - 9 = 41. After earning more she has 41 + 18 = 59. The final answer is 59.",
+    "answer": "59",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-021",
+    "question": "A hall has 7 rows of 16 seats. If 10 seats are empty, how many seats are occupied?",
+    "solution": "The hall has 7 * 16 = 112 seats. Thus 112 - 10 = 102 are occupied. The final answer is 102.",
+    "answer": "102",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-022",
+    "question": "A kitchen has 10 liters of soup, with 4 cups in each liter. After serving 4 cups, how many cups remain?",
+    "solution": "Initially there are 10 * 4 = 40 cups. After serving 4, 36 cups remain. The final answer is 36.",
+    "answer": "36",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-023",
+    "question": "Each of 5 gift bags contains 15 red beads and 10 blue beads. How many beads are in all the bags?",
+    "solution": "Each bag has 15 + 10 = 25 beads. All bags have 5 * 25 = 125 beads. The final answer is 125.",
+    "answer": "125",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-024",
+    "question": "A pantry receives 7 crates with 22 cans each. It uses 22 cans and shares the rest equally among 6 shelters. How many cans does each shelter receive?",
+    "solution": "There are 7 * 22 = 154 cans. After using 22, 132 remain. Each shelter gets 132 / 6 = 22 cans. The final answer is 22.",
+    "answer": "22",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-025",
+    "question": "Mina buys 9 notebooks at $6 each and pays with $90. How much change does she receive?",
+    "solution": "The notebooks cost 9 * $6 = $54. Her change is $90 - $54 = $36. The final answer is 36.",
+    "answer": "36",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-026",
+    "question": "Leo has a 285-page book. He reads 40 pages on Monday, then reads the same number of pages on each of the next 7 days and finishes the book. How many pages does he read on each later day?",
+    "solution": "After Monday, 285 - 40 = 245 pages remain. He reads 245 / 7 = 35 pages per day. The final answer is 35.",
+    "answer": "35",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-027",
+    "question": "A cyclist rides at 16 miles per hour for 5 hours, then rides 16 more miles. How many miles does the cyclist travel in all?",
+    "solution": "The timed part covers 16 * 5 = 80 miles. Adding 16 gives 96 miles. The final answer is 96.",
+    "answer": "96",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-028",
+    "question": "Tickets cost $12 for each adult and $8 for each child. A group buys 5 adult tickets and 12 child tickets. What is the total cost?",
+    "solution": "Adult tickets cost 5 * $12 = $60. Child tickets cost 12 * $8 = $96. Together they cost $156. The final answer is 156.",
+    "answer": "156",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-029",
+    "question": "Nora has 60 stickers. She gives away 11 and later earns 21 more. How many stickers does she have then?",
+    "solution": "After giving some away she has 60 - 11 = 49. After earning more she has 49 + 21 = 70. The final answer is 70.",
+    "answer": "70",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-030",
+    "question": "A hall has 8 rows of 18 seats. If 11 seats are empty, how many seats are occupied?",
+    "solution": "The hall has 8 * 18 = 144 seats. Thus 144 - 11 = 133 are occupied. The final answer is 133.",
+    "answer": "133",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-031",
+    "question": "A kitchen has 12 liters of soup, with 4 cups in each liter. After serving 5 cups, how many cups remain?",
+    "solution": "Initially there are 12 * 4 = 48 cups. After serving 5, 43 cups remain. The final answer is 43.",
+    "answer": "43",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-032",
+    "question": "Each of 6 gift bags contains 18 red beads and 12 blue beads. How many beads are in all the bags?",
+    "solution": "Each bag has 18 + 12 = 30 beads. All bags have 6 * 30 = 180 beads. The final answer is 180.",
+    "answer": "180",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-033",
+    "question": "A pantry receives 8 crates with 24 cans each. It uses 31 cans and shares the rest equally among 7 shelters. How many cans does each shelter receive?",
+    "solution": "There are 8 * 24 = 192 cans. After using 31, 161 remain. Each shelter gets 161 / 7 = 23 cans. The final answer is 23.",
+    "answer": "23",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-034",
+    "question": "Mina buys 10 notebooks at $7 each and pays with $110. How much change does she receive?",
+    "solution": "The notebooks cost 10 * $7 = $70. Her change is $110 - $70 = $40. The final answer is 40.",
+    "answer": "40",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-035",
+    "question": "Leo has a 365-page book. He reads 45 pages on Monday, then reads the same number of pages on each of the next 8 days and finishes the book. How many pages does he read on each later day?",
+    "solution": "After Monday, 365 - 45 = 320 pages remain. He reads 320 / 8 = 40 pages per day. The final answer is 40.",
+    "answer": "40",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-036",
+    "question": "A cyclist rides at 18 miles per hour for 6 hours, then rides 20 more miles. How many miles does the cyclist travel in all?",
+    "solution": "The timed part covers 18 * 6 = 108 miles. Adding 20 gives 128 miles. The final answer is 128.",
+    "answer": "128",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-037",
+    "question": "Tickets cost $13 for each adult and $9 for each child. A group buys 6 adult tickets and 14 child tickets. What is the total cost?",
+    "solution": "Adult tickets cost 6 * $13 = $78. Child tickets cost 14 * $9 = $126. Together they cost $204. The final answer is 204.",
+    "answer": "204",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-038",
+    "question": "Nora has 70 stickers. She gives away 13 and later earns 24 more. How many stickers does she have then?",
+    "solution": "After giving some away she has 70 - 13 = 57. After earning more she has 57 + 24 = 81. The final answer is 81.",
+    "answer": "81",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-039",
+    "question": "A hall has 9 rows of 20 seats. If 12 seats are empty, how many seats are occupied?",
+    "solution": "The hall has 9 * 20 = 180 seats. Thus 180 - 12 = 168 are occupied. The final answer is 168.",
+    "answer": "168",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-040",
+    "question": "A kitchen has 14 liters of soup, with 4 cups in each liter. After serving 6 cups, how many cups remain?",
+    "solution": "Initially there are 14 * 4 = 56 cups. After serving 6, 50 cups remain. The final answer is 50.",
+    "answer": "50",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-041",
+    "question": "Each of 7 gift bags contains 21 red beads and 14 blue beads. How many beads are in all the bags?",
+    "solution": "Each bag has 21 + 14 = 35 beads. All bags have 7 * 35 = 245 beads. The final answer is 245.",
+    "answer": "245",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-042",
+    "question": "A pantry receives 9 crates with 26 cans each. It uses 34 cans and shares the rest equally among 8 shelters. How many cans does each shelter receive?",
+    "solution": "There are 9 * 26 = 234 cans. After using 34, 200 remain. Each shelter gets 200 / 8 = 25 cans. The final answer is 25.",
+    "answer": "25",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-043",
+    "question": "Mina buys 11 notebooks at $8 each and pays with $130. How much change does she receive?",
+    "solution": "The notebooks cost 11 * $8 = $88. Her change is $130 - $88 = $42. The final answer is 42.",
+    "answer": "42",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-044",
+    "question": "Leo has a 455-page book. He reads 50 pages on Monday, then reads the same number of pages on each of the next 9 days and finishes the book. How many pages does he read on each later day?",
+    "solution": "After Monday, 455 - 50 = 405 pages remain. He reads 405 / 9 = 45 pages per day. The final answer is 45.",
+    "answer": "45",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-045",
+    "question": "A cyclist rides at 20 miles per hour for 7 hours, then rides 24 more miles. How many miles does the cyclist travel in all?",
+    "solution": "The timed part covers 20 * 7 = 140 miles. Adding 24 gives 164 miles. The final answer is 164.",
+    "answer": "164",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-046",
+    "question": "Tickets cost $14 for each adult and $10 for each child. A group buys 7 adult tickets and 16 child tickets. What is the total cost?",
+    "solution": "Adult tickets cost 7 * $14 = $98. Child tickets cost 16 * $10 = $160. Together they cost $258. The final answer is 258.",
+    "answer": "258",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-047",
+    "question": "Nora has 80 stickers. She gives away 15 and later earns 27 more. How many stickers does she have then?",
+    "solution": "After giving some away she has 80 - 15 = 65. After earning more she has 65 + 27 = 92. The final answer is 92.",
+    "answer": "92",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-048",
+    "question": "A hall has 10 rows of 22 seats. If 13 seats are empty, how many seats are occupied?",
+    "solution": "The hall has 10 * 22 = 220 seats. Thus 220 - 13 = 207 are occupied. The final answer is 207.",
+    "answer": "207",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-049",
+    "question": "A kitchen has 16 liters of soup, with 4 cups in each liter. After serving 7 cups, how many cups remain?",
+    "solution": "Initially there are 16 * 4 = 64 cups. After serving 7, 57 cups remain. The final answer is 57.",
+    "answer": "57",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  },
+  {
+    "id": "dev-gsm8k-050",
+    "question": "Each of 8 gift bags contains 24 red beads and 16 blue beads. How many beads are in all the bags?",
+    "solution": "Each bag has 24 + 16 = 40 beads. All bags have 8 * 40 = 320 beads. The final answer is 320.",
+    "answer": "320",
+    "source": "original",
+    "style": "GSM8K-style multi-step word problem"
+  }
+]

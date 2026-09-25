@@ -1,0 +1,852 @@
+[
+  {
+    "id": "dev-medqa-001",
+    "question": "A 72-year-old woman comes to the emergency department because of a new right-sided headache and two brief episodes of vision loss in the right eye. For 1 month, she has had fatigue, aching in both shoulders, and pain in her jaw while chewing. Examination shows tenderness over the right temporal artery. Erythrocyte sedimentation rate is 96 mm/h. Which of the following is the most appropriate immediate next step in management?\nA. Begin high-dose glucocorticoid therapy\nB. Obtain a temporal artery biopsy before initiating treatment\nC. Prescribe sumatriptan as needed\nD. Start low-dose aspirin as the only therapy",
+    "query": "A 72-year-old woman comes to the emergency department because of a new right-sided headache and two brief episodes of vision loss in the right eye. For 1 month, she has had fatigue, aching in both shoulders, and pain in her jaw while chewing. Examination shows tenderness over the right temporal artery. Erythrocyte sedimentation rate is 96 mm/h. Which of the following is the most appropriate immediate next step in management?\nA. Begin high-dose glucocorticoid therapy\nB. Obtain a temporal artery biopsy before initiating treatment\nC. Prescribe sumatriptan as needed\nD. Start low-dose aspirin as the only therapy\nChoose the correct option.",
+    "options": [
+      "A. Begin high-dose glucocorticoid therapy",
+      "B. Obtain a temporal artery biopsy before initiating treatment",
+      "C. Prescribe sumatriptan as needed",
+      "D. Start low-dose aspirin as the only therapy"
+    ],
+    "solution": "The new headache, jaw claudication, polymyalgia rheumatica symptoms, markedly elevated erythrocyte sedimentation rate, temporal artery tenderness, and transient monocular vision loss indicate giant cell arteritis with threatened permanent visual loss. High-dose glucocorticoids must be started immediately; diagnostic biopsy should not delay treatment because arterial inflammation can rapidly cause irreversible blindness.",
+    "explanation": "Suspected giant cell arteritis with visual symptoms requires immediate high-dose glucocorticoids. Temporal artery biopsy can confirm the diagnosis after therapy has begun.",
+    "answer": "A. Begin high-dose glucocorticoid therapy",
+    "answer_key": "A",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-002",
+    "question": "A 19-year-old man with type 1 diabetes mellitus is brought to the emergency department because of vomiting and progressive lethargy. His respirations are deep and rapid. Laboratory studies show a serum glucose concentration of 510 mg/dL, arterial pH of 7.12, bicarbonate concentration of 9 mEq/L, and serum potassium concentration of 5.6 mEq/L. Which of the following best describes this patient's potassium balance before treatment?\nA. Increased total-body potassium due to reduced renal excretion\nB. Normal total-body potassium with increased intracellular stores\nC. Decreased total-body potassium despite the elevated serum concentration\nD. Decreased total-body potassium caused primarily by insulin administration",
+    "query": "A 19-year-old man with type 1 diabetes mellitus is brought to the emergency department because of vomiting and progressive lethargy. His respirations are deep and rapid. Laboratory studies show a serum glucose concentration of 510 mg/dL, arterial pH of 7.12, bicarbonate concentration of 9 mEq/L, and serum potassium concentration of 5.6 mEq/L. Which of the following best describes this patient's potassium balance before treatment?\nA. Increased total-body potassium due to reduced renal excretion\nB. Normal total-body potassium with increased intracellular stores\nC. Decreased total-body potassium despite the elevated serum concentration\nD. Decreased total-body potassium caused primarily by insulin administration\nChoose the correct option.",
+    "options": [
+      "A. Increased total-body potassium due to reduced renal excretion",
+      "B. Normal total-body potassium with increased intracellular stores",
+      "C. Decreased total-body potassium despite the elevated serum concentration",
+      "D. Decreased total-body potassium caused primarily by insulin administration"
+    ],
+    "solution": "This patient has diabetic ketoacidosis. Insulin deficiency and hyperosmolality shift potassium from the intracellular space into serum, so the measured serum potassium can be high. At the same time, osmotic diuresis, vomiting, and urinary ketoanion losses produce a substantial net loss of potassium from the body. Therefore, total-body potassium is depleted even before insulin is given.",
+    "explanation": "In diabetic ketoacidosis, extracellular potassium may be elevated by transcellular shifts, but total-body potassium is decreased because of urinary and gastrointestinal losses.",
+    "answer": "C. Decreased total-body potassium despite the elevated serum concentration",
+    "answer_key": "C",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-003",
+    "question": "A 6-year-old boy is brought to the physician because of swelling around his eyes that is most pronounced in the morning. Urinalysis shows 4+ protein without blood, and a 24-hour urine collection shows marked albuminuria. Serum complement concentrations are normal. The symptoms resolve after a course of oral prednisone. Which of the following renal findings is most likely in this patient?\nA. Linear IgG deposition along the glomerular basement membrane\nB. Subepithelial immune-complex humps on electron microscopy\nC. Diffuse effacement of podocyte foot processes on electron microscopy\nD. Mesangial IgA deposition on immunofluorescence",
+    "query": "A 6-year-old boy is brought to the physician because of swelling around his eyes that is most pronounced in the morning. Urinalysis shows 4+ protein without blood, and a 24-hour urine collection shows marked albuminuria. Serum complement concentrations are normal. The symptoms resolve after a course of oral prednisone. Which of the following renal findings is most likely in this patient?\nA. Linear IgG deposition along the glomerular basement membrane\nB. Subepithelial immune-complex humps on electron microscopy\nC. Diffuse effacement of podocyte foot processes on electron microscopy\nD. Mesangial IgA deposition on immunofluorescence\nChoose the correct option.",
+    "options": [
+      "A. Linear IgG deposition along the glomerular basement membrane",
+      "B. Subepithelial immune-complex humps on electron microscopy",
+      "C. Diffuse effacement of podocyte foot processes on electron microscopy",
+      "D. Mesangial IgA deposition on immunofluorescence"
+    ],
+    "solution": "A child with nephrotic-range proteinuria, normal complement, no hematuria, and a rapid response to corticosteroids most likely has minimal change disease. Light microscopy is typically normal, immunofluorescence is negative, and electron microscopy shows diffuse podocyte foot-process effacement.",
+    "explanation": "Minimal change disease is the most common cause of nephrotic syndrome in children and is characterized ultrastructurally by podocyte foot-process effacement.",
+    "answer": "C. Diffuse effacement of podocyte foot processes on electron microscopy",
+    "answer_key": "C",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-004",
+    "question": "A 58-year-old man comes to the physician because of progressive fatigue and numbness in his feet. He underwent total gastrectomy 4 years ago for gastric cancer. Examination shows decreased vibration sense in both legs. Laboratory studies show hemoglobin of 9.4 g/dL and mean corpuscular volume of 113 fL. A peripheral smear shows macro-ovalocytes and hypersegmented neutrophils. Which of the following metabolites is most likely increased in this patient?\nA. Homogentisic acid only\nB. Methylmalonic acid and homocysteine\nC. Orotic acid and ammonia\nD. Uric acid and xanthine",
+    "query": "A 58-year-old man comes to the physician because of progressive fatigue and numbness in his feet. He underwent total gastrectomy 4 years ago for gastric cancer. Examination shows decreased vibration sense in both legs. Laboratory studies show hemoglobin of 9.4 g/dL and mean corpuscular volume of 113 fL. A peripheral smear shows macro-ovalocytes and hypersegmented neutrophils. Which of the following metabolites is most likely increased in this patient?\nA. Homogentisic acid only\nB. Methylmalonic acid and homocysteine\nC. Orotic acid and ammonia\nD. Uric acid and xanthine\nChoose the correct option.",
+    "options": [
+      "A. Homogentisic acid only",
+      "B. Methylmalonic acid and homocysteine",
+      "C. Orotic acid and ammonia",
+      "D. Uric acid and xanthine"
+    ],
+    "solution": "Total gastrectomy eliminates intrinsic-factor production, eventually causing vitamin B12 deficiency after hepatic stores are depleted. Macrocytic megaloblastic anemia plus neurologic deficits supports this diagnosis. Vitamin B12 is required for both methylmalonyl-CoA mutase and methionine synthase, so deficiency increases both methylmalonic acid and homocysteine.",
+    "explanation": "Vitamin B12 deficiency after gastrectomy causes megaloblastic anemia and neurologic findings, with elevations of both methylmalonic acid and homocysteine.",
+    "answer": "B. Methylmalonic acid and homocysteine",
+    "answer_key": "B",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-005",
+    "question": "A 10-day-old girl is brought to the emergency department because of poor feeding and repeated vomiting. She has lost 12% of her birth weight. Examination shows dehydration and clitoromegaly. Laboratory studies show sodium of 124 mEq/L, potassium of 6.4 mEq/L, glucose of 52 mg/dL, and low serum cortisol. Deficiency of which of the following enzymes is the most likely cause?\nA. 5-alpha-reductase\nB. 11-beta-hydroxylase\nC. 17-alpha-hydroxylase\nD. 21-hydroxylase",
+    "query": "A 10-day-old girl is brought to the emergency department because of poor feeding and repeated vomiting. She has lost 12% of her birth weight. Examination shows dehydration and clitoromegaly. Laboratory studies show sodium of 124 mEq/L, potassium of 6.4 mEq/L, glucose of 52 mg/dL, and low serum cortisol. Deficiency of which of the following enzymes is the most likely cause?\nA. 5-alpha-reductase\nB. 11-beta-hydroxylase\nC. 17-alpha-hydroxylase\nD. 21-hydroxylase\nChoose the correct option.",
+    "options": [
+      "A. 5-alpha-reductase",
+      "B. 11-beta-hydroxylase",
+      "C. 17-alpha-hydroxylase",
+      "D. 21-hydroxylase"
+    ],
+    "solution": "This newborn has a salt-wasting adrenal crisis with virilization, the classic presentation of severe 21-hydroxylase deficiency. Impaired cortisol and aldosterone synthesis causes hypoglycemia, hyponatremia, hyperkalemia, and volume depletion. Steroid precursors are diverted toward androgen production, causing virilization of an affected 46,XX infant.",
+    "explanation": "21-hydroxylase deficiency decreases cortisol and aldosterone while increasing adrenal androgens, producing salt wasting and virilization.",
+    "answer": "D. 21-hydroxylase",
+    "answer_key": "D",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-006",
+    "question": "A 58-year-old man has 40 minutes of crushing substernal chest pain, diaphoresis, and ST elevations in leads II, III, and aVF. Which diagnosis is most likely?\nA. Acute pericarditis\nB. Aortic stenosis\nC. Acute inferior myocardial infarction\nD. Stable angina",
+    "query": "A 58-year-old man has 40 minutes of crushing substernal chest pain, diaphoresis, and ST elevations in leads II, III, and aVF. Which diagnosis is most likely?\nA. Acute pericarditis\nB. Aortic stenosis\nC. Acute inferior myocardial infarction\nD. Stable angina\nChoose the correct option.",
+    "options": [
+      "A. Acute pericarditis",
+      "B. Aortic stenosis",
+      "C. Acute inferior myocardial infarction",
+      "D. Stable angina"
+    ],
+    "solution": "Persistent ischemic pain with regional inferior ST elevation indicates an acute inferior STEMI.",
+    "explanation": "Persistent ischemic pain with regional inferior ST elevation indicates an acute inferior STEMI.",
+    "answer": "C. Acute inferior myocardial infarction",
+    "answer_key": "C",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-007",
+    "question": "A 19-year-old has periumbilical pain that migrated to the right lower quadrant, fever, anorexia, and rebound tenderness. Which diagnosis is most likely?\nA. Renal colic\nB. Acute appendicitis\nC. Viral gastroenteritis\nD. Acute pancreatitis",
+    "query": "A 19-year-old has periumbilical pain that migrated to the right lower quadrant, fever, anorexia, and rebound tenderness. Which diagnosis is most likely?\nA. Renal colic\nB. Acute appendicitis\nC. Viral gastroenteritis\nD. Acute pancreatitis\nChoose the correct option.",
+    "options": [
+      "A. Renal colic",
+      "B. Acute appendicitis",
+      "C. Viral gastroenteritis",
+      "D. Acute pancreatitis"
+    ],
+    "solution": "Migration to the right lower quadrant with focal peritoneal signs is classic for acute appendicitis.",
+    "explanation": "Migration to the right lower quadrant with focal peritoneal signs is classic for acute appendicitis.",
+    "answer": "B. Acute appendicitis",
+    "answer_key": "B",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-008",
+    "question": "A 27-year-old with 7 weeks of amenorrhea has unilateral pelvic pain, vaginal spotting, a positive pregnancy test, and no intrauterine pregnancy on transvaginal ultrasound despite a beta-hCG above the discriminatory level. What is the most likely diagnosis?\nA. Ectopic pregnancy\nB. Threatened abortion\nC. Placenta previa\nD. Normal early pregnancy",
+    "query": "A 27-year-old with 7 weeks of amenorrhea has unilateral pelvic pain, vaginal spotting, a positive pregnancy test, and no intrauterine pregnancy on transvaginal ultrasound despite a beta-hCG above the discriminatory level. What is the most likely diagnosis?\nA. Ectopic pregnancy\nB. Threatened abortion\nC. Placenta previa\nD. Normal early pregnancy\nChoose the correct option.",
+    "options": [
+      "A. Ectopic pregnancy",
+      "B. Threatened abortion",
+      "C. Placenta previa",
+      "D. Normal early pregnancy"
+    ],
+    "solution": "The combination strongly indicates an ectopic pregnancy.",
+    "explanation": "The combination strongly indicates an ectopic pregnancy.",
+    "answer": "A. Ectopic pregnancy",
+    "answer_key": "A",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-009",
+    "question": "A college student has fever, severe headache, neck stiffness, photophobia, and a nonblanching petechial rash. After blood cultures, what treatment should be started immediately?\nA. Oral acyclovir alone\nB. Observation only\nC. Antituberculous therapy only\nD. Empiric intravenous antibiotics",
+    "query": "A college student has fever, severe headache, neck stiffness, photophobia, and a nonblanching petechial rash. After blood cultures, what treatment should be started immediately?\nA. Oral acyclovir alone\nB. Observation only\nC. Antituberculous therapy only\nD. Empiric intravenous antibiotics\nChoose the correct option.",
+    "options": [
+      "A. Oral acyclovir alone",
+      "B. Observation only",
+      "C. Antituberculous therapy only",
+      "D. Empiric intravenous antibiotics"
+    ],
+    "solution": "Suspected meningococcal meningitis requires immediate empiric intravenous antibacterial therapy.",
+    "explanation": "Suspected meningococcal meningitis requires immediate empiric intravenous antibacterial therapy.",
+    "answer": "D. Empiric intravenous antibiotics",
+    "answer_key": "D",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-010",
+    "question": "Minutes after eating peanuts, a patient develops urticaria, wheezing, hypotension, and lip swelling. What is the first-line treatment?\nA. Inhaled steroid only\nB. Intravenous insulin\nC. Intramuscular epinephrine\nD. Oral diphenhydramine only",
+    "query": "Minutes after eating peanuts, a patient develops urticaria, wheezing, hypotension, and lip swelling. What is the first-line treatment?\nA. Inhaled steroid only\nB. Intravenous insulin\nC. Intramuscular epinephrine\nD. Oral diphenhydramine only\nChoose the correct option.",
+    "options": [
+      "A. Inhaled steroid only",
+      "B. Intravenous insulin",
+      "C. Intramuscular epinephrine",
+      "D. Oral diphenhydramine only"
+    ],
+    "solution": "Anaphylaxis with airway and circulatory involvement is treated first with intramuscular epinephrine.",
+    "explanation": "Anaphylaxis with airway and circulatory involvement is treated first with intramuscular epinephrine.",
+    "answer": "C. Intramuscular epinephrine",
+    "answer_key": "C",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-011",
+    "question": "A teenager with type 1 diabetes has vomiting, abdominal pain, deep rapid breathing, glucose 480 mg/dL, high anion-gap metabolic acidosis, and ketones. After initial isotonic fluids, which therapy is essential?\nA. Long-acting insulin only\nB. Intravenous regular insulin\nC. Oral metformin\nD. Sodium restriction",
+    "query": "A teenager with type 1 diabetes has vomiting, abdominal pain, deep rapid breathing, glucose 480 mg/dL, high anion-gap metabolic acidosis, and ketones. After initial isotonic fluids, which therapy is essential?\nA. Long-acting insulin only\nB. Intravenous regular insulin\nC. Oral metformin\nD. Sodium restriction\nChoose the correct option.",
+    "options": [
+      "A. Long-acting insulin only",
+      "B. Intravenous regular insulin",
+      "C. Oral metformin",
+      "D. Sodium restriction"
+    ],
+    "solution": "Diabetic ketoacidosis requires fluids, intravenous insulin, and electrolyte monitoring, especially potassium.",
+    "explanation": "Diabetic ketoacidosis requires fluids, intravenous insulin, and electrolyte monitoring, especially potassium.",
+    "answer": "B. Intravenous regular insulin",
+    "answer_key": "B",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-012",
+    "question": "A woman 5 days after hip surgery develops sudden dyspnea, pleuritic chest pain, tachycardia, and hypoxemia. Which diagnosis is most likely?\nA. Pulmonary embolism\nB. Lobar pneumonia\nC. Stable angina\nD. Mitral stenosis",
+    "query": "A woman 5 days after hip surgery develops sudden dyspnea, pleuritic chest pain, tachycardia, and hypoxemia. Which diagnosis is most likely?\nA. Pulmonary embolism\nB. Lobar pneumonia\nC. Stable angina\nD. Mitral stenosis\nChoose the correct option.",
+    "options": [
+      "A. Pulmonary embolism",
+      "B. Lobar pneumonia",
+      "C. Stable angina",
+      "D. Mitral stenosis"
+    ],
+    "solution": "Recent surgery and acute pleuritic hypoxemia strongly suggest pulmonary embolism.",
+    "explanation": "Recent surgery and acute pleuritic hypoxemia strongly suggest pulmonary embolism.",
+    "answer": "A. Pulmonary embolism",
+    "answer_key": "A",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-013",
+    "question": "A 70-year-old develops aphasia and right arm weakness 70 minutes ago. CT shows no hemorrhage, glucose is normal, and there are no contraindications. Which treatment is appropriate?\nA. Delay all treatment for 24 hours\nB. Immediate warfarin loading\nC. Oral antibiotics\nD. Intravenous thrombolytic therapy",
+    "query": "A 70-year-old develops aphasia and right arm weakness 70 minutes ago. CT shows no hemorrhage, glucose is normal, and there are no contraindications. Which treatment is appropriate?\nA. Delay all treatment for 24 hours\nB. Immediate warfarin loading\nC. Oral antibiotics\nD. Intravenous thrombolytic therapy\nChoose the correct option.",
+    "options": [
+      "A. Delay all treatment for 24 hours",
+      "B. Immediate warfarin loading",
+      "C. Oral antibiotics",
+      "D. Intravenous thrombolytic therapy"
+    ],
+    "solution": "An eligible patient with acute ischemic stroke within the treatment window should receive intravenous thrombolysis.",
+    "explanation": "An eligible patient with acute ischemic stroke within the treatment window should receive intravenous thrombolysis.",
+    "answer": "D. Intravenous thrombolytic therapy",
+    "answer_key": "D",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-014",
+    "question": "After blunt chest trauma, a patient is hypotensive with distended neck veins, absent breath sounds on the left, and tracheal deviation to the right. What is the immediate next step?\nA. Give a beta blocker\nB. Perform bronchoscopy first\nC. Needle decompression of the left chest\nD. Wait for chest radiography",
+    "query": "After blunt chest trauma, a patient is hypotensive with distended neck veins, absent breath sounds on the left, and tracheal deviation to the right. What is the immediate next step?\nA. Give a beta blocker\nB. Perform bronchoscopy first\nC. Needle decompression of the left chest\nD. Wait for chest radiography\nChoose the correct option.",
+    "options": [
+      "A. Give a beta blocker",
+      "B. Perform bronchoscopy first",
+      "C. Needle decompression of the left chest",
+      "D. Wait for chest radiography"
+    ],
+    "solution": "This is tension pneumothorax; immediate decompression must precede imaging.",
+    "explanation": "This is tension pneumothorax; immediate decompression must precede imaging.",
+    "answer": "C. Needle decompression of the left chest",
+    "answer_key": "C",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-015",
+    "question": "A 16-year-old has episodic wheezing and cough triggered by exercise. Spirometry shows airflow obstruction that improves substantially after albuterol. Which diagnosis is most likely?\nA. Pneumothorax\nB. Asthma\nC. Pulmonary fibrosis\nD. Bronchiectasis",
+    "query": "A 16-year-old has episodic wheezing and cough triggered by exercise. Spirometry shows airflow obstruction that improves substantially after albuterol. Which diagnosis is most likely?\nA. Pneumothorax\nB. Asthma\nC. Pulmonary fibrosis\nD. Bronchiectasis\nChoose the correct option.",
+    "options": [
+      "A. Pneumothorax",
+      "B. Asthma",
+      "C. Pulmonary fibrosis",
+      "D. Bronchiectasis"
+    ],
+    "solution": "Variable reversible airflow obstruction is characteristic of asthma.",
+    "explanation": "Variable reversible airflow obstruction is characteristic of asthma.",
+    "answer": "B. Asthma",
+    "answer_key": "B",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-016",
+    "question": "A 68-year-old with a 50-pack-year smoking history has progressive dyspnea, chronic cough, and a post-bronchodilator FEV1/FVC ratio of 0.58. Which diagnosis is most likely?\nA. Chronic obstructive pulmonary disease\nB. Asthma with fully normal spirometry\nC. Restrictive lung disease\nD. Pulmonary embolism",
+    "query": "A 68-year-old with a 50-pack-year smoking history has progressive dyspnea, chronic cough, and a post-bronchodilator FEV1/FVC ratio of 0.58. Which diagnosis is most likely?\nA. Chronic obstructive pulmonary disease\nB. Asthma with fully normal spirometry\nC. Restrictive lung disease\nD. Pulmonary embolism\nChoose the correct option.",
+    "options": [
+      "A. Chronic obstructive pulmonary disease",
+      "B. Asthma with fully normal spirometry",
+      "C. Restrictive lung disease",
+      "D. Pulmonary embolism"
+    ],
+    "solution": "Persistent post-bronchodilator airflow obstruction in a heavy smoker supports COPD.",
+    "explanation": "Persistent post-bronchodilator airflow obstruction in a heavy smoker supports COPD.",
+    "answer": "A. Chronic obstructive pulmonary disease",
+    "answer_key": "A",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-017",
+    "question": "A patient has exertional dyspnea, orthopnea, bibasilar crackles, elevated jugular venous pressure, and bilateral leg edema. Which syndrome best explains these findings?\nA. Isolated nephrolithiasis\nB. Acute appendicitis\nC. Hyperventilation syndrome\nD. Congestive heart failure",
+    "query": "A patient has exertional dyspnea, orthopnea, bibasilar crackles, elevated jugular venous pressure, and bilateral leg edema. Which syndrome best explains these findings?\nA. Isolated nephrolithiasis\nB. Acute appendicitis\nC. Hyperventilation syndrome\nD. Congestive heart failure\nChoose the correct option.",
+    "options": [
+      "A. Isolated nephrolithiasis",
+      "B. Acute appendicitis",
+      "C. Hyperventilation syndrome",
+      "D. Congestive heart failure"
+    ],
+    "solution": "Pulmonary and systemic venous congestion together indicate heart failure.",
+    "explanation": "Pulmonary and systemic venous congestion together indicate heart failure.",
+    "answer": "D. Congestive heart failure",
+    "answer_key": "D",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-018",
+    "question": "A person who injects drugs has fever, a new holosystolic murmur at the left lower sternal border, and multiple septic pulmonary emboli. Which valve is most likely infected?\nA. Aortic valve\nB. Pulmonic valve only in congenital disease\nC. Tricuspid valve\nD. Mitral valve",
+    "query": "A person who injects drugs has fever, a new holosystolic murmur at the left lower sternal border, and multiple septic pulmonary emboli. Which valve is most likely infected?\nA. Aortic valve\nB. Pulmonic valve only in congenital disease\nC. Tricuspid valve\nD. Mitral valve\nChoose the correct option.",
+    "options": [
+      "A. Aortic valve",
+      "B. Pulmonic valve only in congenital disease",
+      "C. Tricuspid valve",
+      "D. Mitral valve"
+    ],
+    "solution": "Injection-associated right-sided endocarditis most commonly involves the tricuspid valve.",
+    "explanation": "Injection-associated right-sided endocarditis most commonly involves the tricuspid valve.",
+    "answer": "C. Tricuspid valve",
+    "answer_key": "C",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-019",
+    "question": "A woman has fever, dysuria, flank pain, nausea, and costovertebral-angle tenderness. Which diagnosis is most likely?\nA. Urethral diverticulum\nB. Acute pyelonephritis\nC. Uncomplicated cystitis only\nD. Nephrotic syndrome",
+    "query": "A woman has fever, dysuria, flank pain, nausea, and costovertebral-angle tenderness. Which diagnosis is most likely?\nA. Urethral diverticulum\nB. Acute pyelonephritis\nC. Uncomplicated cystitis only\nD. Nephrotic syndrome\nChoose the correct option.",
+    "options": [
+      "A. Urethral diverticulum",
+      "B. Acute pyelonephritis",
+      "C. Uncomplicated cystitis only",
+      "D. Nephrotic syndrome"
+    ],
+    "solution": "Fever and flank/CVA pain with urinary symptoms indicate upper urinary tract infection.",
+    "explanation": "Fever and flank/CVA pain with urinary symptoms indicate upper urinary tract infection.",
+    "answer": "B. Acute pyelonephritis",
+    "answer_key": "B",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-020",
+    "question": "Two weeks after streptococcal pharyngitis, a child develops periorbital edema, hypertension, cola-colored urine, and red blood cell casts. Which diagnosis is most likely?\nA. Poststreptococcal glomerulonephritis\nB. Minimal change disease\nC. Diabetes insipidus\nD. Renal artery stenosis",
+    "query": "Two weeks after streptococcal pharyngitis, a child develops periorbital edema, hypertension, cola-colored urine, and red blood cell casts. Which diagnosis is most likely?\nA. Poststreptococcal glomerulonephritis\nB. Minimal change disease\nC. Diabetes insipidus\nD. Renal artery stenosis\nChoose the correct option.",
+    "options": [
+      "A. Poststreptococcal glomerulonephritis",
+      "B. Minimal change disease",
+      "C. Diabetes insipidus",
+      "D. Renal artery stenosis"
+    ],
+    "solution": "The delayed nephritic syndrome after streptococcal infection is poststreptococcal glomerulonephritis.",
+    "explanation": "The delayed nephritic syndrome after streptococcal infection is poststreptococcal glomerulonephritis.",
+    "answer": "A. Poststreptococcal glomerulonephritis",
+    "answer_key": "A",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-021",
+    "question": "A child develops generalized edema, heavy proteinuria, hypoalbuminemia, and hyperlipidemia after a mild respiratory illness. Kidney function is preserved. Which diagnosis is most likely?\nA. Acute tubular necrosis\nB. Postrenal obstruction\nC. Renal cell carcinoma\nD. Minimal change disease",
+    "query": "A child develops generalized edema, heavy proteinuria, hypoalbuminemia, and hyperlipidemia after a mild respiratory illness. Kidney function is preserved. Which diagnosis is most likely?\nA. Acute tubular necrosis\nB. Postrenal obstruction\nC. Renal cell carcinoma\nD. Minimal change disease\nChoose the correct option.",
+    "options": [
+      "A. Acute tubular necrosis",
+      "B. Postrenal obstruction",
+      "C. Renal cell carcinoma",
+      "D. Minimal change disease"
+    ],
+    "solution": "Minimal change disease is the common childhood cause of nephrotic syndrome.",
+    "explanation": "Minimal change disease is the common childhood cause of nephrotic syndrome.",
+    "answer": "D. Minimal change disease",
+    "answer_key": "D",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-022",
+    "question": "A patient with fatigue and pica has hemoglobin 9 g/dL, low MCV, low ferritin, and increased total iron-binding capacity. Which deficiency is present?\nA. Folate excess\nB. Copper excess\nC. Iron deficiency\nD. Vitamin B12 deficiency",
+    "query": "A patient with fatigue and pica has hemoglobin 9 g/dL, low MCV, low ferritin, and increased total iron-binding capacity. Which deficiency is present?\nA. Folate excess\nB. Copper excess\nC. Iron deficiency\nD. Vitamin B12 deficiency\nChoose the correct option.",
+    "options": [
+      "A. Folate excess",
+      "B. Copper excess",
+      "C. Iron deficiency",
+      "D. Vitamin B12 deficiency"
+    ],
+    "solution": "Low ferritin with microcytosis and high iron-binding capacity indicates iron deficiency.",
+    "explanation": "Low ferritin with microcytosis and high iron-binding capacity indicates iron deficiency.",
+    "answer": "C. Iron deficiency",
+    "answer_key": "C",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-023",
+    "question": "A strict vegan has paresthesias, loss of vibration sense, macrocytic anemia, and hypersegmented neutrophils. Which deficiency is most likely?\nA. Vitamin K deficiency\nB. Vitamin B12 deficiency\nC. Iron deficiency\nD. Vitamin C deficiency",
+    "query": "A strict vegan has paresthesias, loss of vibration sense, macrocytic anemia, and hypersegmented neutrophils. Which deficiency is most likely?\nA. Vitamin K deficiency\nB. Vitamin B12 deficiency\nC. Iron deficiency\nD. Vitamin C deficiency\nChoose the correct option.",
+    "options": [
+      "A. Vitamin K deficiency",
+      "B. Vitamin B12 deficiency",
+      "C. Iron deficiency",
+      "D. Vitamin C deficiency"
+    ],
+    "solution": "Neurologic deficits plus megaloblastic anemia are characteristic of vitamin B12 deficiency.",
+    "explanation": "Neurologic deficits plus megaloblastic anemia are characteristic of vitamin B12 deficiency.",
+    "answer": "B. Vitamin B12 deficiency",
+    "answer_key": "B",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-024",
+    "question": "A child has petechiae after a viral illness, an isolated platelet count of 18,000/mm3, and otherwise normal blood counts and coagulation tests. Which diagnosis is most likely?\nA. Immune thrombocytopenia\nB. Hemophilia A\nC. Disseminated intravascular coagulation\nD. Aplastic anemia",
+    "query": "A child has petechiae after a viral illness, an isolated platelet count of 18,000/mm3, and otherwise normal blood counts and coagulation tests. Which diagnosis is most likely?\nA. Immune thrombocytopenia\nB. Hemophilia A\nC. Disseminated intravascular coagulation\nD. Aplastic anemia\nChoose the correct option.",
+    "options": [
+      "A. Immune thrombocytopenia",
+      "B. Hemophilia A",
+      "C. Disseminated intravascular coagulation",
+      "D. Aplastic anemia"
+    ],
+    "solution": "Isolated thrombocytopenia after a viral illness is typical of immune thrombocytopenia.",
+    "explanation": "Isolated thrombocytopenia after a viral illness is typical of immune thrombocytopenia.",
+    "answer": "A. Immune thrombocytopenia",
+    "answer_key": "A",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-025",
+    "question": "An adult has confusion, fever, renal dysfunction, thrombocytopenia, microangiopathic hemolytic anemia, and schistocytes. Which treatment is urgent?\nA. Platelet transfusion alone\nB. Oral iron\nC. Splenectomy before stabilization\nD. Plasma exchange",
+    "query": "An adult has confusion, fever, renal dysfunction, thrombocytopenia, microangiopathic hemolytic anemia, and schistocytes. Which treatment is urgent?\nA. Platelet transfusion alone\nB. Oral iron\nC. Splenectomy before stabilization\nD. Plasma exchange\nChoose the correct option.",
+    "options": [
+      "A. Platelet transfusion alone",
+      "B. Oral iron",
+      "C. Splenectomy before stabilization",
+      "D. Plasma exchange"
+    ],
+    "solution": "Thrombotic thrombocytopenic purpura requires urgent plasma exchange.",
+    "explanation": "Thrombotic thrombocytopenic purpura requires urgent plasma exchange.",
+    "answer": "D. Plasma exchange",
+    "answer_key": "D",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-026",
+    "question": "A septic patient bleeds from venipuncture sites and has thrombocytopenia, prolonged PT and PTT, low fibrinogen, and high D-dimer. Which diagnosis is most likely?\nA. Hemophilia A\nB. Vitamin B12 deficiency\nC. Disseminated intravascular coagulation\nD. Immune thrombocytopenia",
+    "query": "A septic patient bleeds from venipuncture sites and has thrombocytopenia, prolonged PT and PTT, low fibrinogen, and high D-dimer. Which diagnosis is most likely?\nA. Hemophilia A\nB. Vitamin B12 deficiency\nC. Disseminated intravascular coagulation\nD. Immune thrombocytopenia\nChoose the correct option.",
+    "options": [
+      "A. Hemophilia A",
+      "B. Vitamin B12 deficiency",
+      "C. Disseminated intravascular coagulation",
+      "D. Immune thrombocytopenia"
+    ],
+    "solution": "Consumption of platelets and clotting factors with fibrinolysis indicates DIC.",
+    "explanation": "Consumption of platelets and clotting factors with fibrinolysis indicates DIC.",
+    "answer": "C. Disseminated intravascular coagulation",
+    "answer_key": "C",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-027",
+    "question": "A patient has fatigue, cold intolerance, constipation, dry skin, weight gain, high TSH, and low free T4. Which diagnosis is most likely?\nA. Pheochromocytoma\nB. Primary hypothyroidism\nC. Secondary hypothyroidism\nD. Graves disease",
+    "query": "A patient has fatigue, cold intolerance, constipation, dry skin, weight gain, high TSH, and low free T4. Which diagnosis is most likely?\nA. Pheochromocytoma\nB. Primary hypothyroidism\nC. Secondary hypothyroidism\nD. Graves disease\nChoose the correct option.",
+    "options": [
+      "A. Pheochromocytoma",
+      "B. Primary hypothyroidism",
+      "C. Secondary hypothyroidism",
+      "D. Graves disease"
+    ],
+    "solution": "High TSH with low free T4 indicates failure of the thyroid gland itself.",
+    "explanation": "High TSH with low free T4 indicates failure of the thyroid gland itself.",
+    "answer": "B. Primary hypothyroidism",
+    "answer_key": "B",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-028",
+    "question": "A young woman has weight loss, tremor, heat intolerance, diffuse goiter, and exophthalmos. TSH is suppressed. Which diagnosis is most likely?\nA. Graves disease\nB. Hashimoto hypothyroidism\nC. Subacute bacterial thyroiditis\nD. Pituitary failure",
+    "query": "A young woman has weight loss, tremor, heat intolerance, diffuse goiter, and exophthalmos. TSH is suppressed. Which diagnosis is most likely?\nA. Graves disease\nB. Hashimoto hypothyroidism\nC. Subacute bacterial thyroiditis\nD. Pituitary failure\nChoose the correct option.",
+    "options": [
+      "A. Graves disease",
+      "B. Hashimoto hypothyroidism",
+      "C. Subacute bacterial thyroiditis",
+      "D. Pituitary failure"
+    ],
+    "solution": "Hyperthyroidism with diffuse goiter and ophthalmopathy is characteristic of Graves disease.",
+    "explanation": "Hyperthyroidism with diffuse goiter and ophthalmopathy is characteristic of Graves disease.",
+    "answer": "A. Graves disease",
+    "answer_key": "A",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-029",
+    "question": "A patient with known primary adrenal insufficiency presents with vomiting, hypotension, hyponatremia, hyperkalemia, and hypoglycemia during an infection. What is the immediate treatment?\nA. Fluid restriction\nB. Methimazole\nC. Insulin infusion\nD. Intravenous hydrocortisone and isotonic fluids",
+    "query": "A patient with known primary adrenal insufficiency presents with vomiting, hypotension, hyponatremia, hyperkalemia, and hypoglycemia during an infection. What is the immediate treatment?\nA. Fluid restriction\nB. Methimazole\nC. Insulin infusion\nD. Intravenous hydrocortisone and isotonic fluids\nChoose the correct option.",
+    "options": [
+      "A. Fluid restriction",
+      "B. Methimazole",
+      "C. Insulin infusion",
+      "D. Intravenous hydrocortisone and isotonic fluids"
+    ],
+    "solution": "Adrenal crisis requires immediate stress-dose glucocorticoid and volume resuscitation.",
+    "explanation": "Adrenal crisis requires immediate stress-dose glucocorticoid and volume resuscitation.",
+    "answer": "D. Intravenous hydrocortisone and isotonic fluids",
+    "answer_key": "D",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-030",
+    "question": "A patient has proximal muscle weakness, easy bruising, purple abdominal striae, hypertension, and hyperglycemia. Which syndrome is most likely?\nA. Myxedema\nB. Acromegaly\nC. Cushing syndrome\nD. Addison disease",
+    "query": "A patient has proximal muscle weakness, easy bruising, purple abdominal striae, hypertension, and hyperglycemia. Which syndrome is most likely?\nA. Myxedema\nB. Acromegaly\nC. Cushing syndrome\nD. Addison disease\nChoose the correct option.",
+    "options": [
+      "A. Myxedema",
+      "B. Acromegaly",
+      "C. Cushing syndrome",
+      "D. Addison disease"
+    ],
+    "solution": "These findings reflect chronic glucocorticoid excess.",
+    "explanation": "These findings reflect chronic glucocorticoid excess.",
+    "answer": "C. Cushing syndrome",
+    "answer_key": "C",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-031",
+    "question": "After head trauma, a patient produces 8 liters of dilute urine daily, has high serum sodium, and responds to desmopressin. Which diagnosis is most likely?\nA. Primary hyperaldosteronism\nB. Central diabetes insipidus\nC. Nephrogenic diabetes insipidus\nD. SIADH",
+    "query": "After head trauma, a patient produces 8 liters of dilute urine daily, has high serum sodium, and responds to desmopressin. Which diagnosis is most likely?\nA. Primary hyperaldosteronism\nB. Central diabetes insipidus\nC. Nephrogenic diabetes insipidus\nD. SIADH\nChoose the correct option.",
+    "options": [
+      "A. Primary hyperaldosteronism",
+      "B. Central diabetes insipidus",
+      "C. Nephrogenic diabetes insipidus",
+      "D. SIADH"
+    ],
+    "solution": "Response to desmopressin after head trauma indicates deficient central ADH release.",
+    "explanation": "Response to desmopressin after head trauma indicates deficient central ADH release.",
+    "answer": "B. Central diabetes insipidus",
+    "answer_key": "B",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-032",
+    "question": "A patient with small-cell lung cancer has confusion, low serum sodium, low serum osmolality, concentrated urine, and clinical euvolemia. Which diagnosis is most likely?\nA. Syndrome of inappropriate ADH secretion\nB. Diabetes insipidus\nC. Osmotic diuresis\nD. Primary hyperaldosteronism",
+    "query": "A patient with small-cell lung cancer has confusion, low serum sodium, low serum osmolality, concentrated urine, and clinical euvolemia. Which diagnosis is most likely?\nA. Syndrome of inappropriate ADH secretion\nB. Diabetes insipidus\nC. Osmotic diuresis\nD. Primary hyperaldosteronism\nChoose the correct option.",
+    "options": [
+      "A. Syndrome of inappropriate ADH secretion",
+      "B. Diabetes insipidus",
+      "C. Osmotic diuresis",
+      "D. Primary hyperaldosteronism"
+    ],
+    "solution": "Euvolemic hypotonic hyponatremia with inappropriately concentrated urine suggests SIADH.",
+    "explanation": "Euvolemic hypotonic hyponatremia with inappropriately concentrated urine suggests SIADH.",
+    "answer": "A. Syndrome of inappropriate ADH secretion",
+    "answer_key": "A",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-033",
+    "question": "A patient has severe epigastric pain radiating to the back, vomiting, and a lipase level four times the upper limit of normal. Which diagnosis is most likely?\nA. Acute appendicitis\nB. Uncomplicated cystitis\nC. Ulcerative colitis\nD. Acute pancreatitis",
+    "query": "A patient has severe epigastric pain radiating to the back, vomiting, and a lipase level four times the upper limit of normal. Which diagnosis is most likely?\nA. Acute appendicitis\nB. Uncomplicated cystitis\nC. Ulcerative colitis\nD. Acute pancreatitis\nChoose the correct option.",
+    "options": [
+      "A. Acute appendicitis",
+      "B. Uncomplicated cystitis",
+      "C. Ulcerative colitis",
+      "D. Acute pancreatitis"
+    ],
+    "solution": "Typical pain plus markedly elevated lipase supports acute pancreatitis.",
+    "explanation": "Typical pain plus markedly elevated lipase supports acute pancreatitis.",
+    "answer": "D. Acute pancreatitis",
+    "answer_key": "D",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-034",
+    "question": "A patient develops steady right upper-quadrant pain, fever, leukocytosis, and inspiratory arrest during palpation beneath the right costal margin. Which diagnosis is most likely?\nA. Renal colic\nB. Gastric reflux\nC. Acute cholecystitis\nD. Acute hepatitis without gallbladder disease",
+    "query": "A patient develops steady right upper-quadrant pain, fever, leukocytosis, and inspiratory arrest during palpation beneath the right costal margin. Which diagnosis is most likely?\nA. Renal colic\nB. Gastric reflux\nC. Acute cholecystitis\nD. Acute hepatitis without gallbladder disease\nChoose the correct option.",
+    "options": [
+      "A. Renal colic",
+      "B. Gastric reflux",
+      "C. Acute cholecystitis",
+      "D. Acute hepatitis without gallbladder disease"
+    ],
+    "solution": "Prolonged RUQ pain, fever, and a positive Murphy sign indicate acute cholecystitis.",
+    "explanation": "Prolonged RUQ pain, fever, and a positive Murphy sign indicate acute cholecystitis.",
+    "answer": "C. Acute cholecystitis",
+    "answer_key": "C",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-035",
+    "question": "A patient has fever, jaundice, and right upper-quadrant pain. Which diagnosis is most likely?\nA. Viral rhinitis\nB. Ascending cholangitis\nC. Acute appendicitis\nD. Nephrotic syndrome",
+    "query": "A patient has fever, jaundice, and right upper-quadrant pain. Which diagnosis is most likely?\nA. Viral rhinitis\nB. Ascending cholangitis\nC. Acute appendicitis\nD. Nephrotic syndrome\nChoose the correct option.",
+    "options": [
+      "A. Viral rhinitis",
+      "B. Ascending cholangitis",
+      "C. Acute appendicitis",
+      "D. Nephrotic syndrome"
+    ],
+    "solution": "Charcot triad indicates ascending cholangitis.",
+    "explanation": "Charcot triad indicates ascending cholangitis.",
+    "answer": "B. Ascending cholangitis",
+    "answer_key": "B",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-036",
+    "question": "A patient with prior abdominal surgery has colicky pain, vomiting, distention, high-pitched bowel sounds, and dilated small-bowel loops with air-fluid levels. Which diagnosis is most likely?\nA. Small-bowel obstruction\nB. Acute pancreatitis\nC. Toxic megacolon\nD. Irritable bowel syndrome",
+    "query": "A patient with prior abdominal surgery has colicky pain, vomiting, distention, high-pitched bowel sounds, and dilated small-bowel loops with air-fluid levels. Which diagnosis is most likely?\nA. Small-bowel obstruction\nB. Acute pancreatitis\nC. Toxic megacolon\nD. Irritable bowel syndrome\nChoose the correct option.",
+    "options": [
+      "A. Small-bowel obstruction",
+      "B. Acute pancreatitis",
+      "C. Toxic megacolon",
+      "D. Irritable bowel syndrome"
+    ],
+    "solution": "Adhesions after surgery commonly cause mechanical small-bowel obstruction with these findings.",
+    "explanation": "Adhesions after surgery commonly cause mechanical small-bowel obstruction with these findings.",
+    "answer": "A. Small-bowel obstruction",
+    "answer_key": "A",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-037",
+    "question": "A young adult has recurrent bloody diarrhea, urgency, and continuous mucosal inflammation beginning at the rectum. Which diagnosis is most likely?\nA. Crohn disease\nB. Celiac disease\nC. Diverticulosis\nD. Ulcerative colitis",
+    "query": "A young adult has recurrent bloody diarrhea, urgency, and continuous mucosal inflammation beginning at the rectum. Which diagnosis is most likely?\nA. Crohn disease\nB. Celiac disease\nC. Diverticulosis\nD. Ulcerative colitis\nChoose the correct option.",
+    "options": [
+      "A. Crohn disease",
+      "B. Celiac disease",
+      "C. Diverticulosis",
+      "D. Ulcerative colitis"
+    ],
+    "solution": "Continuous colonic mucosal disease beginning at the rectum is typical of ulcerative colitis.",
+    "explanation": "Continuous colonic mucosal disease beginning at the rectum is typical of ulcerative colitis.",
+    "answer": "D. Ulcerative colitis",
+    "answer_key": "D",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-038",
+    "question": "A patient has chronic diarrhea, weight loss, perianal fistulas, and patchy transmural inflammation anywhere from mouth to anus. Which diagnosis is most likely?\nA. Lactose intolerance only\nB. Acute appendicitis\nC. Crohn disease\nD. Ulcerative colitis",
+    "query": "A patient has chronic diarrhea, weight loss, perianal fistulas, and patchy transmural inflammation anywhere from mouth to anus. Which diagnosis is most likely?\nA. Lactose intolerance only\nB. Acute appendicitis\nC. Crohn disease\nD. Ulcerative colitis\nChoose the correct option.",
+    "options": [
+      "A. Lactose intolerance only",
+      "B. Acute appendicitis",
+      "C. Crohn disease",
+      "D. Ulcerative colitis"
+    ],
+    "solution": "Skip lesions, transmural inflammation, and fistulas characterize Crohn disease.",
+    "explanation": "Skip lesions, transmural inflammation, and fistulas characterize Crohn disease.",
+    "answer": "C. Crohn disease",
+    "answer_key": "C",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-039",
+    "question": "A patient has chronic diarrhea, iron deficiency, an itchy vesicular rash on extensor surfaces, and positive IgA anti-tissue-transglutaminase antibodies. Which treatment is appropriate?\nA. Long-term broad-spectrum antibiotics\nB. A lifelong gluten-free diet\nC. A lactose-only diet\nD. Immediate colectomy",
+    "query": "A patient has chronic diarrhea, iron deficiency, an itchy vesicular rash on extensor surfaces, and positive IgA anti-tissue-transglutaminase antibodies. Which treatment is appropriate?\nA. Long-term broad-spectrum antibiotics\nB. A lifelong gluten-free diet\nC. A lactose-only diet\nD. Immediate colectomy\nChoose the correct option.",
+    "options": [
+      "A. Long-term broad-spectrum antibiotics",
+      "B. A lifelong gluten-free diet",
+      "C. A lactose-only diet",
+      "D. Immediate colectomy"
+    ],
+    "solution": "Celiac disease is treated by strict gluten avoidance.",
+    "explanation": "Celiac disease is treated by strict gluten avoidance.",
+    "answer": "B. A lifelong gluten-free diet",
+    "answer_key": "B",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-040",
+    "question": "An older adult has knee pain worse with activity, brief morning stiffness, crepitus, and asymmetric joint-space narrowing. Which diagnosis is most likely?\nA. Osteoarthritis\nB. Rheumatoid arthritis\nC. Septic arthritis\nD. Gout",
+    "query": "An older adult has knee pain worse with activity, brief morning stiffness, crepitus, and asymmetric joint-space narrowing. Which diagnosis is most likely?\nA. Osteoarthritis\nB. Rheumatoid arthritis\nC. Septic arthritis\nD. Gout\nChoose the correct option.",
+    "options": [
+      "A. Osteoarthritis",
+      "B. Rheumatoid arthritis",
+      "C. Septic arthritis",
+      "D. Gout"
+    ],
+    "solution": "Mechanical pain, brief stiffness, and degenerative radiographic changes indicate osteoarthritis.",
+    "explanation": "Mechanical pain, brief stiffness, and degenerative radiographic changes indicate osteoarthritis.",
+    "answer": "A. Osteoarthritis",
+    "answer_key": "A",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-041",
+    "question": "A patient has symmetric MCP and PIP swelling, morning stiffness lasting over an hour, and positive anti-CCP antibodies. Which diagnosis is most likely?\nA. Osteoarthritis\nB. Gout\nC. Fibromyalgia\nD. Rheumatoid arthritis",
+    "query": "A patient has symmetric MCP and PIP swelling, morning stiffness lasting over an hour, and positive anti-CCP antibodies. Which diagnosis is most likely?\nA. Osteoarthritis\nB. Gout\nC. Fibromyalgia\nD. Rheumatoid arthritis\nChoose the correct option.",
+    "options": [
+      "A. Osteoarthritis",
+      "B. Gout",
+      "C. Fibromyalgia",
+      "D. Rheumatoid arthritis"
+    ],
+    "solution": "Symmetric inflammatory small-joint arthritis with anti-CCP antibodies indicates rheumatoid arthritis.",
+    "explanation": "Symmetric inflammatory small-joint arthritis with anti-CCP antibodies indicates rheumatoid arthritis.",
+    "answer": "D. Rheumatoid arthritis",
+    "answer_key": "D",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-042",
+    "question": "A man develops sudden severe pain and redness of the first metatarsophalangeal joint. Synovial fluid shows needle-shaped, negatively birefringent crystals. Which diagnosis is most likely?\nA. Septic bursitis\nB. Rheumatoid arthritis\nC. Gout\nD. Pseudogout",
+    "query": "A man develops sudden severe pain and redness of the first metatarsophalangeal joint. Synovial fluid shows needle-shaped, negatively birefringent crystals. Which diagnosis is most likely?\nA. Septic bursitis\nB. Rheumatoid arthritis\nC. Gout\nD. Pseudogout\nChoose the correct option.",
+    "options": [
+      "A. Septic bursitis",
+      "B. Rheumatoid arthritis",
+      "C. Gout",
+      "D. Pseudogout"
+    ],
+    "solution": "Monosodium urate crystals are needle-shaped and negatively birefringent.",
+    "explanation": "Monosodium urate crystals are needle-shaped and negatively birefringent.",
+    "answer": "C. Gout",
+    "answer_key": "C",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-043",
+    "question": "A patient has an acutely hot swollen knee, fever, and purulent synovial fluid with a very high neutrophil count. What is the most appropriate next step?\nA. Reassurance only\nB. Prompt intravenous antibiotics and joint drainage\nC. Exercise without treatment\nD. Allopurinol alone",
+    "query": "A patient has an acutely hot swollen knee, fever, and purulent synovial fluid with a very high neutrophil count. What is the most appropriate next step?\nA. Reassurance only\nB. Prompt intravenous antibiotics and joint drainage\nC. Exercise without treatment\nD. Allopurinol alone\nChoose the correct option.",
+    "options": [
+      "A. Reassurance only",
+      "B. Prompt intravenous antibiotics and joint drainage",
+      "C. Exercise without treatment",
+      "D. Allopurinol alone"
+    ],
+    "solution": "Septic arthritis threatens the joint and requires urgent antibiotics plus drainage.",
+    "explanation": "Septic arthritis threatens the joint and requires urgent antibiotics plus drainage.",
+    "answer": "B. Prompt intravenous antibiotics and joint drainage",
+    "answer_key": "B",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-044",
+    "question": "A child has fever and focal metaphyseal bone pain. MRI shows marrow inflammation, and blood cultures grow Staphylococcus aureus. Which diagnosis is most likely?\nA. Acute osteomyelitis\nB. Osteoarthritis\nC. Osteoporosis\nD. Ewing sarcoma without infection",
+    "query": "A child has fever and focal metaphyseal bone pain. MRI shows marrow inflammation, and blood cultures grow Staphylococcus aureus. Which diagnosis is most likely?\nA. Acute osteomyelitis\nB. Osteoarthritis\nC. Osteoporosis\nD. Ewing sarcoma without infection\nChoose the correct option.",
+    "options": [
+      "A. Acute osteomyelitis",
+      "B. Osteoarthritis",
+      "C. Osteoporosis",
+      "D. Ewing sarcoma without infection"
+    ],
+    "solution": "Focal bone infection with S aureus and marrow inflammation is acute osteomyelitis.",
+    "explanation": "Focal bone infection with S aureus and marrow inflammation is acute osteomyelitis.",
+    "answer": "A. Acute osteomyelitis",
+    "answer_key": "A",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-045",
+    "question": "For 6 weeks, a patient has depressed mood, loss of interest, insomnia, low energy, guilt, poor concentration, and no history of mania. Which diagnosis is most likely?\nA. Bipolar I disorder\nB. Cyclothymic disorder\nC. Delirium\nD. Major depressive disorder",
+    "query": "For 6 weeks, a patient has depressed mood, loss of interest, insomnia, low energy, guilt, poor concentration, and no history of mania. Which diagnosis is most likely?\nA. Bipolar I disorder\nB. Cyclothymic disorder\nC. Delirium\nD. Major depressive disorder\nChoose the correct option.",
+    "options": [
+      "A. Bipolar I disorder",
+      "B. Cyclothymic disorder",
+      "C. Delirium",
+      "D. Major depressive disorder"
+    ],
+    "solution": "At least two weeks of depressive symptoms including low mood or anhedonia supports major depressive disorder.",
+    "explanation": "At least two weeks of depressive symptoms including low mood or anhedonia supports major depressive disorder.",
+    "answer": "D. Major depressive disorder",
+    "answer_key": "D",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-046",
+    "question": "For 8 days, a patient has elevated mood, little need for sleep, pressured speech, grandiosity, and severe impairment requiring hospitalization. Which episode is present?\nA. Major depressive episode\nB. Panic attack\nC. Manic episode\nD. Hypomanic episode",
+    "query": "For 8 days, a patient has elevated mood, little need for sleep, pressured speech, grandiosity, and severe impairment requiring hospitalization. Which episode is present?\nA. Major depressive episode\nB. Panic attack\nC. Manic episode\nD. Hypomanic episode\nChoose the correct option.",
+    "options": [
+      "A. Major depressive episode",
+      "B. Panic attack",
+      "C. Manic episode",
+      "D. Hypomanic episode"
+    ],
+    "solution": "Marked impairment or hospitalization with sustained elevated mood defines mania.",
+    "explanation": "Marked impairment or hospitalization with sustained elevated mood defines mania.",
+    "answer": "C. Manic episode",
+    "answer_key": "C",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-047",
+    "question": "A patient has 8 months of auditory hallucinations, delusions, disorganized speech, and social dysfunction, with mood symptoms present only briefly. Which diagnosis is most likely?\nA. Delusional disorder\nB. Schizophrenia\nC. Brief psychotic disorder\nD. Schizoaffective disorder",
+    "query": "A patient has 8 months of auditory hallucinations, delusions, disorganized speech, and social dysfunction, with mood symptoms present only briefly. Which diagnosis is most likely?\nA. Delusional disorder\nB. Schizophrenia\nC. Brief psychotic disorder\nD. Schizoaffective disorder\nChoose the correct option.",
+    "options": [
+      "A. Delusional disorder",
+      "B. Schizophrenia",
+      "C. Brief psychotic disorder",
+      "D. Schizoaffective disorder"
+    ],
+    "solution": "Chronic psychosis with functional decline and no predominant mood syndrome supports schizophrenia.",
+    "explanation": "Chronic psychosis with functional decline and no predominant mood syndrome supports schizophrenia.",
+    "answer": "B. Schizophrenia",
+    "answer_key": "B",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-048",
+    "question": "An hospitalized older adult develops an acute fluctuating disturbance of attention, disorientation, and visual hallucinations during a urinary infection. Which diagnosis is most likely?\nA. Delirium\nB. Alzheimer disease\nC. Schizophrenia\nD. Persistent depressive disorder",
+    "query": "An hospitalized older adult develops an acute fluctuating disturbance of attention, disorientation, and visual hallucinations during a urinary infection. Which diagnosis is most likely?\nA. Delirium\nB. Alzheimer disease\nC. Schizophrenia\nD. Persistent depressive disorder\nChoose the correct option.",
+    "options": [
+      "A. Delirium",
+      "B. Alzheimer disease",
+      "C. Schizophrenia",
+      "D. Persistent depressive disorder"
+    ],
+    "solution": "Acute, fluctuating inattention triggered by illness is delirium.",
+    "explanation": "Acute, fluctuating inattention triggered by illness is delirium.",
+    "answer": "A. Delirium",
+    "answer_key": "A",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-049",
+    "question": "An older adult has years of progressive short-term memory loss followed by impaired language and daily functioning, without early motor findings or fluctuating attention. Which diagnosis is most likely?\nA. Delirium\nB. Normal grief\nC. Acute intoxication\nD. Alzheimer disease",
+    "query": "An older adult has years of progressive short-term memory loss followed by impaired language and daily functioning, without early motor findings or fluctuating attention. Which diagnosis is most likely?\nA. Delirium\nB. Normal grief\nC. Acute intoxication\nD. Alzheimer disease\nChoose the correct option.",
+    "options": [
+      "A. Delirium",
+      "B. Normal grief",
+      "C. Acute intoxication",
+      "D. Alzheimer disease"
+    ],
+    "solution": "Insidious progressive amnestic dementia is typical of Alzheimer disease.",
+    "explanation": "Insidious progressive amnestic dementia is typical of Alzheimer disease.",
+    "answer": "D. Alzheimer disease",
+    "answer_key": "D",
+    "source": "original",
+    "style": "MedQA"
+  },
+  {
+    "id": "dev-medqa-050",
+    "question": "A 74-year-old has a new temporal headache, jaw claudication, transient monocular visual loss, elevated ESR, and temporal artery tenderness. What should be done immediately?\nA. Give sumatriptan\nB. Use aspirin alone\nC. Start high-dose glucocorticoids\nD. Wait for biopsy before treatment",
+    "query": "A 74-year-old has a new temporal headache, jaw claudication, transient monocular visual loss, elevated ESR, and temporal artery tenderness. What should be done immediately?\nA. Give sumatriptan\nB. Use aspirin alone\nC. Start high-dose glucocorticoids\nD. Wait for biopsy before treatment\nChoose the correct option.",
+    "options": [
+      "A. Give sumatriptan",
+      "B. Use aspirin alone",
+      "C. Start high-dose glucocorticoids",
+      "D. Wait for biopsy before treatment"
+    ],
+    "solution": "Suspected giant cell arteritis with visual symptoms requires immediate glucocorticoids to prevent blindness.",
+    "explanation": "Suspected giant cell arteritis with visual symptoms requires immediate glucocorticoids to prevent blindness.",
+    "answer": "C. Start high-dose glucocorticoids",
+    "answer_key": "C",
+    "source": "original",
+    "style": "MedQA"
+  }
+]

@@ -1,0 +1,16 @@
+# Python >= 3.9
+# Install the platform-appropriate PyTorch build separately.
+
+numpy==2.2.6
+transformers==4.56.0
+tokenizers==0.22.0
+accelerate==0.34.0
+datasets==2.20.0
+tqdm==4.69.0
+matplotlib==3.9.0
+pyarrow==17.0.0
+scikit-learn==1.5.1
+safetensors==0.7.0
+
+# Optional inference backend; install a build compatible with local CUDA/PyTorch.
+# vllm==0.17.0

@@ -1,0 +1,402 @@
+[
+  {
+    "id": "dev-aime2025-001",
+    "problem": "The three roots of $x^3-14x^2+49x-36=0$ are $r$, $s$, and $t$. Find the remainder when $(r-s)^2(s-t)^2(t-r)^2$ is divided by 1000.",
+    "solution": "The polynomial factors as $(x-1)(x-4)(x-9)$, so the roots are $1,4,9$. Therefore $(r-s)^2(s-t)^2(t-r)^2$ is independent of the order of the roots and equals $3^2\\cdot5^2\\cdot8^2=14400$. Its remainder upon division by 1000 is $\\boxed{400}$.",
+    "answer": "400",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-002",
+    "problem": "Four married couples are seated around a circular table. Two seatings are considered the same if one is a rotation of the other. Let $N$ be the number of seatings in which no person sits next to their spouse. Find the remainder when $N$ is divided by 1000.",
+    "solution": "Use inclusion-exclusion on the four events that a particular couple sits together. If a specified set of $k$ couples sits together, regard each such couple as a block. The resulting $8-k$ objects have $(7-k)!$ circular arrangements, and each couple-block has 2 internal orders. Thus $N=\\sum_{k=0}^4(-1)^k\\binom{4}{k}2^k(7-k)!=5040-5760+2880-768+96=1488$. Hence the requested remainder is $\\boxed{488}$.",
+    "answer": "488",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-003",
+    "problem": "A triangle has side lengths 13, 14, and 15. If $O$ and $I$ are its circumcenter and incenter, respectively, and $OI^2=\\frac{p}{q}$ for relatively prime positive integers $p$ and $q$, find $p+q$.",
+    "solution": "The semiperimeter is 21, so Heron's formula gives area $K=\\sqrt{21\\cdot8\\cdot7\\cdot6}=84$. Thus the inradius is $r=K/21=4$, while the circumradius is $R=\\frac{13\\cdot14\\cdot15}{4K}=\\frac{65}{8}$. Euler's relation gives $OI^2=R^2-2Rr=\\frac{4225}{64}-65=\\frac{65}{64}$. Therefore $p+q=65+64=\\boxed{129}$.",
+    "answer": "129",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-004",
+    "problem": "How many positive integers $n\\leq 2025$ satisfy $n^2\\equiv 1\\pmod{120}$?",
+    "solution": "Since $120=8\\cdot3\\cdot5$, the congruence is equivalent to congruences modulo 8, 3, and 5. There are 4 solutions modulo 8 and 2 solutions modulo each of 3 and 5, so the Chinese remainder theorem gives 16 solutions modulo 120. They are $1,11,19,29,31,41,49,59,61,71,79,89,91,101,109,119$. The first 1920 integers contain 16 full periods, contributing $16\\cdot16=256$ solutions. In the remaining 105 integers, the first 14 listed residues occur. Hence the total is $256+14=\\boxed{270}$.",
+    "answer": "270",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-005",
+    "problem": "Four fair six-sided dice are rolled. The probability that the product of the four results is divisible by 12 is $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find the remainder when $m+n$ is divided by 1000.",
+    "solution": "There are $6^4=1296$ outcomes. Let $A$ be the event that no die is divisible by 3, so $|A|=4^4=256$. Let $B$ be the event that the product contains at most one factor of 2. Either all dice are odd, or exactly one die is 2 or 6 and the other three are odd, giving $|B|=3^4+4\\cdot2\\cdot3^3=297$. In $A\\cap B$, the odd choices are 1 and 5, and the sole possible even choice is 2, so $|A\\cap B|=2^4+4\\cdot2^3=48$. Thus the number of products divisible by 12 is $1296-256-297+48=791$, and the probability is $791/1296$, already reduced. Since $791+1296=2087$, the requested remainder is $\\boxed{87}$.",
+    "answer": "87",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-006",
+    "problem": "In an AIME-style practice collection for 2025, how many ordered pairs of positive integers $(x,y)$ with $x\\le y$ satisfy $\\frac1x+\\frac1y=\\frac1{10}$?",
+    "solution": "Rearranging gives $(x-10)(y-10)=100$. Each unordered factor pair of $100$ gives exactly one pair with $x\\le y$. Since $100$ has 9 positive divisors, the number of factor pairs is $(9+1)/2=5$. Hence the requested answer is $\\boxed{5}$.",
+    "answer": "5",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-007",
+    "problem": "In an AIME-style practice collection for 2025, how many ordered pairs of positive integers $(x,y)$ with $x\\le y$ satisfy $\\frac1x+\\frac1y=\\frac1{11}$?",
+    "solution": "Rearranging gives $(x-11)(y-11)=121$. Each unordered factor pair of $121$ gives exactly one pair with $x\\le y$. Since $121$ has 3 positive divisors, the number of factor pairs is $(3+1)/2=2$. Hence the requested answer is $\\boxed{2}$.",
+    "answer": "2",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-008",
+    "problem": "In an AIME-style practice collection for 2025, how many ordered pairs of positive integers $(x,y)$ with $x\\le y$ satisfy $\\frac1x+\\frac1y=\\frac1{12}$?",
+    "solution": "Rearranging gives $(x-12)(y-12)=144$. Each unordered factor pair of $144$ gives exactly one pair with $x\\le y$. Since $144$ has 15 positive divisors, the number of factor pairs is $(15+1)/2=8$. Hence the requested answer is $\\boxed{8}$.",
+    "answer": "8",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-009",
+    "problem": "In an AIME-style practice collection for 2025, how many ordered pairs of positive integers $(x,y)$ with $x\\le y$ satisfy $\\frac1x+\\frac1y=\\frac1{13}$?",
+    "solution": "Rearranging gives $(x-13)(y-13)=169$. Each unordered factor pair of $169$ gives exactly one pair with $x\\le y$. Since $169$ has 3 positive divisors, the number of factor pairs is $(3+1)/2=2$. Hence the requested answer is $\\boxed{2}$.",
+    "answer": "2",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-010",
+    "problem": "In an AIME-style practice collection for 2025, how many ordered pairs of positive integers $(x,y)$ with $x\\le y$ satisfy $\\frac1x+\\frac1y=\\frac1{14}$?",
+    "solution": "Rearranging gives $(x-14)(y-14)=196$. Each unordered factor pair of $196$ gives exactly one pair with $x\\le y$. Since $196$ has 9 positive divisors, the number of factor pairs is $(9+1)/2=5$. Hence the requested answer is $\\boxed{5}$.",
+    "answer": "5",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-011",
+    "problem": "In an AIME-style practice collection for 2025, find the remainder when $5^{8}$ is divided by $1000$.",
+    "solution": "Repeated squaring modulo 1000 gives $5^{8}\\equiv 625\\pmod{1000}$. Hence the requested answer is $\\boxed{625}$.",
+    "answer": "625",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-012",
+    "problem": "In an AIME-style practice collection for 2025, find the remainder when $5^{9}$ is divided by $1000$.",
+    "solution": "Repeated squaring modulo 1000 gives $5^{9}\\equiv 125\\pmod{1000}$. Hence the requested answer is $\\boxed{125}$.",
+    "answer": "125",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-013",
+    "problem": "In an AIME-style practice collection for 2025, find the remainder when $5^{10}$ is divided by $1000$.",
+    "solution": "Repeated squaring modulo 1000 gives $5^{10}\\equiv 625\\pmod{1000}$. Hence the requested answer is $\\boxed{625}$.",
+    "answer": "625",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-014",
+    "problem": "In an AIME-style practice collection for 2025, find the remainder when $5^{11}$ is divided by $1000$.",
+    "solution": "Repeated squaring modulo 1000 gives $5^{11}\\equiv 125\\pmod{1000}$. Hence the requested answer is $\\boxed{125}$.",
+    "answer": "125",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-015",
+    "problem": "In an AIME-style practice collection for 2025, find the remainder when $5^{12}$ is divided by $1000$.",
+    "solution": "Repeated squaring modulo 1000 gives $5^{12}\\equiv 625\\pmod{1000}$. Hence the requested answer is $\\boxed{625}$.",
+    "answer": "625",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-016",
+    "problem": "In an AIME-style practice collection for 2025, an arithmetic sequence has common difference $3$, and the sum of its first $10$ terms is $195$. Find its $10$th term.",
+    "solution": "From $195=10(2a+9\\cdot3)/2$, the first term is $a=6$. Thus the 10th term is $6+9\\cdot3=33$. Hence the requested answer is $\\boxed{33}$.",
+    "answer": "33",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-017",
+    "problem": "In an AIME-style practice collection for 2025, an arithmetic sequence has common difference $4$, and the sum of its first $11$ terms is $297$. Find its $11$th term.",
+    "solution": "From $297=11(2a+10\\cdot4)/2$, the first term is $a=7$. Thus the 11th term is $7+10\\cdot4=47$. Hence the requested answer is $\\boxed{47}$.",
+    "answer": "47",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-018",
+    "problem": "In an AIME-style practice collection for 2025, an arithmetic sequence has common difference $3$, and the sum of its first $12$ terms is $294$. Find its $12$th term.",
+    "solution": "From $294=12(2a+11\\cdot3)/2$, the first term is $a=8$. Thus the 12th term is $8+11\\cdot3=41$. Hence the requested answer is $\\boxed{41}$.",
+    "answer": "41",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-019",
+    "problem": "In an AIME-style practice collection for 2025, an arithmetic sequence has common difference $4$, and the sum of its first $13$ terms is $429$. Find its $13$th term.",
+    "solution": "From $429=13(2a+12\\cdot4)/2$, the first term is $a=9$. Thus the 13th term is $9+12\\cdot4=57$. Hence the requested answer is $\\boxed{57}$.",
+    "answer": "57",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-020",
+    "problem": "In an AIME-style practice collection for 2025, an arithmetic sequence has common difference $3$, and the sum of its first $14$ terms is $413$. Find its $14$th term.",
+    "solution": "From $413=14(2a+13\\cdot3)/2$, the first term is $a=10$. Thus the 14th term is $10+13\\cdot3=49$. Hence the requested answer is $\\boxed{49}$.",
+    "answer": "49",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-021",
+    "problem": "In an AIME-style practice collection for 2025, a robot moves from $(0,0)$ to $(3,5)$ using only unit steps right or up, but it may not visit $(1,2)$. How many shortest allowed paths are there?",
+    "solution": "There are $\\binom{8}{3}=56$ unrestricted paths. Exactly $\\binom{3}{1}\\binom{5}{2}=30$ pass through the forbidden point, leaving $56-30=26$. Hence the requested answer is $\\boxed{26}$.",
+    "answer": "26",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-022",
+    "problem": "In an AIME-style practice collection for 2025, a robot moves from $(0,0)$ to $(4,5)$ using only unit steps right or up, but it may not visit $(2,2)$. How many shortest allowed paths are there?",
+    "solution": "There are $\\binom{9}{4}=126$ unrestricted paths. Exactly $\\binom{4}{2}\\binom{5}{2}=60$ pass through the forbidden point, leaving $126-60=66$. Hence the requested answer is $\\boxed{66}$.",
+    "answer": "66",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-023",
+    "problem": "In an AIME-style practice collection for 2025, a robot moves from $(0,0)$ to $(5,5)$ using only unit steps right or up, but it may not visit $(1,2)$. How many shortest allowed paths are there?",
+    "solution": "There are $\\binom{10}{5}=252$ unrestricted paths. Exactly $\\binom{3}{1}\\binom{7}{4}=105$ pass through the forbidden point, leaving $252-105=147$. Hence the requested answer is $\\boxed{147}$.",
+    "answer": "147",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-024",
+    "problem": "In an AIME-style practice collection for 2025, a robot moves from $(0,0)$ to $(6,5)$ using only unit steps right or up, but it may not visit $(2,2)$. How many shortest allowed paths are there?",
+    "solution": "There are $\\binom{11}{6}=462$ unrestricted paths. Exactly $\\binom{4}{2}\\binom{7}{4}=210$ pass through the forbidden point, leaving $462-210=252$. Hence the requested answer is $\\boxed{252}$.",
+    "answer": "252",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-025",
+    "problem": "In an AIME-style practice collection for 2025, a robot moves from $(0,0)$ to $(7,5)$ using only unit steps right or up, but it may not visit $(1,2)$. How many shortest allowed paths are there?",
+    "solution": "There are $\\binom{12}{7}=792$ unrestricted paths. Exactly $\\binom{3}{1}\\binom{9}{6}=252$ pass through the forbidden point, leaving $792-252=540$. Hence the requested answer is $\\boxed{540}$.",
+    "answer": "540",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-026",
+    "problem": "In an AIME-style practice collection for 2025, a bag contains $7$ blue tokens and $6$ gold tokens. Three tokens are selected uniformly without replacement. The probability that exactly two are blue is $a/b$ in lowest terms. Find $a+b$.",
+    "solution": "There are $\\binom{13}3=286$ selections, of which $\\binom{7}2\\binom{6}1=126$ are favorable. The probability reduces to $63/143$, so $a+b=206$. Hence the requested answer is $\\boxed{206}$.",
+    "answer": "206",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-027",
+    "problem": "In an AIME-style practice collection for 2025, a bag contains $8$ blue tokens and $8$ gold tokens. Three tokens are selected uniformly without replacement. The probability that exactly two are blue is $a/b$ in lowest terms. Find $a+b$.",
+    "solution": "There are $\\binom{16}3=560$ selections, of which $\\binom{8}2\\binom{8}1=224$ are favorable. The probability reduces to $2/5$, so $a+b=7$. Hence the requested answer is $\\boxed{7}$.",
+    "answer": "7",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-028",
+    "problem": "In an AIME-style practice collection for 2025, a bag contains $9$ blue tokens and $10$ gold tokens. Three tokens are selected uniformly without replacement. The probability that exactly two are blue is $a/b$ in lowest terms. Find $a+b$.",
+    "solution": "There are $\\binom{19}3=969$ selections, of which $\\binom{9}2\\binom{10}1=360$ are favorable. The probability reduces to $120/323$, so $a+b=443$. Hence the requested answer is $\\boxed{443}$.",
+    "answer": "443",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-029",
+    "problem": "In an AIME-style practice collection for 2025, a bag contains $10$ blue tokens and $12$ gold tokens. Three tokens are selected uniformly without replacement. The probability that exactly two are blue is $a/b$ in lowest terms. Find $a+b$.",
+    "solution": "There are $\\binom{22}3=1540$ selections, of which $\\binom{10}2\\binom{12}1=540$ are favorable. The probability reduces to $27/77$, so $a+b=104$. Hence the requested answer is $\\boxed{104}$.",
+    "answer": "104",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-030",
+    "problem": "In an AIME-style practice collection for 2025, a bag contains $11$ blue tokens and $14$ gold tokens. Three tokens are selected uniformly without replacement. The probability that exactly two are blue is $a/b$ in lowest terms. Find $a+b$.",
+    "solution": "There are $\\binom{25}3=2300$ selections, of which $\\binom{11}2\\binom{14}1=770$ are favorable. The probability reduces to $77/230$, so $a+b=307$. Hence the requested answer is $\\boxed{307}$.",
+    "answer": "307",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-031",
+    "problem": "In an AIME-style practice collection for 2025, a circle has radius $3$ and center $O$. A point $P$ outside the circle satisfies $OP=5$. A tangent from $P$ touches the circle at $T$. Find $PT$.",
+    "solution": "Because a radius to a tangent point is perpendicular to the tangent, $OPT$ is right. Thus $PT=\\sqrt{5^2-3^2}=4$. Hence the requested answer is $\\boxed{4}$.",
+    "answer": "4",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-032",
+    "problem": "In an AIME-style practice collection for 2025, a circle has radius $5$ and center $O$. A point $P$ outside the circle satisfies $OP=13$. A tangent from $P$ touches the circle at $T$. Find $PT$.",
+    "solution": "Because a radius to a tangent point is perpendicular to the tangent, $OPT$ is right. Thus $PT=\\sqrt{13^2-5^2}=12$. Hence the requested answer is $\\boxed{12}$.",
+    "answer": "12",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-033",
+    "problem": "In an AIME-style practice collection for 2025, a circle has radius $8$ and center $O$. A point $P$ outside the circle satisfies $OP=17$. A tangent from $P$ touches the circle at $T$. Find $PT$.",
+    "solution": "Because a radius to a tangent point is perpendicular to the tangent, $OPT$ is right. Thus $PT=\\sqrt{17^2-8^2}=15$. Hence the requested answer is $\\boxed{15}$.",
+    "answer": "15",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-034",
+    "problem": "In an AIME-style practice collection for 2025, a circle has radius $7$ and center $O$. A point $P$ outside the circle satisfies $OP=25$. A tangent from $P$ touches the circle at $T$. Find $PT$.",
+    "solution": "Because a radius to a tangent point is perpendicular to the tangent, $OPT$ is right. Thus $PT=\\sqrt{25^2-7^2}=24$. Hence the requested answer is $\\boxed{24}$.",
+    "answer": "24",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-035",
+    "problem": "In an AIME-style practice collection for 2025, a circle has radius $20$ and center $O$. A point $P$ outside the circle satisfies $OP=29$. A tangent from $P$ touches the circle at $T$. Find $PT$.",
+    "solution": "Because a radius to a tangent point is perpendicular to the tangent, $OPT$ is right. Thus $PT=\\sqrt{29^2-20^2}=21$. Hence the requested answer is $\\boxed{21}$.",
+    "answer": "21",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-036",
+    "problem": "In an AIME-style practice collection for 2025, how many positive integers $n\\le 500$ satisfy both $n\\equiv 2\\pmod{5}$ and $n\\equiv 3\\pmod{7}$?",
+    "solution": "Because 5 and 7 are relatively prime, the two congruences specify one residue class modulo $35$. Listing that class through 500 gives 14 positive integers. Hence the requested answer is $\\boxed{14}$.",
+    "answer": "14",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-037",
+    "problem": "In an AIME-style practice collection for 2025, how many positive integers $n\\le 550$ satisfy both $n\\equiv 2\\pmod{6}$ and $n\\equiv 4\\pmod{11}$?",
+    "solution": "Because 6 and 11 are relatively prime, the two congruences specify one residue class modulo $66$. Listing that class through 550 gives 8 positive integers. Hence the requested answer is $\\boxed{8}$.",
+    "answer": "8",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-038",
+    "problem": "In an AIME-style practice collection for 2025, how many positive integers $n\\le 600$ satisfy both $n\\equiv 2\\pmod{7}$ and $n\\equiv 5\\pmod{11}$?",
+    "solution": "Because 7 and 11 are relatively prime, the two congruences specify one residue class modulo $77$. Listing that class through 600 gives 8 positive integers. Hence the requested answer is $\\boxed{8}$.",
+    "answer": "8",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-039",
+    "problem": "In an AIME-style practice collection for 2025, how many positive integers $n\\le 650$ satisfy both $n\\equiv 2\\pmod{8}$ and $n\\equiv 6\\pmod{13}$?",
+    "solution": "Because 8 and 13 are relatively prime, the two congruences specify one residue class modulo $104$. Listing that class through 650 gives 6 positive integers. Hence the requested answer is $\\boxed{6}$.",
+    "answer": "6",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-040",
+    "problem": "In an AIME-style practice collection for 2025, how many positive integers $n\\le 700$ satisfy both $n\\equiv 2\\pmod{9}$ and $n\\equiv 7\\pmod{16}$?",
+    "solution": "Because 9 and 16 are relatively prime, the two congruences specify one residue class modulo $144$. Listing that class through 700 gives 5 positive integers. Hence the requested answer is $\\boxed{5}$.",
+    "answer": "5",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-041",
+    "problem": "In an AIME-style practice collection for 2025, the roots of $x^3-11x^2+38x-40=0$ are $r,s,t$. Find $r^2+s^2+t^2$.",
+    "solution": "Vieta gives $r+s+t=11$ and $rs+rt+st=38$. Hence $r^2+s^2+t^2=(r+s+t)^2-2(rs+rt+st)=11^2-2(38)=45$. Hence the requested answer is $\\boxed{45}$.",
+    "answer": "45",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-042",
+    "problem": "In an AIME-style practice collection for 2025, the roots of $x^3-13x^2+55x-75=0$ are $r,s,t$. Find $r^2+s^2+t^2$.",
+    "solution": "Vieta gives $r+s+t=13$ and $rs+rt+st=55$. Hence $r^2+s^2+t^2=(r+s+t)^2-2(rs+rt+st)=13^2-2(55)=59$. Hence the requested answer is $\\boxed{59}$.",
+    "answer": "59",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-043",
+    "problem": "In an AIME-style practice collection for 2025, the roots of $x^3-15x^2+74x-120=0$ are $r,s,t$. Find $r^2+s^2+t^2$.",
+    "solution": "Vieta gives $r+s+t=15$ and $rs+rt+st=74$. Hence $r^2+s^2+t^2=(r+s+t)^2-2(rs+rt+st)=15^2-2(74)=77$. Hence the requested answer is $\\boxed{77}$.",
+    "answer": "77",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-044",
+    "problem": "In an AIME-style practice collection for 2025, the roots of $x^3-17x^2+95x-175=0$ are $r,s,t$. Find $r^2+s^2+t^2$.",
+    "solution": "Vieta gives $r+s+t=17$ and $rs+rt+st=95$. Hence $r^2+s^2+t^2=(r+s+t)^2-2(rs+rt+st)=17^2-2(95)=99$. Hence the requested answer is $\\boxed{99}$.",
+    "answer": "99",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-045",
+    "problem": "In an AIME-style practice collection for 2025, the roots of $x^3-19x^2+118x-240=0$ are $r,s,t$. Find $r^2+s^2+t^2$.",
+    "solution": "Vieta gives $r+s+t=19$ and $rs+rt+st=118$. Hence $r^2+s^2+t^2=(r+s+t)^2-2(rs+rt+st)=19^2-2(118)=125$. Hence the requested answer is $\\boxed{125}$.",
+    "answer": "125",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-046",
+    "problem": "In an AIME-style practice collection for 2025, no three diagonals of a convex $9$-gon meet at an interior point. How many interior intersection points of diagonals are there?",
+    "solution": "Each interior intersection is determined uniquely by choosing its four endpoint vertices, and every four vertices produce one crossing. Therefore the number is $\\binom{9}4=126$. Hence the requested answer is $\\boxed{126}$.",
+    "answer": "126",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-047",
+    "problem": "In an AIME-style practice collection for 2025, no three diagonals of a convex $10$-gon meet at an interior point. How many interior intersection points of diagonals are there?",
+    "solution": "Each interior intersection is determined uniquely by choosing its four endpoint vertices, and every four vertices produce one crossing. Therefore the number is $\\binom{10}4=210$. Hence the requested answer is $\\boxed{210}$.",
+    "answer": "210",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-048",
+    "problem": "In an AIME-style practice collection for 2025, no three diagonals of a convex $11$-gon meet at an interior point. How many interior intersection points of diagonals are there?",
+    "solution": "Each interior intersection is determined uniquely by choosing its four endpoint vertices, and every four vertices produce one crossing. Therefore the number is $\\binom{11}4=330$. Hence the requested answer is $\\boxed{330}$.",
+    "answer": "330",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-049",
+    "problem": "In an AIME-style practice collection for 2025, no three diagonals of a convex $12$-gon meet at an interior point. How many interior intersection points of diagonals are there?",
+    "solution": "Each interior intersection is determined uniquely by choosing its four endpoint vertices, and every four vertices produce one crossing. Therefore the number is $\\binom{12}4=495$. Hence the requested answer is $\\boxed{495}$.",
+    "answer": "495",
+    "source": "original",
+    "style": "AIME 2025"
+  },
+  {
+    "id": "dev-aime2025-050",
+    "problem": "In an AIME-style practice collection for 2025, no three diagonals of a convex $13$-gon meet at an interior point. How many interior intersection points of diagonals are there?",
+    "solution": "Each interior intersection is determined uniquely by choosing its four endpoint vertices, and every four vertices produce one crossing. Therefore the number is $\\binom{13}4=715$. Hence the requested answer is $\\boxed{715}$.",
+    "answer": "715",
+    "source": "original",
+    "style": "AIME 2025"
+  }
+]

@@ -1,0 +1,760 @@
+[
+  {
+    "id": "dev-mbppplus-001",
+    "prompt": "Write a function that compresses consecutive equal values in a list. Return a list of (value, count) tuples, preserving the order in which each run appears. An empty input should produce an empty list.",
+    "entry_point": "compress_runs",
+    "canonical_solution": "def compress_runs(values):\n    if not values:\n        return []\n    runs = []\n    current = values[0]\n    count = 1\n    for value in values[1:]:\n        if value == current:\n            count += 1\n        else:\n            runs.append((current, count))\n            current = value\n            count = 1\n    runs.append((current, count))\n    return runs\n",
+    "code": "def compress_runs(values):\n    if not values:\n        return []\n    runs = []\n    current = values[0]\n    count = 1\n    for value in values[1:]:\n        if value == current:\n            count += 1\n        else:\n            runs.append((current, count))\n            current = value\n            count = 1\n    runs.append((current, count))\n    return runs\n",
+    "test_list": [
+      "assert compress_runs([1, 1, 2, 2, 2, 1]) == [(1, 2), (2, 3), (1, 1)]",
+      "assert compress_runs([]) == []",
+      "assert compress_runs(['a', 'a', 'b', 'a']) == [('a', 2), ('b', 1), ('a', 1)]",
+      "assert compress_runs([False, False, True]) == [(False, 2), (True, 1)]"
+    ],
+    "solution": "Scan from left to right while storing the current value and its run length. When the value changes, append the completed pair and start a new run. Append the final run after the loop; the empty-list case is handled separately.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-002",
+    "prompt": "Write a function to read a rectangular matrix by diagonals of equal row-plus-column index. Visit diagonals from top-left to bottom-right; reverse the values on every odd-numbered diagonal (the first diagonal is number 0). Return the flattened traversal. Return an empty list for an empty matrix.",
+    "entry_point": "alternating_diagonals",
+    "canonical_solution": "def alternating_diagonals(matrix):\n    if not matrix or not matrix[0]:\n        return []\n    rows, cols = len(matrix), len(matrix[0])\n    result = []\n    for diagonal in range(rows + cols - 1):\n        values = []\n        start = max(0, diagonal - cols + 1)\n        end = min(rows - 1, diagonal)\n        for row in range(start, end + 1):\n            values.append(matrix[row][diagonal - row])\n        if diagonal % 2 == 1:\n            values.reverse()\n        result.extend(values)\n    return result\n",
+    "code": "def alternating_diagonals(matrix):\n    if not matrix or not matrix[0]:\n        return []\n    rows, cols = len(matrix), len(matrix[0])\n    result = []\n    for diagonal in range(rows + cols - 1):\n        values = []\n        start = max(0, diagonal - cols + 1)\n        end = min(rows - 1, diagonal)\n        for row in range(start, end + 1):\n            values.append(matrix[row][diagonal - row])\n        if diagonal % 2 == 1:\n            values.reverse()\n        result.extend(values)\n    return result\n",
+    "test_list": [
+      "assert alternating_diagonals([[1, 2, 3], [4, 5, 6]]) == [1, 4, 2, 3, 5, 6]",
+      "assert alternating_diagonals([[1], [2], [3]]) == [1, 2, 3]",
+      "assert alternating_diagonals([[1, 2], [3, 4], [5, 6]]) == [1, 3, 2, 4, 5, 6]",
+      "assert alternating_diagonals([]) == []"
+    ],
+    "solution": "Elements on one diagonal have the same row-plus-column index. Enumerate those indices, collect each in increasing row order, reverse odd diagonals, and concatenate the groups. The row bounds keep column indices inside a rectangular matrix.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-003",
+    "prompt": "Write a function that splits a string of parentheses into the shortest consecutive balanced groups. Return the groups as a list. If the string contains a character other than '(' or ')', or if the entire string is not balanced, return an empty list. The empty string also returns an empty list.",
+    "entry_point": "split_balanced_groups",
+    "canonical_solution": "def split_balanced_groups(text):\n    groups = []\n    balance = 0\n    start = 0\n    for index, char in enumerate(text):\n        if char == '(':\n            balance += 1\n        elif char == ')':\n            balance -= 1\n        else:\n            return []\n        if balance < 0:\n            return []\n        if balance == 0:\n            groups.append(text[start:index + 1])\n            start = index + 1\n    return groups if balance == 0 else []\n",
+    "code": "def split_balanced_groups(text):\n    groups = []\n    balance = 0\n    start = 0\n    for index, char in enumerate(text):\n        if char == '(':\n            balance += 1\n        elif char == ')':\n            balance -= 1\n        else:\n            return []\n        if balance < 0:\n            return []\n        if balance == 0:\n            groups.append(text[start:index + 1])\n            start = index + 1\n    return groups if balance == 0 else []\n",
+    "test_list": [
+      "assert split_balanced_groups('()(())()') == ['()', '(())', '()']",
+      "assert split_balanced_groups('((()))') == ['((()))']",
+      "assert split_balanced_groups('(()') == []",
+      "assert split_balanced_groups('()x()') == []",
+      "assert split_balanced_groups('') == []"
+    ],
+    "solution": "Maintain the number of unmatched opening parentheses. A return to zero ends the shortest possible balanced group. A negative balance, an invalid character, or a nonzero final balance makes the input invalid.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-004",
+    "prompt": "Write a function that returns the indices of two distinct numbers whose sum is closest to a target. Return the smaller index first. If several pairs are equally close, choose the lexicographically smallest index pair. Return an empty tuple when fewer than two numbers are given.",
+    "entry_point": "closest_sum_indices",
+    "canonical_solution": "def closest_sum_indices(numbers, target):\n    if len(numbers) < 2:\n        return ()\n    best_pair = (0, 1)\n    best_distance = abs(numbers[0] + numbers[1] - target)\n    for left in range(len(numbers)):\n        for right in range(left + 1, len(numbers)):\n            distance = abs(numbers[left] + numbers[right] - target)\n            pair = (left, right)\n            if distance < best_distance or (distance == best_distance and pair < best_pair):\n                best_distance = distance\n                best_pair = pair\n    return best_pair\n",
+    "code": "def closest_sum_indices(numbers, target):\n    if len(numbers) < 2:\n        return ()\n    best_pair = (0, 1)\n    best_distance = abs(numbers[0] + numbers[1] - target)\n    for left in range(len(numbers)):\n        for right in range(left + 1, len(numbers)):\n            distance = abs(numbers[left] + numbers[right] - target)\n            pair = (left, right)\n            if distance < best_distance or (distance == best_distance and pair < best_pair):\n                best_distance = distance\n                best_pair = pair\n    return best_pair\n",
+    "test_list": [
+      "assert closest_sum_indices([8, 1, 6, 3], 10) == (0, 1)",
+      "assert closest_sum_indices([5, 5, 5], 11) == (0, 1)",
+      "assert closest_sum_indices([-8, 2, 11, 4], 5) == (1, 3)",
+      "assert closest_sum_indices([7], 7) == ()",
+      "assert closest_sum_indices([0, 4, 6, 10], 8) == (0, 2)"
+    ],
+    "solution": "Enumerate all index pairs in lexicographic order and compare the absolute error of each sum. Replace the saved pair for a smaller error, or for an equal error and lexicographically smaller pair. Fewer than two elements cannot form a pair.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-005",
+    "prompt": "Write a function to find the length of the longest contiguous section of integers in which every neighboring pair has opposite parity. Return 0 for an empty list.",
+    "entry_point": "longest_alternating_parity",
+    "canonical_solution": "def longest_alternating_parity(numbers):\n    if not numbers:\n        return 0\n    longest = 1\n    current = 1\n    for previous, value in zip(numbers, numbers[1:]):\n        if previous % 2 != value % 2:\n            current += 1\n        else:\n            current = 1\n        longest = max(longest, current)\n    return longest\n",
+    "code": "def longest_alternating_parity(numbers):\n    if not numbers:\n        return 0\n    longest = 1\n    current = 1\n    for previous, value in zip(numbers, numbers[1:]):\n        if previous % 2 != value % 2:\n            current += 1\n        else:\n            current = 1\n        longest = max(longest, current)\n    return longest\n",
+    "test_list": [
+      "assert longest_alternating_parity([2, 5, 8, 3, 7, 4]) == 4",
+      "assert longest_alternating_parity([1, 3, 5]) == 1",
+      "assert longest_alternating_parity([]) == 0",
+      "assert longest_alternating_parity([-3, -2, -7, 6, 8, 9]) == 4",
+      "assert longest_alternating_parity([4]) == 1"
+    ],
+    "solution": "Track the length of the alternating section ending at each value. Extend it when adjacent parities differ and reset it to one otherwise, while retaining the maximum length seen.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-006",
+    "prompt": "Write a function named ``sum_divisible_by_2``. Return the sum of all integers in ``values`` that are divisible by 2. The input list must not be modified.",
+    "entry_point": "sum_divisible_by_2",
+    "canonical_solution": "def sum_divisible_by_2(values):\n    return sum(value for value in values if value % 2 == 0)\n",
+    "code": "def sum_divisible_by_2(values):\n    return sum(value for value in values if value % 2 == 0)\n",
+    "test_list": [
+      "assert sum_divisible_by_2([1, 2, 3, 4, 5, 6]) == 12",
+      "assert sum_divisible_by_2([]) == 0",
+      "assert sum_divisible_by_2([-2, 3, 4]) == 2"
+    ],
+    "solution": "Return the sum of all integers in ``values`` that are divisible by 2. The input list must not be modified.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-007",
+    "prompt": "Write a function named ``rotate_left_1``. Return a new list formed by rotating ``values`` left by 1 positions. Empty input returns an empty list.",
+    "entry_point": "rotate_left_1",
+    "canonical_solution": "def rotate_left_1(values):\n    if not values:\n        return []\n    shift = 1 % len(values)\n    return values[shift:] + values[:shift]\n",
+    "code": "def rotate_left_1(values):\n    if not values:\n        return []\n    shift = 1 % len(values)\n    return values[shift:] + values[:shift]\n",
+    "test_list": [
+      "assert rotate_left_1([1, 2, 3, 4, 5, 6, 7]) == [2, 3, 4, 5, 6, 7, 1]",
+      "assert rotate_left_1([]) == []",
+      "assert rotate_left_1([9]) == [9]"
+    ],
+    "solution": "Return a new list formed by rotating ``values`` left by 1 positions. Empty input returns an empty list.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-008",
+    "prompt": "Write a function named ``every_2th_word``. Split ``text`` on whitespace and return every 2th word, counting the first word as position 1.",
+    "entry_point": "every_2th_word",
+    "canonical_solution": "def every_2th_word(text):\n    words = text.split()\n    return words[1::2]\n",
+    "code": "def every_2th_word(text):\n    words = text.split()\n    return words[1::2]\n",
+    "test_list": [
+      "assert every_2th_word('one two three four five six seven eight nine ten') == ['two', 'four', 'six', 'eight', 'ten']",
+      "assert every_2th_word('') == []",
+      "assert every_2th_word('  a   b c  ') == ['b']"
+    ],
+    "solution": "Split ``text`` on whitespace and return every 2th word, counting the first word as position 1.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-009",
+    "prompt": "Write a function named ``count_runs_at_least_2``. Count maximal runs of equal consecutive values whose lengths are at least 2.",
+    "entry_point": "count_runs_at_least_2",
+    "canonical_solution": "def count_runs_at_least_2(values):\n    if not values:\n        return 0\n    count = 0\n    run = 1\n    for i in range(1, len(values)):\n        if values[i] == values[i - 1]:\n            run += 1\n        else:\n            count += run >= 2\n            run = 1\n    return count + (run >= 2)\n",
+    "code": "def count_runs_at_least_2(values):\n    if not values:\n        return 0\n    count = 0\n    run = 1\n    for i in range(1, len(values)):\n        if values[i] == values[i - 1]:\n            run += 1\n        else:\n            count += run >= 2\n            run = 1\n    return count + (run >= 2)\n",
+    "test_list": [
+      "assert count_runs_at_least_2([1, 1, 2, 3, 3, 3, 4]) == 2",
+      "assert count_runs_at_least_2([]) == 0",
+      "assert count_runs_at_least_2([7,7]) == 1"
+    ],
+    "solution": "Count maximal runs of equal consecutive values whose lengths are at least 2.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-010",
+    "prompt": "Write a function named ``chunk_sums_2``. Partition ``values`` into consecutive chunks of at most 2 items and return the sum of each chunk.",
+    "entry_point": "chunk_sums_2",
+    "canonical_solution": "def chunk_sums_2(values):\n    return [sum(values[i:i + 2]) for i in range(0, len(values), 2)]\n",
+    "code": "def chunk_sums_2(values):\n    return [sum(values[i:i + 2]) for i in range(0, len(values), 2)]\n",
+    "test_list": [
+      "assert chunk_sums_2([1, 2, 3, 4, 5, 6, 7, 8]) == [3, 7, 11, 15]",
+      "assert chunk_sums_2([]) == []",
+      "assert chunk_sums_2([5]) == [5]"
+    ],
+    "solution": "Partition ``values`` into consecutive chunks of at most 2 items and return the sum of each chunk.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-011",
+    "prompt": "Write a function named ``clamp_symmetric_3``. Return a new list in which every number is clamped to the closed interval [-3, 3].",
+    "entry_point": "clamp_symmetric_3",
+    "canonical_solution": "def clamp_symmetric_3(values):\n    return [max(-3, min(3, value)) for value in values]\n",
+    "code": "def clamp_symmetric_3(values):\n    return [max(-3, min(3, value)) for value in values]\n",
+    "test_list": [
+      "assert clamp_symmetric_3([-100, -3, 0, 3, 100]) == [-3, -3, 0, 3, 3]",
+      "assert clamp_symmetric_3([]) == []",
+      "assert clamp_symmetric_3([1, -1]) == [1, -1]"
+    ],
+    "solution": "Return a new list in which every number is clamped to the closed interval [-3, 3].",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-012",
+    "prompt": "Write a function named ``moving_max_2``. Return the maximum of each consecutive window of length 2. If the list is shorter than 2, return an empty list.",
+    "entry_point": "moving_max_2",
+    "canonical_solution": "def moving_max_2(values):\n    return [max(values[i:i + 2]) for i in range(len(values) - 2 + 1)]\n",
+    "code": "def moving_max_2(values):\n    return [max(values[i:i + 2]) for i in range(len(values) - 2 + 1)]\n",
+    "test_list": [
+      "assert moving_max_2([4, 1, 7, 2, 9, 3, 8]) == [4, 7, 7, 9, 9, 8]",
+      "assert moving_max_2([0]) == []",
+      "assert moving_max_2([0, 1]) == [1]"
+    ],
+    "solution": "Return the maximum of each consecutive window of length 2. If the list is shorter than 2, return an empty list.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-013",
+    "prompt": "Write a function named ``remove_every_2th``. Return a new list after removing items at positions 2, 4, 6, and so on, using one-based positions.",
+    "entry_point": "remove_every_2th",
+    "canonical_solution": "def remove_every_2th(values):\n    return [value for index, value in enumerate(values, 1) if index % 2 != 0]\n",
+    "code": "def remove_every_2th(values):\n    return [value for index, value in enumerate(values, 1) if index % 2 != 0]\n",
+    "test_list": [
+      "assert remove_every_2th([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == [1, 3, 5, 7, 9]",
+      "assert remove_every_2th([]) == []",
+      "assert remove_every_2th([1]) == [1]"
+    ],
+    "solution": "Return a new list after removing items at positions 2, 4, 6, and so on, using one-based positions.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-014",
+    "prompt": "Write a function named ``digit_sum_base_2``. Return the sum of the base-2 digits of a nonnegative integer ``number``.",
+    "entry_point": "digit_sum_base_2",
+    "canonical_solution": "def digit_sum_base_2(number):\n    if number == 0:\n        return 0\n    total = 0\n    while number:\n        total += number % 2\n        number //= 2\n    return total\n",
+    "code": "def digit_sum_base_2(number):\n    if number == 0:\n        return 0\n    total = 0\n    while number:\n        total += number % 2\n        number //= 2\n    return total\n",
+    "test_list": [
+      "assert digit_sum_base_2(11) == 3",
+      "assert digit_sum_base_2(0) == 0",
+      "assert digit_sum_base_2(15) == 4"
+    ],
+    "solution": "Return the sum of the base-2 digits of a nonnegative integer ``number``.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-015",
+    "prompt": "Write a function named ``sum_divisible_by_3``. Return the sum of all integers in ``values`` that are divisible by 3. The input list must not be modified.",
+    "entry_point": "sum_divisible_by_3",
+    "canonical_solution": "def sum_divisible_by_3(values):\n    return sum(value for value in values if value % 3 == 0)\n",
+    "code": "def sum_divisible_by_3(values):\n    return sum(value for value in values if value % 3 == 0)\n",
+    "test_list": [
+      "assert sum_divisible_by_3([1, 2, 3, 4, 5, 6]) == 9",
+      "assert sum_divisible_by_3([]) == 0",
+      "assert sum_divisible_by_3([-3, 4, 6]) == 3"
+    ],
+    "solution": "Return the sum of all integers in ``values`` that are divisible by 3. The input list must not be modified.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-016",
+    "prompt": "Write a function named ``rotate_left_2``. Return a new list formed by rotating ``values`` left by 2 positions. Empty input returns an empty list.",
+    "entry_point": "rotate_left_2",
+    "canonical_solution": "def rotate_left_2(values):\n    if not values:\n        return []\n    shift = 2 % len(values)\n    return values[shift:] + values[:shift]\n",
+    "code": "def rotate_left_2(values):\n    if not values:\n        return []\n    shift = 2 % len(values)\n    return values[shift:] + values[:shift]\n",
+    "test_list": [
+      "assert rotate_left_2([1, 2, 3, 4, 5, 6, 7]) == [3, 4, 5, 6, 7, 1, 2]",
+      "assert rotate_left_2([]) == []",
+      "assert rotate_left_2([9]) == [9]"
+    ],
+    "solution": "Return a new list formed by rotating ``values`` left by 2 positions. Empty input returns an empty list.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-017",
+    "prompt": "Write a function named ``every_3th_word``. Split ``text`` on whitespace and return every 3th word, counting the first word as position 1.",
+    "entry_point": "every_3th_word",
+    "canonical_solution": "def every_3th_word(text):\n    words = text.split()\n    return words[2::3]\n",
+    "code": "def every_3th_word(text):\n    words = text.split()\n    return words[2::3]\n",
+    "test_list": [
+      "assert every_3th_word('one two three four five six seven eight nine ten') == ['three', 'six', 'nine']",
+      "assert every_3th_word('') == []",
+      "assert every_3th_word('  a   b c  ') == ['c']"
+    ],
+    "solution": "Split ``text`` on whitespace and return every 3th word, counting the first word as position 1.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-018",
+    "prompt": "Write a function named ``count_runs_at_least_3``. Count maximal runs of equal consecutive values whose lengths are at least 3.",
+    "entry_point": "count_runs_at_least_3",
+    "canonical_solution": "def count_runs_at_least_3(values):\n    if not values:\n        return 0\n    count = 0\n    run = 1\n    for i in range(1, len(values)):\n        if values[i] == values[i - 1]:\n            run += 1\n        else:\n            count += run >= 3\n            run = 1\n    return count + (run >= 3)\n",
+    "code": "def count_runs_at_least_3(values):\n    if not values:\n        return 0\n    count = 0\n    run = 1\n    for i in range(1, len(values)):\n        if values[i] == values[i - 1]:\n            run += 1\n        else:\n            count += run >= 3\n            run = 1\n    return count + (run >= 3)\n",
+    "test_list": [
+      "assert count_runs_at_least_3([1, 1, 1, 2, 3, 3, 3, 3, 4, 4]) == 2",
+      "assert count_runs_at_least_3([]) == 0",
+      "assert count_runs_at_least_3([7,7,7]) == 1"
+    ],
+    "solution": "Count maximal runs of equal consecutive values whose lengths are at least 3.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-019",
+    "prompt": "Write a function named ``chunk_sums_3``. Partition ``values`` into consecutive chunks of at most 3 items and return the sum of each chunk.",
+    "entry_point": "chunk_sums_3",
+    "canonical_solution": "def chunk_sums_3(values):\n    return [sum(values[i:i + 3]) for i in range(0, len(values), 3)]\n",
+    "code": "def chunk_sums_3(values):\n    return [sum(values[i:i + 3]) for i in range(0, len(values), 3)]\n",
+    "test_list": [
+      "assert chunk_sums_3([1, 2, 3, 4, 5, 6, 7, 8]) == [6, 15, 15]",
+      "assert chunk_sums_3([]) == []",
+      "assert chunk_sums_3([5]) == [5]"
+    ],
+    "solution": "Partition ``values`` into consecutive chunks of at most 3 items and return the sum of each chunk.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-020",
+    "prompt": "Write a function named ``clamp_symmetric_5``. Return a new list in which every number is clamped to the closed interval [-5, 5].",
+    "entry_point": "clamp_symmetric_5",
+    "canonical_solution": "def clamp_symmetric_5(values):\n    return [max(-5, min(5, value)) for value in values]\n",
+    "code": "def clamp_symmetric_5(values):\n    return [max(-5, min(5, value)) for value in values]\n",
+    "test_list": [
+      "assert clamp_symmetric_5([-100, -5, 0, 5, 100]) == [-5, -5, 0, 5, 5]",
+      "assert clamp_symmetric_5([]) == []",
+      "assert clamp_symmetric_5([1, -1]) == [1, -1]"
+    ],
+    "solution": "Return a new list in which every number is clamped to the closed interval [-5, 5].",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-021",
+    "prompt": "Write a function named ``moving_max_3``. Return the maximum of each consecutive window of length 3. If the list is shorter than 3, return an empty list.",
+    "entry_point": "moving_max_3",
+    "canonical_solution": "def moving_max_3(values):\n    return [max(values[i:i + 3]) for i in range(len(values) - 3 + 1)]\n",
+    "code": "def moving_max_3(values):\n    return [max(values[i:i + 3]) for i in range(len(values) - 3 + 1)]\n",
+    "test_list": [
+      "assert moving_max_3([4, 1, 7, 2, 9, 3, 8]) == [7, 7, 9, 9, 9]",
+      "assert moving_max_3([0, 1]) == []",
+      "assert moving_max_3([0, 1, 2]) == [2]"
+    ],
+    "solution": "Return the maximum of each consecutive window of length 3. If the list is shorter than 3, return an empty list.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-022",
+    "prompt": "Write a function named ``remove_every_3th``. Return a new list after removing items at positions 3, 6, 9, and so on, using one-based positions.",
+    "entry_point": "remove_every_3th",
+    "canonical_solution": "def remove_every_3th(values):\n    return [value for index, value in enumerate(values, 1) if index % 3 != 0]\n",
+    "code": "def remove_every_3th(values):\n    return [value for index, value in enumerate(values, 1) if index % 3 != 0]\n",
+    "test_list": [
+      "assert remove_every_3th([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == [1, 2, 4, 5, 7, 8, 10]",
+      "assert remove_every_3th([]) == []",
+      "assert remove_every_3th([1]) == [1]"
+    ],
+    "solution": "Return a new list after removing items at positions 3, 6, 9, and so on, using one-based positions.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-023",
+    "prompt": "Write a function named ``digit_sum_base_3``. Return the sum of the base-3 digits of a nonnegative integer ``number``.",
+    "entry_point": "digit_sum_base_3",
+    "canonical_solution": "def digit_sum_base_3(number):\n    if number == 0:\n        return 0\n    total = 0\n    while number:\n        total += number % 3\n        number //= 3\n    return total\n",
+    "code": "def digit_sum_base_3(number):\n    if number == 0:\n        return 0\n    total = 0\n    while number:\n        total += number % 3\n        number //= 3\n    return total\n",
+    "test_list": [
+      "assert digit_sum_base_3(31) == 3",
+      "assert digit_sum_base_3(0) == 0",
+      "assert digit_sum_base_3(80) == 8"
+    ],
+    "solution": "Return the sum of the base-3 digits of a nonnegative integer ``number``.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-024",
+    "prompt": "Write a function named ``sum_divisible_by_4``. Return the sum of all integers in ``values`` that are divisible by 4. The input list must not be modified.",
+    "entry_point": "sum_divisible_by_4",
+    "canonical_solution": "def sum_divisible_by_4(values):\n    return sum(value for value in values if value % 4 == 0)\n",
+    "code": "def sum_divisible_by_4(values):\n    return sum(value for value in values if value % 4 == 0)\n",
+    "test_list": [
+      "assert sum_divisible_by_4([1, 2, 3, 4, 5, 6]) == 4",
+      "assert sum_divisible_by_4([]) == 0",
+      "assert sum_divisible_by_4([-4, 5, 8]) == 4"
+    ],
+    "solution": "Return the sum of all integers in ``values`` that are divisible by 4. The input list must not be modified.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-025",
+    "prompt": "Write a function named ``rotate_left_3``. Return a new list formed by rotating ``values`` left by 3 positions. Empty input returns an empty list.",
+    "entry_point": "rotate_left_3",
+    "canonical_solution": "def rotate_left_3(values):\n    if not values:\n        return []\n    shift = 3 % len(values)\n    return values[shift:] + values[:shift]\n",
+    "code": "def rotate_left_3(values):\n    if not values:\n        return []\n    shift = 3 % len(values)\n    return values[shift:] + values[:shift]\n",
+    "test_list": [
+      "assert rotate_left_3([1, 2, 3, 4, 5, 6, 7]) == [4, 5, 6, 7, 1, 2, 3]",
+      "assert rotate_left_3([]) == []",
+      "assert rotate_left_3([9]) == [9]"
+    ],
+    "solution": "Return a new list formed by rotating ``values`` left by 3 positions. Empty input returns an empty list.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-026",
+    "prompt": "Write a function named ``every_4th_word``. Split ``text`` on whitespace and return every 4th word, counting the first word as position 1.",
+    "entry_point": "every_4th_word",
+    "canonical_solution": "def every_4th_word(text):\n    words = text.split()\n    return words[3::4]\n",
+    "code": "def every_4th_word(text):\n    words = text.split()\n    return words[3::4]\n",
+    "test_list": [
+      "assert every_4th_word('one two three four five six seven eight nine ten') == ['four', 'eight']",
+      "assert every_4th_word('') == []",
+      "assert every_4th_word('  a   b c  ') == []"
+    ],
+    "solution": "Split ``text`` on whitespace and return every 4th word, counting the first word as position 1.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-027",
+    "prompt": "Write a function named ``count_runs_at_least_4``. Count maximal runs of equal consecutive values whose lengths are at least 4.",
+    "entry_point": "count_runs_at_least_4",
+    "canonical_solution": "def count_runs_at_least_4(values):\n    if not values:\n        return 0\n    count = 0\n    run = 1\n    for i in range(1, len(values)):\n        if values[i] == values[i - 1]:\n            run += 1\n        else:\n            count += run >= 4\n            run = 1\n    return count + (run >= 4)\n",
+    "code": "def count_runs_at_least_4(values):\n    if not values:\n        return 0\n    count = 0\n    run = 1\n    for i in range(1, len(values)):\n        if values[i] == values[i - 1]:\n            run += 1\n        else:\n            count += run >= 4\n            run = 1\n    return count + (run >= 4)\n",
+    "test_list": [
+      "assert count_runs_at_least_4([1, 1, 1, 1, 2, 3, 3, 3, 3, 3, 4, 4, 4]) == 2",
+      "assert count_runs_at_least_4([]) == 0",
+      "assert count_runs_at_least_4([7,7,7,7]) == 1"
+    ],
+    "solution": "Count maximal runs of equal consecutive values whose lengths are at least 4.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-028",
+    "prompt": "Write a function named ``chunk_sums_4``. Partition ``values`` into consecutive chunks of at most 4 items and return the sum of each chunk.",
+    "entry_point": "chunk_sums_4",
+    "canonical_solution": "def chunk_sums_4(values):\n    return [sum(values[i:i + 4]) for i in range(0, len(values), 4)]\n",
+    "code": "def chunk_sums_4(values):\n    return [sum(values[i:i + 4]) for i in range(0, len(values), 4)]\n",
+    "test_list": [
+      "assert chunk_sums_4([1, 2, 3, 4, 5, 6, 7, 8]) == [10, 26]",
+      "assert chunk_sums_4([]) == []",
+      "assert chunk_sums_4([5]) == [5]"
+    ],
+    "solution": "Partition ``values`` into consecutive chunks of at most 4 items and return the sum of each chunk.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-029",
+    "prompt": "Write a function named ``clamp_symmetric_7``. Return a new list in which every number is clamped to the closed interval [-7, 7].",
+    "entry_point": "clamp_symmetric_7",
+    "canonical_solution": "def clamp_symmetric_7(values):\n    return [max(-7, min(7, value)) for value in values]\n",
+    "code": "def clamp_symmetric_7(values):\n    return [max(-7, min(7, value)) for value in values]\n",
+    "test_list": [
+      "assert clamp_symmetric_7([-100, -7, 0, 7, 100]) == [-7, -7, 0, 7, 7]",
+      "assert clamp_symmetric_7([]) == []",
+      "assert clamp_symmetric_7([1, -1]) == [1, -1]"
+    ],
+    "solution": "Return a new list in which every number is clamped to the closed interval [-7, 7].",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-030",
+    "prompt": "Write a function named ``moving_max_4``. Return the maximum of each consecutive window of length 4. If the list is shorter than 4, return an empty list.",
+    "entry_point": "moving_max_4",
+    "canonical_solution": "def moving_max_4(values):\n    return [max(values[i:i + 4]) for i in range(len(values) - 4 + 1)]\n",
+    "code": "def moving_max_4(values):\n    return [max(values[i:i + 4]) for i in range(len(values) - 4 + 1)]\n",
+    "test_list": [
+      "assert moving_max_4([4, 1, 7, 2, 9, 3, 8]) == [7, 9, 9, 9]",
+      "assert moving_max_4([0, 1, 2]) == []",
+      "assert moving_max_4([0, 1, 2, 3]) == [3]"
+    ],
+    "solution": "Return the maximum of each consecutive window of length 4. If the list is shorter than 4, return an empty list.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-031",
+    "prompt": "Write a function named ``remove_every_4th``. Return a new list after removing items at positions 4, 8, 12, and so on, using one-based positions.",
+    "entry_point": "remove_every_4th",
+    "canonical_solution": "def remove_every_4th(values):\n    return [value for index, value in enumerate(values, 1) if index % 4 != 0]\n",
+    "code": "def remove_every_4th(values):\n    return [value for index, value in enumerate(values, 1) if index % 4 != 0]\n",
+    "test_list": [
+      "assert remove_every_4th([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == [1, 2, 3, 5, 6, 7, 9, 10]",
+      "assert remove_every_4th([]) == []",
+      "assert remove_every_4th([1]) == [1]"
+    ],
+    "solution": "Return a new list after removing items at positions 4, 8, 12, and so on, using one-based positions.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-032",
+    "prompt": "Write a function named ``digit_sum_base_4``. Return the sum of the base-4 digits of a nonnegative integer ``number``.",
+    "entry_point": "digit_sum_base_4",
+    "canonical_solution": "def digit_sum_base_4(number):\n    if number == 0:\n        return 0\n    total = 0\n    while number:\n        total += number % 4\n        number //= 4\n    return total\n",
+    "code": "def digit_sum_base_4(number):\n    if number == 0:\n        return 0\n    total = 0\n    while number:\n        total += number % 4\n        number //= 4\n    return total\n",
+    "test_list": [
+      "assert digit_sum_base_4(69) == 3",
+      "assert digit_sum_base_4(0) == 0",
+      "assert digit_sum_base_4(255) == 12"
+    ],
+    "solution": "Return the sum of the base-4 digits of a nonnegative integer ``number``.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-033",
+    "prompt": "Write a function named ``sum_divisible_by_5``. Return the sum of all integers in ``values`` that are divisible by 5. The input list must not be modified.",
+    "entry_point": "sum_divisible_by_5",
+    "canonical_solution": "def sum_divisible_by_5(values):\n    return sum(value for value in values if value % 5 == 0)\n",
+    "code": "def sum_divisible_by_5(values):\n    return sum(value for value in values if value % 5 == 0)\n",
+    "test_list": [
+      "assert sum_divisible_by_5([1, 2, 3, 4, 5, 6]) == 5",
+      "assert sum_divisible_by_5([]) == 0",
+      "assert sum_divisible_by_5([-5, 6, 10]) == 5"
+    ],
+    "solution": "Return the sum of all integers in ``values`` that are divisible by 5. The input list must not be modified.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-034",
+    "prompt": "Write a function named ``rotate_left_4``. Return a new list formed by rotating ``values`` left by 4 positions. Empty input returns an empty list.",
+    "entry_point": "rotate_left_4",
+    "canonical_solution": "def rotate_left_4(values):\n    if not values:\n        return []\n    shift = 4 % len(values)\n    return values[shift:] + values[:shift]\n",
+    "code": "def rotate_left_4(values):\n    if not values:\n        return []\n    shift = 4 % len(values)\n    return values[shift:] + values[:shift]\n",
+    "test_list": [
+      "assert rotate_left_4([1, 2, 3, 4, 5, 6, 7]) == [5, 6, 7, 1, 2, 3, 4]",
+      "assert rotate_left_4([]) == []",
+      "assert rotate_left_4([9]) == [9]"
+    ],
+    "solution": "Return a new list formed by rotating ``values`` left by 4 positions. Empty input returns an empty list.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-035",
+    "prompt": "Write a function named ``every_5th_word``. Split ``text`` on whitespace and return every 5th word, counting the first word as position 1.",
+    "entry_point": "every_5th_word",
+    "canonical_solution": "def every_5th_word(text):\n    words = text.split()\n    return words[4::5]\n",
+    "code": "def every_5th_word(text):\n    words = text.split()\n    return words[4::5]\n",
+    "test_list": [
+      "assert every_5th_word('one two three four five six seven eight nine ten') == ['five', 'ten']",
+      "assert every_5th_word('') == []",
+      "assert every_5th_word('  a   b c  ') == []"
+    ],
+    "solution": "Split ``text`` on whitespace and return every 5th word, counting the first word as position 1.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-036",
+    "prompt": "Write a function named ``count_runs_at_least_5``. Count maximal runs of equal consecutive values whose lengths are at least 5.",
+    "entry_point": "count_runs_at_least_5",
+    "canonical_solution": "def count_runs_at_least_5(values):\n    if not values:\n        return 0\n    count = 0\n    run = 1\n    for i in range(1, len(values)):\n        if values[i] == values[i - 1]:\n            run += 1\n        else:\n            count += run >= 5\n            run = 1\n    return count + (run >= 5)\n",
+    "code": "def count_runs_at_least_5(values):\n    if not values:\n        return 0\n    count = 0\n    run = 1\n    for i in range(1, len(values)):\n        if values[i] == values[i - 1]:\n            run += 1\n        else:\n            count += run >= 5\n            run = 1\n    return count + (run >= 5)\n",
+    "test_list": [
+      "assert count_runs_at_least_5([1, 1, 1, 1, 1, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4]) == 2",
+      "assert count_runs_at_least_5([]) == 0",
+      "assert count_runs_at_least_5([7,7,7,7,7]) == 1"
+    ],
+    "solution": "Count maximal runs of equal consecutive values whose lengths are at least 5.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-037",
+    "prompt": "Write a function named ``chunk_sums_5``. Partition ``values`` into consecutive chunks of at most 5 items and return the sum of each chunk.",
+    "entry_point": "chunk_sums_5",
+    "canonical_solution": "def chunk_sums_5(values):\n    return [sum(values[i:i + 5]) for i in range(0, len(values), 5)]\n",
+    "code": "def chunk_sums_5(values):\n    return [sum(values[i:i + 5]) for i in range(0, len(values), 5)]\n",
+    "test_list": [
+      "assert chunk_sums_5([1, 2, 3, 4, 5, 6, 7, 8]) == [15, 21]",
+      "assert chunk_sums_5([]) == []",
+      "assert chunk_sums_5([5]) == [5]"
+    ],
+    "solution": "Partition ``values`` into consecutive chunks of at most 5 items and return the sum of each chunk.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-038",
+    "prompt": "Write a function named ``clamp_symmetric_9``. Return a new list in which every number is clamped to the closed interval [-9, 9].",
+    "entry_point": "clamp_symmetric_9",
+    "canonical_solution": "def clamp_symmetric_9(values):\n    return [max(-9, min(9, value)) for value in values]\n",
+    "code": "def clamp_symmetric_9(values):\n    return [max(-9, min(9, value)) for value in values]\n",
+    "test_list": [
+      "assert clamp_symmetric_9([-100, -9, 0, 9, 100]) == [-9, -9, 0, 9, 9]",
+      "assert clamp_symmetric_9([]) == []",
+      "assert clamp_symmetric_9([1, -1]) == [1, -1]"
+    ],
+    "solution": "Return a new list in which every number is clamped to the closed interval [-9, 9].",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-039",
+    "prompt": "Write a function named ``moving_max_5``. Return the maximum of each consecutive window of length 5. If the list is shorter than 5, return an empty list.",
+    "entry_point": "moving_max_5",
+    "canonical_solution": "def moving_max_5(values):\n    return [max(values[i:i + 5]) for i in range(len(values) - 5 + 1)]\n",
+    "code": "def moving_max_5(values):\n    return [max(values[i:i + 5]) for i in range(len(values) - 5 + 1)]\n",
+    "test_list": [
+      "assert moving_max_5([4, 1, 7, 2, 9, 3, 8]) == [9, 9, 9]",
+      "assert moving_max_5([0, 1, 2, 3]) == []",
+      "assert moving_max_5([0, 1, 2, 3, 4]) == [4]"
+    ],
+    "solution": "Return the maximum of each consecutive window of length 5. If the list is shorter than 5, return an empty list.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-040",
+    "prompt": "Write a function named ``remove_every_5th``. Return a new list after removing items at positions 5, 10, 15, and so on, using one-based positions.",
+    "entry_point": "remove_every_5th",
+    "canonical_solution": "def remove_every_5th(values):\n    return [value for index, value in enumerate(values, 1) if index % 5 != 0]\n",
+    "code": "def remove_every_5th(values):\n    return [value for index, value in enumerate(values, 1) if index % 5 != 0]\n",
+    "test_list": [
+      "assert remove_every_5th([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == [1, 2, 3, 4, 6, 7, 8, 9]",
+      "assert remove_every_5th([]) == []",
+      "assert remove_every_5th([1]) == [1]"
+    ],
+    "solution": "Return a new list after removing items at positions 5, 10, 15, and so on, using one-based positions.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-041",
+    "prompt": "Write a function named ``digit_sum_base_5``. Return the sum of the base-5 digits of a nonnegative integer ``number``.",
+    "entry_point": "digit_sum_base_5",
+    "canonical_solution": "def digit_sum_base_5(number):\n    if number == 0:\n        return 0\n    total = 0\n    while number:\n        total += number % 5\n        number //= 5\n    return total\n",
+    "code": "def digit_sum_base_5(number):\n    if number == 0:\n        return 0\n    total = 0\n    while number:\n        total += number % 5\n        number //= 5\n    return total\n",
+    "test_list": [
+      "assert digit_sum_base_5(131) == 3",
+      "assert digit_sum_base_5(0) == 0",
+      "assert digit_sum_base_5(624) == 16"
+    ],
+    "solution": "Return the sum of the base-5 digits of a nonnegative integer ``number``.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-042",
+    "prompt": "Write a function named ``sum_divisible_by_6``. Return the sum of all integers in ``values`` that are divisible by 6. The input list must not be modified.",
+    "entry_point": "sum_divisible_by_6",
+    "canonical_solution": "def sum_divisible_by_6(values):\n    return sum(value for value in values if value % 6 == 0)\n",
+    "code": "def sum_divisible_by_6(values):\n    return sum(value for value in values if value % 6 == 0)\n",
+    "test_list": [
+      "assert sum_divisible_by_6([1, 2, 3, 4, 5, 6]) == 6",
+      "assert sum_divisible_by_6([]) == 0",
+      "assert sum_divisible_by_6([-6, 7, 12]) == 6"
+    ],
+    "solution": "Return the sum of all integers in ``values`` that are divisible by 6. The input list must not be modified.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-043",
+    "prompt": "Write a function named ``rotate_left_5``. Return a new list formed by rotating ``values`` left by 5 positions. Empty input returns an empty list.",
+    "entry_point": "rotate_left_5",
+    "canonical_solution": "def rotate_left_5(values):\n    if not values:\n        return []\n    shift = 5 % len(values)\n    return values[shift:] + values[:shift]\n",
+    "code": "def rotate_left_5(values):\n    if not values:\n        return []\n    shift = 5 % len(values)\n    return values[shift:] + values[:shift]\n",
+    "test_list": [
+      "assert rotate_left_5([1, 2, 3, 4, 5, 6, 7]) == [6, 7, 1, 2, 3, 4, 5]",
+      "assert rotate_left_5([]) == []",
+      "assert rotate_left_5([9]) == [9]"
+    ],
+    "solution": "Return a new list formed by rotating ``values`` left by 5 positions. Empty input returns an empty list.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-044",
+    "prompt": "Write a function named ``every_6th_word``. Split ``text`` on whitespace and return every 6th word, counting the first word as position 1.",
+    "entry_point": "every_6th_word",
+    "canonical_solution": "def every_6th_word(text):\n    words = text.split()\n    return words[5::6]\n",
+    "code": "def every_6th_word(text):\n    words = text.split()\n    return words[5::6]\n",
+    "test_list": [
+      "assert every_6th_word('one two three four five six seven eight nine ten') == ['six']",
+      "assert every_6th_word('') == []",
+      "assert every_6th_word('  a   b c  ') == []"
+    ],
+    "solution": "Split ``text`` on whitespace and return every 6th word, counting the first word as position 1.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-045",
+    "prompt": "Write a function named ``count_runs_at_least_6``. Count maximal runs of equal consecutive values whose lengths are at least 6.",
+    "entry_point": "count_runs_at_least_6",
+    "canonical_solution": "def count_runs_at_least_6(values):\n    if not values:\n        return 0\n    count = 0\n    run = 1\n    for i in range(1, len(values)):\n        if values[i] == values[i - 1]:\n            run += 1\n        else:\n            count += run >= 6\n            run = 1\n    return count + (run >= 6)\n",
+    "code": "def count_runs_at_least_6(values):\n    if not values:\n        return 0\n    count = 0\n    run = 1\n    for i in range(1, len(values)):\n        if values[i] == values[i - 1]:\n            run += 1\n        else:\n            count += run >= 6\n            run = 1\n    return count + (run >= 6)\n",
+    "test_list": [
+      "assert count_runs_at_least_6([1, 1, 1, 1, 1, 1, 2, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4]) == 2",
+      "assert count_runs_at_least_6([]) == 0",
+      "assert count_runs_at_least_6([7,7,7,7,7,7]) == 1"
+    ],
+    "solution": "Count maximal runs of equal consecutive values whose lengths are at least 6.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-046",
+    "prompt": "Write a function named ``chunk_sums_6``. Partition ``values`` into consecutive chunks of at most 6 items and return the sum of each chunk.",
+    "entry_point": "chunk_sums_6",
+    "canonical_solution": "def chunk_sums_6(values):\n    return [sum(values[i:i + 6]) for i in range(0, len(values), 6)]\n",
+    "code": "def chunk_sums_6(values):\n    return [sum(values[i:i + 6]) for i in range(0, len(values), 6)]\n",
+    "test_list": [
+      "assert chunk_sums_6([1, 2, 3, 4, 5, 6, 7, 8]) == [21, 15]",
+      "assert chunk_sums_6([]) == []",
+      "assert chunk_sums_6([5]) == [5]"
+    ],
+    "solution": "Partition ``values`` into consecutive chunks of at most 6 items and return the sum of each chunk.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-047",
+    "prompt": "Write a function named ``clamp_symmetric_11``. Return a new list in which every number is clamped to the closed interval [-11, 11].",
+    "entry_point": "clamp_symmetric_11",
+    "canonical_solution": "def clamp_symmetric_11(values):\n    return [max(-11, min(11, value)) for value in values]\n",
+    "code": "def clamp_symmetric_11(values):\n    return [max(-11, min(11, value)) for value in values]\n",
+    "test_list": [
+      "assert clamp_symmetric_11([-100, -11, 0, 11, 100]) == [-11, -11, 0, 11, 11]",
+      "assert clamp_symmetric_11([]) == []",
+      "assert clamp_symmetric_11([1, -1]) == [1, -1]"
+    ],
+    "solution": "Return a new list in which every number is clamped to the closed interval [-11, 11].",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-048",
+    "prompt": "Write a function named ``moving_max_6``. Return the maximum of each consecutive window of length 6. If the list is shorter than 6, return an empty list.",
+    "entry_point": "moving_max_6",
+    "canonical_solution": "def moving_max_6(values):\n    return [max(values[i:i + 6]) for i in range(len(values) - 6 + 1)]\n",
+    "code": "def moving_max_6(values):\n    return [max(values[i:i + 6]) for i in range(len(values) - 6 + 1)]\n",
+    "test_list": [
+      "assert moving_max_6([4, 1, 7, 2, 9, 3, 8]) == [9, 9]",
+      "assert moving_max_6([0, 1, 2, 3, 4]) == []",
+      "assert moving_max_6([0, 1, 2, 3, 4, 5]) == [5]"
+    ],
+    "solution": "Return the maximum of each consecutive window of length 6. If the list is shorter than 6, return an empty list.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-049",
+    "prompt": "Write a function named ``remove_every_6th``. Return a new list after removing items at positions 6, 12, 18, and so on, using one-based positions.",
+    "entry_point": "remove_every_6th",
+    "canonical_solution": "def remove_every_6th(values):\n    return [value for index, value in enumerate(values, 1) if index % 6 != 0]\n",
+    "code": "def remove_every_6th(values):\n    return [value for index, value in enumerate(values, 1) if index % 6 != 0]\n",
+    "test_list": [
+      "assert remove_every_6th([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == [1, 2, 3, 4, 5, 7, 8, 9, 10]",
+      "assert remove_every_6th([]) == []",
+      "assert remove_every_6th([1]) == [1]"
+    ],
+    "solution": "Return a new list after removing items at positions 6, 12, 18, and so on, using one-based positions.",
+    "source": "original",
+    "style": "MBPP+"
+  },
+  {
+    "id": "dev-mbppplus-050",
+    "prompt": "Write a function named ``digit_sum_base_6``. Return the sum of the base-6 digits of a nonnegative integer ``number``.",
+    "entry_point": "digit_sum_base_6",
+    "canonical_solution": "def digit_sum_base_6(number):\n    if number == 0:\n        return 0\n    total = 0\n    while number:\n        total += number % 6\n        number //= 6\n    return total\n",
+    "code": "def digit_sum_base_6(number):\n    if number == 0:\n        return 0\n    total = 0\n    while number:\n        total += number % 6\n        number //= 6\n    return total\n",
+    "test_list": [
+      "assert digit_sum_base_6(223) == 3",
+      "assert digit_sum_base_6(0) == 0",
+      "assert digit_sum_base_6(1295) == 20"
+    ],
+    "solution": "Return the sum of the base-6 digits of a nonnegative integer ``number``.",
+    "source": "original",
+    "style": "MBPP+"
+  }
+]

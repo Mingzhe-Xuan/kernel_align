@@ -1,0 +1,83 @@
+{
+    "aime2024": {
+        "max_token": 20000,
+        "generation_bs": 2,
+        "latent_steps": {
+            "sequential": 20,
+            "hierarchical": 10
+        },
+        "times": 3
+    },
+    "aime2025": {
+        "max_token": 20000,
+        "generation_bs": 2,
+        "latent_steps": {
+            "sequential": 10,
+            "hierarchical": 10
+        },
+        "times": 3
+    },
+    "arc_challenge": {
+        "max_token": 2048,
+        "generation_bs": 16,
+        "latent_steps": {
+            "sequential": 20,
+            "hierarchical": 10
+        },
+        "times": 3
+    },
+    "arc_easy": {
+        "max_token": 2048,
+        "generation_bs": 16,
+        "latent_steps": {
+            "sequential": 10,
+            "hierarchical": 10
+        },
+        "times": 3
+    },
+    "gpqa": {
+        "max_token": 8000,
+        "generation_bs": 5,
+        "latent_steps": {
+            "sequential": 10,
+            "hierarchical": 80
+        },
+        "times": 3
+    },
+    "gsm8k": {
+        "max_token": 2048,
+        "generation_bs": 16,
+        "latent_steps": {
+            "sequential": 20,
+            "hierarchical": 20
+        },
+        "times": 3
+    },
+    "humanevalplus": {
+        "max_token": 4096,
+        "generation_bs": 8,
+        "latent_steps": {
+            "sequential": 20,
+            "hierarchical": 40
+        },
+        "times": 3
+    },
+    "mbppplus": {
+        "max_token": 4096,
+        "generation_bs": 8,
+        "latent_steps": {
+            "sequential": 10,
+            "hierarchical": 80
+        },
+        "times": 3
+    },
+    "medqa": {
+        "max_token": 4096,
+        "generation_bs": 8,
+        "latent_steps": {
+            "sequential": 10,
+            "hierarchical": 10
+        },
+        "times": 3
+    }
+}

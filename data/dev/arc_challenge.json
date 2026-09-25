@@ -1,0 +1,1052 @@
+[
+  {
+    "id": "dev-arc_challenge-001",
+    "question": "Two carts start at rest on a level, nearly frictionless track. Cart X has a mass of 2 kg, and cart Y has a mass of 8 kg. Each cart is pushed by the same constant force for the same amount of time. How does the change in speed of cart X compare with the change in speed of cart Y?",
+    "problem": "Two carts start at rest on a level, nearly frictionless track. Cart X has a mass of 2 kg, and cart Y has a mass of 8 kg. Each cart is pushed by the same constant force for the same amount of time. How does the change in speed of cart X compare with the change in speed of cart Y?",
+    "choices": [
+      "Cart X has one-fourth the change in speed of cart Y.",
+      "Cart X has the same change in speed as cart Y.",
+      "Cart X has twice the change in speed of cart Y.",
+      "Cart X has four times the change in speed of cart Y."
+    ],
+    "options": [
+      "Cart X has one-fourth the change in speed of cart Y.",
+      "Cart X has the same change in speed as cart Y.",
+      "Cart X has twice the change in speed of cart Y.",
+      "Cart X has four times the change in speed of cart Y."
+    ],
+    "solution": "The same force acting for the same time gives both carts the same impulse, so they receive equal changes in momentum. Since change in speed equals change in momentum divided by mass, the 2 kg cart's change in speed is 8/2 = 4 times that of the 8 kg cart.",
+    "answer": "Cart X has four times the change in speed of cart Y.",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-002",
+    "question": "After heavy rain washes fertilizer into a pond, algae grow rapidly across the surface. Several days later, many fish die even though the fertilizer is not directly poisonous to them. Which explanation best accounts for the fish deaths?",
+    "problem": "After heavy rain washes fertilizer into a pond, algae grow rapidly across the surface. Several days later, many fish die even though the fertilizer is not directly poisonous to them. Which explanation best accounts for the fish deaths?",
+    "choices": [
+      "The algae make the pond water too dense for fish to swim through.",
+      "Decomposers use much of the dissolved oxygen while breaking down dead algae.",
+      "The fertilizer prevents fish from absorbing nutrients through their gills.",
+      "The algae convert all of the pond's oxygen directly into nitrogen."
+    ],
+    "options": [
+      "The algae make the pond water too dense for fish to swim through.",
+      "Decomposers use much of the dissolved oxygen while breaking down dead algae.",
+      "The fertilizer prevents fish from absorbing nutrients through their gills.",
+      "The algae convert all of the pond's oxygen directly into nitrogen."
+    ],
+    "solution": "Extra nutrients cause an algal bloom. When large numbers of algae die, decomposers carry out cellular respiration as they break the algae down. This consumes dissolved oxygen, leaving too little oxygen for the fish.",
+    "answer": "Decomposers use much of the dissolved oxygen while breaking down dead algae.",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-003",
+    "question": "A seismograph station detects P waves from an earthquake on the opposite side of Earth but detects no S waves from that earthquake. Which property of Earth's interior best explains this observation?",
+    "problem": "A seismograph station detects P waves from an earthquake on the opposite side of Earth but detects no S waves from that earthquake. Which property of Earth's interior best explains this observation?",
+    "choices": [
+      "The mantle is less dense than the crust.",
+      "The inner core has a lower temperature than the mantle.",
+      "Part of the core is liquid, and S waves cannot travel through liquids.",
+      "P waves travel only through solids, while S waves travel only through gases."
+    ],
+    "options": [
+      "The mantle is less dense than the crust.",
+      "The inner core has a lower temperature than the mantle.",
+      "Part of the core is liquid, and S waves cannot travel through liquids.",
+      "P waves travel only through solids, while S waves travel only through gases."
+    ],
+    "solution": "P waves can pass through solids and liquids, but S waves cannot pass through liquids. The liquid outer core therefore blocks S waves while allowing P waves to continue, producing the observation at the station.",
+    "answer": "Part of the core is liquid, and S waves cannot travel through liquids.",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-004",
+    "question": "Two identical light bulbs are connected in parallel to an ideal battery. If one bulb burns out and creates an open circuit in its branch, what happens to the other bulb?",
+    "problem": "Two identical light bulbs are connected in parallel to an ideal battery. If one bulb burns out and creates an open circuit in its branch, what happens to the other bulb?",
+    "choices": [
+      "It goes out because the entire circuit is open.",
+      "It becomes dimmer because the battery voltage is divided between the branches.",
+      "It remains about equally bright because its branch still has the full battery voltage.",
+      "It becomes twice as bright because all current must pass through it."
+    ],
+    "options": [
+      "It goes out because the entire circuit is open.",
+      "It becomes dimmer because the battery voltage is divided between the branches.",
+      "It remains about equally bright because its branch still has the full battery voltage.",
+      "It becomes twice as bright because all current must pass through it."
+    ],
+    "solution": "Parallel branches are independently connected across the battery. Opening one branch stops current only in that branch. The unbroken bulb remains across the same battery voltage, so its power and brightness remain about the same.",
+    "answer": "It remains about equally bright because its branch still has the full battery voltage.",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-005",
+    "question": "A red-flowered plant is crossed with a white-flowered plant. Red flower color is controlled by a dominant allele R, and white flower color by a recessive allele r. Some of their offspring have white flowers. What must be true about the red-flowered parent?",
+    "problem": "A red-flowered plant is crossed with a white-flowered plant. Red flower color is controlled by a dominant allele R, and white flower color by a recessive allele r. Some of their offspring have white flowers. What must be true about the red-flowered parent?",
+    "choices": [
+      "It has genotype RR and contributes R to every offspring.",
+      "It has genotype Rr and can contribute r to an offspring.",
+      "It has genotype rr but appears red because red is dominant.",
+      "Its genotype cannot be determined because the white parent may contribute R."
+    ],
+    "options": [
+      "It has genotype RR and contributes R to every offspring.",
+      "It has genotype Rr and can contribute r to an offspring.",
+      "It has genotype rr but appears red because red is dominant.",
+      "Its genotype cannot be determined because the white parent may contribute R."
+    ],
+    "solution": "The white parent must be rr, and a white offspring must receive r from both parents. The red parent therefore carries an r allele. Because it is red, it must also carry the dominant R allele, so its genotype is Rr.",
+    "answer": "It has genotype Rr and can contribute r to an offspring.",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-006",
+    "question": "Two blocks of masses 2 kg and 6 kg are separately pulled on frictionless surfaces by equal constant forces. What is the ratio of the lighter block's acceleration to the heavier block's acceleration?",
+    "problem": "Two blocks of masses 2 kg and 6 kg are separately pulled on frictionless surfaces by equal constant forces. What is the ratio of the lighter block's acceleration to the heavier block's acceleration?",
+    "choices": [
+      "2:6",
+      "8:1",
+      "3:1",
+      "1:1"
+    ],
+    "options": [
+      "2:6",
+      "8:1",
+      "3:1",
+      "1:1"
+    ],
+    "solution": "Newton's second law gives a=F/m. The acceleration ratio is (F/2)/(F/6)=6/2=3:1.",
+    "answer": "3:1",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-007",
+    "question": "A 12-V ideal battery is connected to 2-ohm and 4-ohm resistors in series. What current flows in the circuit?",
+    "problem": "A 12-V ideal battery is connected to 2-ohm and 4-ohm resistors in series. What current flows in the circuit?",
+    "choices": [
+      "0.5 A",
+      "2 A",
+      "6 A",
+      "3 A"
+    ],
+    "options": [
+      "0.5 A",
+      "2 A",
+      "6 A",
+      "3 A"
+    ],
+    "solution": "Series resistances add to 6 ohms, so I=V/R=12/6=2 A.",
+    "answer": "2 A",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-008",
+    "question": "A solid object with average density 0.60 g/cm^3 floats at rest in water of density 1.00 g/cm^3. Approximately what fraction of its volume is submerged?",
+    "problem": "A solid object with average density 0.60 g/cm^3 floats at rest in water of density 1.00 g/cm^3. Approximately what fraction of its volume is submerged?",
+    "choices": [
+      "60%",
+      "40%",
+      "100%",
+      "167%"
+    ],
+    "options": [
+      "60%",
+      "40%",
+      "100%",
+      "167%"
+    ],
+    "solution": "For a floating object, the submerged-volume fraction equals the object's density divided by the fluid density.",
+    "answer": "60%",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-009",
+    "question": "Two unaffected heterozygous parents carry the same autosomal recessive allele. What is the probability their next child is affected?",
+    "problem": "Two unaffected heterozygous parents carry the same autosomal recessive allele. What is the probability their next child is affected?",
+    "choices": [
+      "25%",
+      "50%",
+      "75%",
+      "0%"
+    ],
+    "options": [
+      "25%",
+      "50%",
+      "75%",
+      "0%"
+    ],
+    "solution": "An Aa by Aa cross produces aa with probability 1/4.",
+    "answer": "25%",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-010",
+    "question": "Producers store 20,000 kJ of energy. If about 10% passes at each trophic transfer, how much is available to consumers 2 trophic levels above the producers?",
+    "problem": "Producers store 20,000 kJ of energy. If about 10% passes at each trophic transfer, how much is available to consumers 2 trophic levels above the producers?",
+    "choices": [
+      "20,000 kJ",
+      "19,800 kJ",
+      "200 kJ",
+      "2,000 kJ"
+    ],
+    "options": [
+      "20,000 kJ",
+      "19,800 kJ",
+      "200 kJ",
+      "2,000 kJ"
+    ],
+    "solution": "Applying the 10% rule 2 times gives 20000*(0.1)^2=200 kJ.",
+    "answer": "200 kJ",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-011",
+    "question": "Hydrogen burns by 2 H2 + O2 -> 2 H2O. If 2 g of H2 reacts with excess oxygen, how many moles of H2O form? (Molar mass H2 = 2 g/mol.)",
+    "problem": "Hydrogen burns by 2 H2 + O2 -> 2 H2O. If 2 g of H2 reacts with excess oxygen, how many moles of H2O form? (Molar mass H2 = 2 g/mol.)",
+    "choices": [
+      "4 mol",
+      "1 mol",
+      "0.5 mol",
+      "2 mol"
+    ],
+    "options": [
+      "4 mol",
+      "1 mol",
+      "0.5 mol",
+      "2 mol"
+    ],
+    "solution": "There are 2/2=1 mol H2, and the balanced equation gives a 1:1 H2-to-H2O mole ratio.",
+    "answer": "1 mol",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-012",
+    "question": "A spacecraft moves from a distance r to 2r from the Sun. Ignoring absorption, what fraction of the original solar intensity does it receive?",
+    "problem": "A spacecraft moves from a distance r to 2r from the Sun. Ignoring absorption, what fraction of the original solar intensity does it receive?",
+    "choices": [
+      "1/2",
+      "1/4",
+      "1/8",
+      "4"
+    ],
+    "options": [
+      "1/2",
+      "1/4",
+      "1/8",
+      "4"
+    ],
+    "solution": "Radiative intensity follows the inverse-square law, so I(2r)/I(r)=1/2^2=1/4.",
+    "answer": "1/4",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-013",
+    "question": "A radioactive sample is observed after 2 complete half-lives. What fraction of the original parent isotope remains?",
+    "problem": "A radioactive sample is observed after 2 complete half-lives. What fraction of the original parent isotope remains?",
+    "choices": [
+      "1/5",
+      "2/3",
+      "1/2",
+      "1/4"
+    ],
+    "options": [
+      "1/5",
+      "2/3",
+      "1/2",
+      "1/4"
+    ],
+    "solution": "The remaining fraction is (1/2)^2=1/4.",
+    "answer": "1/4",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-014",
+    "question": "A researcher tests whether added nitrogen changes algal growth. Identical cultures receive different nitrogen concentrations. Which setup best isolates the causal effect?",
+    "problem": "A researcher tests whether added nitrogen changes algal growth. Identical cultures receive different nitrogen concentrations. Which setup best isolates the causal effect?",
+    "choices": [
+      "Use a different algal species in every flask",
+      "Measure each group with a different method",
+      "Use different light levels for every concentration",
+      "Keep light, temperature, volume, and starting algae constant"
+    ],
+    "options": [
+      "Use a different algal species in every flask",
+      "Measure each group with a different method",
+      "Use different light levels for every concentration",
+      "Keep light, temperature, volume, and starting algae constant"
+    ],
+    "solution": "Holding other variables constant makes nitrogen concentration the sole manipulated variable, allowing a causal comparison.",
+    "answer": "Keep light, temperature, volume, and starting algae constant",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-015",
+    "question": "Two blocks of masses 3 kg and 8 kg are separately pulled on frictionless surfaces by equal constant forces. What is the ratio of the lighter block's acceleration to the heavier block's acceleration?",
+    "problem": "Two blocks of masses 3 kg and 8 kg are separately pulled on frictionless surfaces by equal constant forces. What is the ratio of the lighter block's acceleration to the heavier block's acceleration?",
+    "choices": [
+      "11:1",
+      "8:3",
+      "1:1",
+      "3:8"
+    ],
+    "options": [
+      "11:1",
+      "8:3",
+      "1:1",
+      "3:8"
+    ],
+    "solution": "Newton's second law gives a=F/m. The acceleration ratio is (F/3)/(F/8)=8/3=8:3.",
+    "answer": "8:3",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-016",
+    "question": "A 18-V ideal battery is connected to 3-ohm and 5-ohm resistors in series. What current flows in the circuit?",
+    "problem": "A 18-V ideal battery is connected to 3-ohm and 5-ohm resistors in series. What current flows in the circuit?",
+    "choices": [
+      "2.25 A",
+      "6 A",
+      "3.6 A",
+      "0.444444 A"
+    ],
+    "options": [
+      "2.25 A",
+      "6 A",
+      "3.6 A",
+      "0.444444 A"
+    ],
+    "solution": "Series resistances add to 8 ohms, so I=V/R=18/8=2.25 A.",
+    "answer": "2.25 A",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-017",
+    "question": "A solid object with average density 0.65 g/cm^3 floats at rest in water of density 1.00 g/cm^3. Approximately what fraction of its volume is submerged?",
+    "problem": "A solid object with average density 0.65 g/cm^3 floats at rest in water of density 1.00 g/cm^3. Approximately what fraction of its volume is submerged?",
+    "choices": [
+      "35%",
+      "100%",
+      "154%",
+      "65%"
+    ],
+    "options": [
+      "35%",
+      "100%",
+      "154%",
+      "65%"
+    ],
+    "solution": "For a floating object, the submerged-volume fraction equals the object's density divided by the fluid density.",
+    "answer": "65%",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-018",
+    "question": "A heterozygous carrier of an autosomal recessive condition has a child with an affected individual. What is the probability the child is affected?",
+    "problem": "A heterozygous carrier of an autosomal recessive condition has a child with an affected individual. What is the probability the child is affected?",
+    "choices": [
+      "50%",
+      "100%",
+      "0%",
+      "25%"
+    ],
+    "options": [
+      "50%",
+      "100%",
+      "0%",
+      "25%"
+    ],
+    "solution": "Aa by aa produces affected aa offspring with probability 1/2.",
+    "answer": "50%",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-019",
+    "question": "Producers store 40,000 kJ of energy. If about 10% passes at each trophic transfer, how much is available to consumers 3 trophic levels above the producers?",
+    "problem": "Producers store 40,000 kJ of energy. If about 10% passes at each trophic transfer, how much is available to consumers 3 trophic levels above the producers?",
+    "choices": [
+      "39,960 kJ",
+      "40 kJ",
+      "400 kJ",
+      "4,000 kJ"
+    ],
+    "options": [
+      "39,960 kJ",
+      "40 kJ",
+      "400 kJ",
+      "4,000 kJ"
+    ],
+    "solution": "Applying the 10% rule 3 times gives 40000*(0.1)^3=40 kJ.",
+    "answer": "40 kJ",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-020",
+    "question": "Hydrogen burns by 2 H2 + O2 -> 2 H2O. If 4 g of H2 reacts with excess oxygen, how many moles of H2O form? (Molar mass H2 = 2 g/mol.)",
+    "problem": "Hydrogen burns by 2 H2 + O2 -> 2 H2O. If 4 g of H2 reacts with excess oxygen, how many moles of H2O form? (Molar mass H2 = 2 g/mol.)",
+    "choices": [
+      "2 mol",
+      "1 mol",
+      "4 mol",
+      "8 mol"
+    ],
+    "options": [
+      "2 mol",
+      "1 mol",
+      "4 mol",
+      "8 mol"
+    ],
+    "solution": "There are 4/2=2 mol H2, and the balanced equation gives a 1:1 H2-to-H2O mole ratio.",
+    "answer": "2 mol",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-021",
+    "question": "A spacecraft moves from a distance r to 3r from the Sun. Ignoring absorption, what fraction of the original solar intensity does it receive?",
+    "problem": "A spacecraft moves from a distance r to 3r from the Sun. Ignoring absorption, what fraction of the original solar intensity does it receive?",
+    "choices": [
+      "1/9",
+      "1/27",
+      "9",
+      "1/3"
+    ],
+    "options": [
+      "1/9",
+      "1/27",
+      "9",
+      "1/3"
+    ],
+    "solution": "Radiative intensity follows the inverse-square law, so I(3r)/I(r)=1/3^2=1/9.",
+    "answer": "1/9",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-022",
+    "question": "A radioactive sample is observed after 3 complete half-lives. What fraction of the original parent isotope remains?",
+    "problem": "A radioactive sample is observed after 3 complete half-lives. What fraction of the original parent isotope remains?",
+    "choices": [
+      "3/4",
+      "1/3",
+      "1/8",
+      "1/9"
+    ],
+    "options": [
+      "3/4",
+      "1/3",
+      "1/8",
+      "1/9"
+    ],
+    "solution": "The remaining fraction is (1/2)^3=1/8.",
+    "answer": "1/8",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-023",
+    "question": "A researcher tests whether added phosphorus changes algal growth. Identical cultures receive different phosphorus concentrations. Which setup best isolates the causal effect?",
+    "problem": "A researcher tests whether added phosphorus changes algal growth. Identical cultures receive different phosphorus concentrations. Which setup best isolates the causal effect?",
+    "choices": [
+      "Measure each group with a different method",
+      "Use different light levels for every concentration",
+      "Keep light, temperature, volume, and starting algae constant",
+      "Use a different algal species in every flask"
+    ],
+    "options": [
+      "Measure each group with a different method",
+      "Use different light levels for every concentration",
+      "Keep light, temperature, volume, and starting algae constant",
+      "Use a different algal species in every flask"
+    ],
+    "solution": "Holding other variables constant makes phosphorus concentration the sole manipulated variable, allowing a causal comparison.",
+    "answer": "Keep light, temperature, volume, and starting algae constant",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-024",
+    "question": "Two blocks of masses 4 kg and 10 kg are separately pulled on frictionless surfaces by equal constant forces. What is the ratio of the lighter block's acceleration to the heavier block's acceleration?",
+    "problem": "Two blocks of masses 4 kg and 10 kg are separately pulled on frictionless surfaces by equal constant forces. What is the ratio of the lighter block's acceleration to the heavier block's acceleration?",
+    "choices": [
+      "5:2",
+      "1:1",
+      "4:10",
+      "14:1"
+    ],
+    "options": [
+      "5:2",
+      "1:1",
+      "4:10",
+      "14:1"
+    ],
+    "solution": "Newton's second law gives a=F/m. The acceleration ratio is (F/4)/(F/10)=10/4=5:2.",
+    "answer": "5:2",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-025",
+    "question": "A 24-V ideal battery is connected to 4-ohm and 6-ohm resistors in series. What current flows in the circuit?",
+    "problem": "A 24-V ideal battery is connected to 4-ohm and 6-ohm resistors in series. What current flows in the circuit?",
+    "choices": [
+      "6 A",
+      "4 A",
+      "0.416667 A",
+      "2.4 A"
+    ],
+    "options": [
+      "6 A",
+      "4 A",
+      "0.416667 A",
+      "2.4 A"
+    ],
+    "solution": "Series resistances add to 10 ohms, so I=V/R=24/10=2.4 A.",
+    "answer": "2.4 A",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-026",
+    "question": "A solid object with average density 0.70 g/cm^3 floats at rest in water of density 1.00 g/cm^3. Approximately what fraction of its volume is submerged?",
+    "problem": "A solid object with average density 0.70 g/cm^3 floats at rest in water of density 1.00 g/cm^3. Approximately what fraction of its volume is submerged?",
+    "choices": [
+      "100%",
+      "143%",
+      "70%",
+      "30%"
+    ],
+    "options": [
+      "100%",
+      "143%",
+      "70%",
+      "30%"
+    ],
+    "solution": "For a floating object, the submerged-volume fraction equals the object's density divided by the fluid density.",
+    "answer": "70%",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-027",
+    "question": "A woman heterozygous for an X-linked recessive allele has sons with a man lacking the allele. What fraction of their sons is expected to be affected?",
+    "problem": "A woman heterozygous for an X-linked recessive allele has sons with a man lacking the allele. What fraction of their sons is expected to be affected?",
+    "choices": [
+      "100%",
+      "0%",
+      "25%",
+      "50%"
+    ],
+    "options": [
+      "100%",
+      "0%",
+      "25%",
+      "50%"
+    ],
+    "solution": "Each son receives his only X chromosome from the mother, who transmits the allele half the time.",
+    "answer": "50%",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-028",
+    "question": "Producers store 60,000 kJ of energy. If about 10% passes at each trophic transfer, how much is available to consumers 2 trophic levels above the producers?",
+    "problem": "Producers store 60,000 kJ of energy. If about 10% passes at each trophic transfer, how much is available to consumers 2 trophic levels above the producers?",
+    "choices": [
+      "600 kJ",
+      "6,000 kJ",
+      "60,000 kJ",
+      "59,400 kJ"
+    ],
+    "options": [
+      "600 kJ",
+      "6,000 kJ",
+      "60,000 kJ",
+      "59,400 kJ"
+    ],
+    "solution": "Applying the 10% rule 2 times gives 60000*(0.1)^2=600 kJ.",
+    "answer": "600 kJ",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-029",
+    "question": "Hydrogen burns by 2 H2 + O2 -> 2 H2O. If 6 g of H2 reacts with excess oxygen, how many moles of H2O form? (Molar mass H2 = 2 g/mol.)",
+    "problem": "Hydrogen burns by 2 H2 + O2 -> 2 H2O. If 6 g of H2 reacts with excess oxygen, how many moles of H2O form? (Molar mass H2 = 2 g/mol.)",
+    "choices": [
+      "1.5 mol",
+      "6 mol",
+      "12 mol",
+      "3 mol"
+    ],
+    "options": [
+      "1.5 mol",
+      "6 mol",
+      "12 mol",
+      "3 mol"
+    ],
+    "solution": "There are 6/2=3 mol H2, and the balanced equation gives a 1:1 H2-to-H2O mole ratio.",
+    "answer": "3 mol",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-030",
+    "question": "A spacecraft moves from a distance r to 4r from the Sun. Ignoring absorption, what fraction of the original solar intensity does it receive?",
+    "problem": "A spacecraft moves from a distance r to 4r from the Sun. Ignoring absorption, what fraction of the original solar intensity does it receive?",
+    "choices": [
+      "1/64",
+      "16",
+      "1/4",
+      "1/16"
+    ],
+    "options": [
+      "1/64",
+      "16",
+      "1/4",
+      "1/16"
+    ],
+    "solution": "Radiative intensity follows the inverse-square law, so I(4r)/I(r)=1/4^2=1/16.",
+    "answer": "1/16",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-031",
+    "question": "A radioactive sample is observed after 4 complete half-lives. What fraction of the original parent isotope remains?",
+    "problem": "A radioactive sample is observed after 4 complete half-lives. What fraction of the original parent isotope remains?",
+    "choices": [
+      "1/4",
+      "1/16",
+      "1/17",
+      "4/5"
+    ],
+    "options": [
+      "1/4",
+      "1/16",
+      "1/17",
+      "4/5"
+    ],
+    "solution": "The remaining fraction is (1/2)^4=1/16.",
+    "answer": "1/16",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-032",
+    "question": "A researcher tests whether added potassium changes algal growth. Identical cultures receive different potassium concentrations. Which setup best isolates the causal effect?",
+    "problem": "A researcher tests whether added potassium changes algal growth. Identical cultures receive different potassium concentrations. Which setup best isolates the causal effect?",
+    "choices": [
+      "Use different light levels for every concentration",
+      "Keep light, temperature, volume, and starting algae constant",
+      "Use a different algal species in every flask",
+      "Measure each group with a different method"
+    ],
+    "options": [
+      "Use different light levels for every concentration",
+      "Keep light, temperature, volume, and starting algae constant",
+      "Use a different algal species in every flask",
+      "Measure each group with a different method"
+    ],
+    "solution": "Holding other variables constant makes potassium concentration the sole manipulated variable, allowing a causal comparison.",
+    "answer": "Keep light, temperature, volume, and starting algae constant",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-033",
+    "question": "Two blocks of masses 5 kg and 12 kg are separately pulled on frictionless surfaces by equal constant forces. What is the ratio of the lighter block's acceleration to the heavier block's acceleration?",
+    "problem": "Two blocks of masses 5 kg and 12 kg are separately pulled on frictionless surfaces by equal constant forces. What is the ratio of the lighter block's acceleration to the heavier block's acceleration?",
+    "choices": [
+      "1:1",
+      "5:12",
+      "17:1",
+      "12:5"
+    ],
+    "options": [
+      "1:1",
+      "5:12",
+      "17:1",
+      "12:5"
+    ],
+    "solution": "Newton's second law gives a=F/m. The acceleration ratio is (F/5)/(F/12)=12/5=12:5.",
+    "answer": "12:5",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-034",
+    "question": "A 30-V ideal battery is connected to 5-ohm and 7-ohm resistors in series. What current flows in the circuit?",
+    "problem": "A 30-V ideal battery is connected to 5-ohm and 7-ohm resistors in series. What current flows in the circuit?",
+    "choices": [
+      "4.28571 A",
+      "0.4 A",
+      "2.5 A",
+      "6 A"
+    ],
+    "options": [
+      "4.28571 A",
+      "0.4 A",
+      "2.5 A",
+      "6 A"
+    ],
+    "solution": "Series resistances add to 12 ohms, so I=V/R=30/12=2.5 A.",
+    "answer": "2.5 A",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-035",
+    "question": "A solid object with average density 0.75 g/cm^3 floats at rest in water of density 1.00 g/cm^3. Approximately what fraction of its volume is submerged?",
+    "problem": "A solid object with average density 0.75 g/cm^3 floats at rest in water of density 1.00 g/cm^3. Approximately what fraction of its volume is submerged?",
+    "choices": [
+      "133%",
+      "75%",
+      "25%",
+      "100%"
+    ],
+    "options": [
+      "133%",
+      "75%",
+      "25%",
+      "100%"
+    ],
+    "solution": "For a floating object, the submerged-volume fraction equals the object's density divided by the fluid density.",
+    "answer": "75%",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-036",
+    "question": "One parent is heterozygous for a fully penetrant autosomal dominant trait and the other lacks the allele. What is the probability their child shows the trait?",
+    "problem": "One parent is heterozygous for a fully penetrant autosomal dominant trait and the other lacks the allele. What is the probability their child shows the trait?",
+    "choices": [
+      "0%",
+      "25%",
+      "50%",
+      "75%"
+    ],
+    "options": [
+      "0%",
+      "25%",
+      "50%",
+      "75%"
+    ],
+    "solution": "Aa by aa passes the dominant allele to half of offspring.",
+    "answer": "50%",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-037",
+    "question": "Producers store 80,000 kJ of energy. If about 10% passes at each trophic transfer, how much is available to consumers 3 trophic levels above the producers?",
+    "problem": "Producers store 80,000 kJ of energy. If about 10% passes at each trophic transfer, how much is available to consumers 3 trophic levels above the producers?",
+    "choices": [
+      "800 kJ",
+      "8,000 kJ",
+      "79,920 kJ",
+      "80 kJ"
+    ],
+    "options": [
+      "800 kJ",
+      "8,000 kJ",
+      "79,920 kJ",
+      "80 kJ"
+    ],
+    "solution": "Applying the 10% rule 3 times gives 80000*(0.1)^3=80 kJ.",
+    "answer": "80 kJ",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-038",
+    "question": "Hydrogen burns by 2 H2 + O2 -> 2 H2O. If 8 g of H2 reacts with excess oxygen, how many moles of H2O form? (Molar mass H2 = 2 g/mol.)",
+    "problem": "Hydrogen burns by 2 H2 + O2 -> 2 H2O. If 8 g of H2 reacts with excess oxygen, how many moles of H2O form? (Molar mass H2 = 2 g/mol.)",
+    "choices": [
+      "8 mol",
+      "16 mol",
+      "4 mol",
+      "2 mol"
+    ],
+    "options": [
+      "8 mol",
+      "16 mol",
+      "4 mol",
+      "2 mol"
+    ],
+    "solution": "There are 8/2=4 mol H2, and the balanced equation gives a 1:1 H2-to-H2O mole ratio.",
+    "answer": "4 mol",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-039",
+    "question": "A spacecraft moves from a distance r to 5r from the Sun. Ignoring absorption, what fraction of the original solar intensity does it receive?",
+    "problem": "A spacecraft moves from a distance r to 5r from the Sun. Ignoring absorption, what fraction of the original solar intensity does it receive?",
+    "choices": [
+      "25",
+      "1/5",
+      "1/25",
+      "1/125"
+    ],
+    "options": [
+      "25",
+      "1/5",
+      "1/25",
+      "1/125"
+    ],
+    "solution": "Radiative intensity follows the inverse-square law, so I(5r)/I(r)=1/5^2=1/25.",
+    "answer": "1/25",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-040",
+    "question": "A radioactive sample is observed after 5 complete half-lives. What fraction of the original parent isotope remains?",
+    "problem": "A radioactive sample is observed after 5 complete half-lives. What fraction of the original parent isotope remains?",
+    "choices": [
+      "1/32",
+      "1/33",
+      "5/6",
+      "1/5"
+    ],
+    "options": [
+      "1/32",
+      "1/33",
+      "5/6",
+      "1/5"
+    ],
+    "solution": "The remaining fraction is (1/2)^5=1/32.",
+    "answer": "1/32",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-041",
+    "question": "A researcher tests whether added magnesium changes algal growth. Identical cultures receive different magnesium concentrations. Which setup best isolates the causal effect?",
+    "problem": "A researcher tests whether added magnesium changes algal growth. Identical cultures receive different magnesium concentrations. Which setup best isolates the causal effect?",
+    "choices": [
+      "Keep light, temperature, volume, and starting algae constant",
+      "Use a different algal species in every flask",
+      "Measure each group with a different method",
+      "Use different light levels for every concentration"
+    ],
+    "options": [
+      "Keep light, temperature, volume, and starting algae constant",
+      "Use a different algal species in every flask",
+      "Measure each group with a different method",
+      "Use different light levels for every concentration"
+    ],
+    "solution": "Holding other variables constant makes magnesium concentration the sole manipulated variable, allowing a causal comparison.",
+    "answer": "Keep light, temperature, volume, and starting algae constant",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-042",
+    "question": "Two blocks of masses 6 kg and 14 kg are separately pulled on frictionless surfaces by equal constant forces. What is the ratio of the lighter block's acceleration to the heavier block's acceleration?",
+    "problem": "Two blocks of masses 6 kg and 14 kg are separately pulled on frictionless surfaces by equal constant forces. What is the ratio of the lighter block's acceleration to the heavier block's acceleration?",
+    "choices": [
+      "6:14",
+      "20:1",
+      "7:3",
+      "1:1"
+    ],
+    "options": [
+      "6:14",
+      "20:1",
+      "7:3",
+      "1:1"
+    ],
+    "solution": "Newton's second law gives a=F/m. The acceleration ratio is (F/6)/(F/14)=14/6=7:3.",
+    "answer": "7:3",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-043",
+    "question": "A 36-V ideal battery is connected to 6-ohm and 8-ohm resistors in series. What current flows in the circuit?",
+    "problem": "A 36-V ideal battery is connected to 6-ohm and 8-ohm resistors in series. What current flows in the circuit?",
+    "choices": [
+      "0.388889 A",
+      "2.57143 A",
+      "6 A",
+      "4.5 A"
+    ],
+    "options": [
+      "0.388889 A",
+      "2.57143 A",
+      "6 A",
+      "4.5 A"
+    ],
+    "solution": "Series resistances add to 14 ohms, so I=V/R=36/14=2.57143 A.",
+    "answer": "2.57143 A",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-044",
+    "question": "A solid object with average density 0.80 g/cm^3 floats at rest in water of density 1.00 g/cm^3. Approximately what fraction of its volume is submerged?",
+    "problem": "A solid object with average density 0.80 g/cm^3 floats at rest in water of density 1.00 g/cm^3. Approximately what fraction of its volume is submerged?",
+    "choices": [
+      "80%",
+      "20%",
+      "100%",
+      "125%"
+    ],
+    "options": [
+      "80%",
+      "20%",
+      "100%",
+      "125%"
+    ],
+    "solution": "For a floating object, the submerged-volume fraction equals the object's density divided by the fluid density.",
+    "answer": "80%",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-045",
+    "question": "Two heterozygous carriers of an autosomal recessive allele have an unaffected child. What is the probability that this unaffected child is a carrier?",
+    "problem": "Two heterozygous carriers of an autosomal recessive allele have an unaffected child. What is the probability that this unaffected child is a carrier?",
+    "choices": [
+      "1/3",
+      "1/2",
+      "2/3",
+      "1/4"
+    ],
+    "options": [
+      "1/3",
+      "1/2",
+      "2/3",
+      "1/4"
+    ],
+    "solution": "Conditional on being unaffected, the possible genotypes have weights AA:Aa = 1:2, so the carrier probability is 2/3.",
+    "answer": "2/3",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-046",
+    "question": "Producers store 100,000 kJ of energy. If about 10% passes at each trophic transfer, how much is available to consumers 2 trophic levels above the producers?",
+    "problem": "Producers store 100,000 kJ of energy. If about 10% passes at each trophic transfer, how much is available to consumers 2 trophic levels above the producers?",
+    "choices": [
+      "100,000 kJ",
+      "99,000 kJ",
+      "1,000 kJ",
+      "10,000 kJ"
+    ],
+    "options": [
+      "100,000 kJ",
+      "99,000 kJ",
+      "1,000 kJ",
+      "10,000 kJ"
+    ],
+    "solution": "Applying the 10% rule 2 times gives 100000*(0.1)^2=1000 kJ.",
+    "answer": "1,000 kJ",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-047",
+    "question": "Hydrogen burns by 2 H2 + O2 -> 2 H2O. If 10 g of H2 reacts with excess oxygen, how many moles of H2O form? (Molar mass H2 = 2 g/mol.)",
+    "problem": "Hydrogen burns by 2 H2 + O2 -> 2 H2O. If 10 g of H2 reacts with excess oxygen, how many moles of H2O form? (Molar mass H2 = 2 g/mol.)",
+    "choices": [
+      "20 mol",
+      "5 mol",
+      "2.5 mol",
+      "10 mol"
+    ],
+    "options": [
+      "20 mol",
+      "5 mol",
+      "2.5 mol",
+      "10 mol"
+    ],
+    "solution": "There are 10/2=5 mol H2, and the balanced equation gives a 1:1 H2-to-H2O mole ratio.",
+    "answer": "5 mol",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-048",
+    "question": "A spacecraft moves from a distance r to 6r from the Sun. Ignoring absorption, what fraction of the original solar intensity does it receive?",
+    "problem": "A spacecraft moves from a distance r to 6r from the Sun. Ignoring absorption, what fraction of the original solar intensity does it receive?",
+    "choices": [
+      "1/6",
+      "1/36",
+      "1/216",
+      "36"
+    ],
+    "options": [
+      "1/6",
+      "1/36",
+      "1/216",
+      "36"
+    ],
+    "solution": "Radiative intensity follows the inverse-square law, so I(6r)/I(r)=1/6^2=1/36.",
+    "answer": "1/36",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-049",
+    "question": "A radioactive sample is observed after 6 complete half-lives. What fraction of the original parent isotope remains?",
+    "problem": "A radioactive sample is observed after 6 complete half-lives. What fraction of the original parent isotope remains?",
+    "choices": [
+      "1/65",
+      "6/7",
+      "1/6",
+      "1/64"
+    ],
+    "options": [
+      "1/65",
+      "6/7",
+      "1/6",
+      "1/64"
+    ],
+    "solution": "The remaining fraction is (1/2)^6=1/64.",
+    "answer": "1/64",
+    "source": "original",
+    "style": "ARC-Challenge"
+  },
+  {
+    "id": "dev-arc_challenge-050",
+    "question": "A researcher tests whether added iron changes algal growth. Identical cultures receive different iron concentrations. Which setup best isolates the causal effect?",
+    "problem": "A researcher tests whether added iron changes algal growth. Identical cultures receive different iron concentrations. Which setup best isolates the causal effect?",
+    "choices": [
+      "Use a different algal species in every flask",
+      "Measure each group with a different method",
+      "Use different light levels for every concentration",
+      "Keep light, temperature, volume, and starting algae constant"
+    ],
+    "options": [
+      "Use a different algal species in every flask",
+      "Measure each group with a different method",
+      "Use different light levels for every concentration",
+      "Keep light, temperature, volume, and starting algae constant"
+    ],
+    "solution": "Holding other variables constant makes iron concentration the sole manipulated variable, allowing a causal comparison.",
+    "answer": "Keep light, temperature, volume, and starting algae constant",
+    "source": "original",
+    "style": "ARC-Challenge"
+  }
+]

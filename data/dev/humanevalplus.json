@@ -1,0 +1,502 @@
+[
+  {
+    "id": "dev-humanevalplus-001",
+    "prompt": "from typing import List\n\n\ndef encode_zero_gaps(values: List[int]) -> List[int]:\n    \"\"\"Replace every maximal consecutive run of zeros by one integer: the\n    negative length of that run. Keep every nonzero value unchanged.\n    Return a new list and do not modify ``values``.\n\n    >>> encode_zero_gaps([4, 0, 0, 3, 0])\n    [4, -2, 3, -1]\n    >>> encode_zero_gaps([0, 0, 0])\n    [-3]\n    \"\"\"\n",
+    "entry_point": "encode_zero_gaps",
+    "canonical_solution": "    result = []\n    index = 0\n    while index < len(values):\n        if values[index] != 0:\n            result.append(values[index])\n            index += 1\n            continue\n        end = index\n        while end < len(values) and values[end] == 0:\n            end += 1\n        result.append(index - end)\n        index = end\n    return result\n",
+    "test": "def check(candidate):\n    data = [4, 0, 0, 3, 0]\n    assert candidate(data) == [4, -2, 3, -1]\n    assert data == [4, 0, 0, 3, 0]\n    assert candidate([]) == []\n    assert candidate([0]) == [-1]\n    assert candidate([0, 0, 0]) == [-3]\n    assert candidate([1, 2, 3]) == [1, 2, 3]\n    assert candidate([0, 5, 0, 0, -2, 0, 0, 0, 7]) == [-1, 5, -2, -2, -3, 7]\n    assert candidate([-1, 0, -3, 0, 0]) == [-1, -1, -3, -2]\n",
+    "solution": "Scan from left to right. A nonzero value is copied immediately. At a zero, advance a second index to the end of that maximal zero run, append the negative distance between the two indices, and resume there. Each input position is visited at most once, so the time complexity is O(n), with O(n) output space.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-002",
+    "prompt": "from typing import List, Tuple\n\n\ndef peak_plateau_ranges(values: List[int]) -> List[Tuple[int, int]]:\n    \"\"\"Return inclusive index ranges of all maximal constant plateaus that\n    are strict peaks. A plateau is a peak when its value is greater than each\n    adjacent value that exists; a missing neighbor imposes no condition.\n\n    >>> peak_plateau_ranges([1, 3, 3, 2, 4, 1])\n    [(1, 2), (4, 4)]\n    >>> peak_plateau_ranges([5, 5])\n    [(0, 1)]\n    \"\"\"\n",
+    "entry_point": "peak_plateau_ranges",
+    "canonical_solution": "    peaks = []\n    start = 0\n    while start < len(values):\n        end = start\n        while end + 1 < len(values) and values[end + 1] == values[start]:\n            end += 1\n        left_ok = start == 0 or values[start] > values[start - 1]\n        right_ok = end == len(values) - 1 or values[end] > values[end + 1]\n        if left_ok and right_ok:\n            peaks.append((start, end))\n        start = end + 1\n    return peaks\n",
+    "test": "def check(candidate):\n    assert candidate([]) == []\n    assert candidate([7]) == [(0, 0)]\n    assert candidate([5, 5]) == [(0, 1)]\n    assert candidate([1, 3, 3, 2, 4, 1]) == [(1, 2), (4, 4)]\n    assert candidate([3, 2, 1]) == [(0, 0)]\n    assert candidate([1, 2, 3]) == [(2, 2)]\n    assert candidate([2, 1, 2]) == [(0, 0), (2, 2)]\n    assert candidate([1, 1, 2, 2, 1, 3, 3, 3]) == [(2, 3), (5, 7)]\n    assert candidate([4, 4, 4, 3, 3, 4, 4]) == [(0, 2), (5, 6)]\n",
+    "solution": "Partition the input into maximal equal-value runs. For each run, compare its value with the element immediately before and after it when those neighbors exist. Record the run precisely when both comparisons are strict. Advancing directly to the next run gives O(n) time.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-003",
+    "prompt": "def carryless_add(a: int, b: int) -> int:\n    \"\"\"Add two nonnegative integers digit by digit without carrying. Each\n    result digit is the sum of the corresponding digits modulo 10.\n\n    >>> carryless_add(785, 698)\n    373\n    >>> carryless_add(99, 1)\n    90\n    \"\"\"\n",
+    "entry_point": "carryless_add",
+    "canonical_solution": "    place = 1\n    result = 0\n    while a or b:\n        result += ((a % 10 + b % 10) % 10) * place\n        a //= 10\n        b //= 10\n        place *= 10\n    return result\n",
+    "test": "def check(candidate):\n    assert candidate(785, 698) == 373\n    assert candidate(99, 1) == 90\n    assert candidate(0, 0) == 0\n    assert candidate(123, 456) == 579\n    assert candidate(5007, 809) == 5806\n    assert candidate(99999, 99999) == 88888\n    assert candidate(1000000, 9) == 1000009\n    assert candidate(101010, 909090) == 0\n",
+    "solution": "Read both numbers from the units place upward. At each place, add the two current digits modulo 10 and put that digit at the same place in the result. Integer division discards processed digits. The loop uses O(d) time and O(1) auxiliary space for d digits.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-004",
+    "prompt": "from typing import List\n\n\ndef weave_by_sign(values: List[int]) -> List[int]:\n    \"\"\"Stably interleave negative and nonnegative values, beginning with the\n    sign group of the first element. When one group is exhausted, append the\n    rest of the other group. Zero is nonnegative.\n\n    >>> weave_by_sign([3, 0, -1, -2, 5, -4])\n    [3, -1, 0, -2, 5, -4]\n    >>> weave_by_sign([-2, -3, 4, 5, 6])\n    [-2, 4, -3, 5, 6]\n    \"\"\"\n",
+    "entry_point": "weave_by_sign",
+    "canonical_solution": "    if not values:\n        return []\n    negative = [value for value in values if value < 0]\n    nonnegative = [value for value in values if value >= 0]\n    take_negative = values[0] < 0\n    ni = 0\n    pi = 0\n    result = []\n    while ni < len(negative) and pi < len(nonnegative):\n        if take_negative:\n            result.append(negative[ni])\n            ni += 1\n        else:\n            result.append(nonnegative[pi])\n            pi += 1\n        take_negative = not take_negative\n    result.extend(negative[ni:])\n    result.extend(nonnegative[pi:])\n    return result\n",
+    "test": "def check(candidate):\n    assert candidate([]) == []\n    assert candidate([0]) == [0]\n    assert candidate([-1]) == [-1]\n    assert candidate([3, 0, -1, -2, 5, -4]) == [3, -1, 0, -2, 5, -4]\n    assert candidate([-2, -3, 4, 5, 6]) == [-2, 4, -3, 5, 6]\n    assert candidate([1, 2, 3, -1]) == [1, -1, 2, 3]\n    assert candidate([-1, -2, -3, 0]) == [-1, 0, -2, -3]\n    assert candidate([0, -1, 0, -2, 0]) == [0, -1, 0, -2, 0]\n",
+    "solution": "Split the input into negative and nonnegative subsequences, which preserves the order within each group. Alternate reads from the two subsequences according to the first input value's group. Once either group is empty, append the remaining suffix. The algorithm is O(n) in time and space.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-005",
+    "prompt": "def shortest_inventory_window(text: str, required: str) -> str:\n    \"\"\"Return the shortest substring of ``text`` containing every character\n    of ``required`` with at least the same multiplicity. Break ties by taking\n    the earliest substring. Return an empty string if no such window exists;\n    an empty requirement also yields an empty string.\n\n    >>> shortest_inventory_window('cabeca', 'aca')\n    'abeca'\n    >>> shortest_inventory_window('abc', 'zz')\n    ''\n    \"\"\"\n",
+    "entry_point": "shortest_inventory_window",
+    "canonical_solution": "    from collections import Counter\n\n    if not required:\n        return \"\"\n    need = Counter(required)\n    have = {}\n    missing = len(required)\n    left = 0\n    best_start = 0\n    best_length = len(text) + 1\n    for right, char in enumerate(text):\n        have[char] = have.get(char, 0) + 1\n        if have[char] <= need.get(char, 0):\n            missing -= 1\n        while missing == 0:\n            length = right - left + 1\n            if length < best_length:\n                best_start = left\n                best_length = length\n            old = text[left]\n            have[old] -= 1\n            if have[old] < need.get(old, 0):\n                missing += 1\n            left += 1\n    if best_length > len(text):\n        return \"\"\n    return text[best_start:best_start + best_length]\n",
+    "test": "def check(candidate):\n    assert candidate('cabeca', 'aca') == 'abeca'\n    assert candidate('abc', 'zz') == ''\n    assert candidate('', '') == ''\n    assert candidate('anything', '') == ''\n    assert candidate('ADOBECODEBANC', 'ABC') == 'BANC'\n    assert candidate('aaab', 'aa') == 'aa'\n    assert candidate('bacaac', 'aac') == 'aca'\n    assert candidate('xyabzzab', 'ab') == 'ab'\n    assert candidate('a', 'a') == 'a'\n    assert candidate('ab', 'ba') == 'ab'\n    assert candidate('abbcac', 'bbc') == 'bbc'\n",
+    "solution": "Count the required character multiplicities and expand a right endpoint across the text while tracking how many required occurrences are still missing. Whenever all are present, advance the left endpoint until the window would become invalid, recording only strictly shorter windows so equal-length ties keep the earliest. This sliding window is O(len(text) + len(required)).",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-006",
+    "prompt": "def verified_sum_divisible_by_2(values):\n    \"\"\"Return the sum of all integers in ``values`` that are divisible by 2. The input list must not be modified.\n    \"\"\"\n",
+    "entry_point": "verified_sum_divisible_by_2",
+    "canonical_solution": "    return sum(value for value in values if value % 2 == 0)\n",
+    "test": "def check(candidate):\n    assert candidate([1, 2, 3, 4, 5, 6]) == 12\n    assert candidate([]) == 0\n    assert candidate([-2, 3, 4]) == 2\n",
+    "solution": "Return the sum of all integers in ``values`` that are divisible by 2. The input list must not be modified.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-007",
+    "prompt": "def verified_rotate_left_1(values):\n    \"\"\"Return a new list formed by rotating ``values`` left by 1 positions. Empty input returns an empty list.\n    \"\"\"\n",
+    "entry_point": "verified_rotate_left_1",
+    "canonical_solution": "    if not values:\n        return []\n    shift = 1 % len(values)\n    return values[shift:] + values[:shift]\n",
+    "test": "def check(candidate):\n    assert candidate([1, 2, 3, 4, 5, 6, 7]) == [2, 3, 4, 5, 6, 7, 1]\n    assert candidate([]) == []\n    assert candidate([9]) == [9]\n",
+    "solution": "Return a new list formed by rotating ``values`` left by 1 positions. Empty input returns an empty list.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-008",
+    "prompt": "def verified_every_2th_word(text):\n    \"\"\"Split ``text`` on whitespace and return every 2th word, counting the first word as position 1.\n    \"\"\"\n",
+    "entry_point": "verified_every_2th_word",
+    "canonical_solution": "    words = text.split()\n    return words[1::2]\n",
+    "test": "def check(candidate):\n    assert candidate('one two three four five six seven eight nine ten') == ['two', 'four', 'six', 'eight', 'ten']\n    assert candidate('') == []\n    assert candidate('  a   b c  ') == ['b']\n",
+    "solution": "Split ``text`` on whitespace and return every 2th word, counting the first word as position 1.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-009",
+    "prompt": "def verified_count_runs_at_least_2(values):\n    \"\"\"Count maximal runs of equal consecutive values whose lengths are at least 2.\n    \"\"\"\n",
+    "entry_point": "verified_count_runs_at_least_2",
+    "canonical_solution": "    if not values:\n        return 0\n    count = 0\n    run = 1\n    for i in range(1, len(values)):\n        if values[i] == values[i - 1]:\n            run += 1\n        else:\n            count += run >= 2\n            run = 1\n    return count + (run >= 2)\n",
+    "test": "def check(candidate):\n    assert candidate([1, 1, 2, 3, 3, 3, 4]) == 2\n    assert candidate([]) == 0\n    assert candidate([7,7]) == 1\n",
+    "solution": "Count maximal runs of equal consecutive values whose lengths are at least 2.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-010",
+    "prompt": "def verified_chunk_sums_2(values):\n    \"\"\"Partition ``values`` into consecutive chunks of at most 2 items and return the sum of each chunk.\n    \"\"\"\n",
+    "entry_point": "verified_chunk_sums_2",
+    "canonical_solution": "    return [sum(values[i:i + 2]) for i in range(0, len(values), 2)]\n",
+    "test": "def check(candidate):\n    assert candidate([1, 2, 3, 4, 5, 6, 7, 8]) == [3, 7, 11, 15]\n    assert candidate([]) == []\n    assert candidate([5]) == [5]\n",
+    "solution": "Partition ``values`` into consecutive chunks of at most 2 items and return the sum of each chunk.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-011",
+    "prompt": "def verified_clamp_symmetric_3(values):\n    \"\"\"Return a new list in which every number is clamped to the closed interval [-3, 3].\n    \"\"\"\n",
+    "entry_point": "verified_clamp_symmetric_3",
+    "canonical_solution": "    return [max(-3, min(3, value)) for value in values]\n",
+    "test": "def check(candidate):\n    assert candidate([-100, -3, 0, 3, 100]) == [-3, -3, 0, 3, 3]\n    assert candidate([]) == []\n    assert candidate([1, -1]) == [1, -1]\n",
+    "solution": "Return a new list in which every number is clamped to the closed interval [-3, 3].",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-012",
+    "prompt": "def verified_moving_max_2(values):\n    \"\"\"Return the maximum of each consecutive window of length 2. If the list is shorter than 2, return an empty list.\n    \"\"\"\n",
+    "entry_point": "verified_moving_max_2",
+    "canonical_solution": "    return [max(values[i:i + 2]) for i in range(len(values) - 2 + 1)]\n",
+    "test": "def check(candidate):\n    assert candidate([4, 1, 7, 2, 9, 3, 8]) == [4, 7, 7, 9, 9, 8]\n    assert candidate([0]) == []\n    assert candidate([0, 1]) == [1]\n",
+    "solution": "Return the maximum of each consecutive window of length 2. If the list is shorter than 2, return an empty list.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-013",
+    "prompt": "def verified_remove_every_2th(values):\n    \"\"\"Return a new list after removing items at positions 2, 4, 6, and so on, using one-based positions.\n    \"\"\"\n",
+    "entry_point": "verified_remove_every_2th",
+    "canonical_solution": "    return [value for index, value in enumerate(values, 1) if index % 2 != 0]\n",
+    "test": "def check(candidate):\n    assert candidate([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == [1, 3, 5, 7, 9]\n    assert candidate([]) == []\n    assert candidate([1]) == [1]\n",
+    "solution": "Return a new list after removing items at positions 2, 4, 6, and so on, using one-based positions.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-014",
+    "prompt": "def verified_digit_sum_base_2(number):\n    \"\"\"Return the sum of the base-2 digits of a nonnegative integer ``number``.\n    \"\"\"\n",
+    "entry_point": "verified_digit_sum_base_2",
+    "canonical_solution": "    if number == 0:\n        return 0\n    total = 0\n    while number:\n        total += number % 2\n        number //= 2\n    return total\n",
+    "test": "def check(candidate):\n    assert candidate(11) == 3\n    assert candidate(0) == 0\n    assert candidate(15) == 4\n",
+    "solution": "Return the sum of the base-2 digits of a nonnegative integer ``number``.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-015",
+    "prompt": "def verified_sum_divisible_by_3(values):\n    \"\"\"Return the sum of all integers in ``values`` that are divisible by 3. The input list must not be modified.\n    \"\"\"\n",
+    "entry_point": "verified_sum_divisible_by_3",
+    "canonical_solution": "    return sum(value for value in values if value % 3 == 0)\n",
+    "test": "def check(candidate):\n    assert candidate([1, 2, 3, 4, 5, 6]) == 9\n    assert candidate([]) == 0\n    assert candidate([-3, 4, 6]) == 3\n",
+    "solution": "Return the sum of all integers in ``values`` that are divisible by 3. The input list must not be modified.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-016",
+    "prompt": "def verified_rotate_left_2(values):\n    \"\"\"Return a new list formed by rotating ``values`` left by 2 positions. Empty input returns an empty list.\n    \"\"\"\n",
+    "entry_point": "verified_rotate_left_2",
+    "canonical_solution": "    if not values:\n        return []\n    shift = 2 % len(values)\n    return values[shift:] + values[:shift]\n",
+    "test": "def check(candidate):\n    assert candidate([1, 2, 3, 4, 5, 6, 7]) == [3, 4, 5, 6, 7, 1, 2]\n    assert candidate([]) == []\n    assert candidate([9]) == [9]\n",
+    "solution": "Return a new list formed by rotating ``values`` left by 2 positions. Empty input returns an empty list.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-017",
+    "prompt": "def verified_every_3th_word(text):\n    \"\"\"Split ``text`` on whitespace and return every 3th word, counting the first word as position 1.\n    \"\"\"\n",
+    "entry_point": "verified_every_3th_word",
+    "canonical_solution": "    words = text.split()\n    return words[2::3]\n",
+    "test": "def check(candidate):\n    assert candidate('one two three four five six seven eight nine ten') == ['three', 'six', 'nine']\n    assert candidate('') == []\n    assert candidate('  a   b c  ') == ['c']\n",
+    "solution": "Split ``text`` on whitespace and return every 3th word, counting the first word as position 1.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-018",
+    "prompt": "def verified_count_runs_at_least_3(values):\n    \"\"\"Count maximal runs of equal consecutive values whose lengths are at least 3.\n    \"\"\"\n",
+    "entry_point": "verified_count_runs_at_least_3",
+    "canonical_solution": "    if not values:\n        return 0\n    count = 0\n    run = 1\n    for i in range(1, len(values)):\n        if values[i] == values[i - 1]:\n            run += 1\n        else:\n            count += run >= 3\n            run = 1\n    return count + (run >= 3)\n",
+    "test": "def check(candidate):\n    assert candidate([1, 1, 1, 2, 3, 3, 3, 3, 4, 4]) == 2\n    assert candidate([]) == 0\n    assert candidate([7,7,7]) == 1\n",
+    "solution": "Count maximal runs of equal consecutive values whose lengths are at least 3.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-019",
+    "prompt": "def verified_chunk_sums_3(values):\n    \"\"\"Partition ``values`` into consecutive chunks of at most 3 items and return the sum of each chunk.\n    \"\"\"\n",
+    "entry_point": "verified_chunk_sums_3",
+    "canonical_solution": "    return [sum(values[i:i + 3]) for i in range(0, len(values), 3)]\n",
+    "test": "def check(candidate):\n    assert candidate([1, 2, 3, 4, 5, 6, 7, 8]) == [6, 15, 15]\n    assert candidate([]) == []\n    assert candidate([5]) == [5]\n",
+    "solution": "Partition ``values`` into consecutive chunks of at most 3 items and return the sum of each chunk.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-020",
+    "prompt": "def verified_clamp_symmetric_5(values):\n    \"\"\"Return a new list in which every number is clamped to the closed interval [-5, 5].\n    \"\"\"\n",
+    "entry_point": "verified_clamp_symmetric_5",
+    "canonical_solution": "    return [max(-5, min(5, value)) for value in values]\n",
+    "test": "def check(candidate):\n    assert candidate([-100, -5, 0, 5, 100]) == [-5, -5, 0, 5, 5]\n    assert candidate([]) == []\n    assert candidate([1, -1]) == [1, -1]\n",
+    "solution": "Return a new list in which every number is clamped to the closed interval [-5, 5].",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-021",
+    "prompt": "def verified_moving_max_3(values):\n    \"\"\"Return the maximum of each consecutive window of length 3. If the list is shorter than 3, return an empty list.\n    \"\"\"\n",
+    "entry_point": "verified_moving_max_3",
+    "canonical_solution": "    return [max(values[i:i + 3]) for i in range(len(values) - 3 + 1)]\n",
+    "test": "def check(candidate):\n    assert candidate([4, 1, 7, 2, 9, 3, 8]) == [7, 7, 9, 9, 9]\n    assert candidate([0, 1]) == []\n    assert candidate([0, 1, 2]) == [2]\n",
+    "solution": "Return the maximum of each consecutive window of length 3. If the list is shorter than 3, return an empty list.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-022",
+    "prompt": "def verified_remove_every_3th(values):\n    \"\"\"Return a new list after removing items at positions 3, 6, 9, and so on, using one-based positions.\n    \"\"\"\n",
+    "entry_point": "verified_remove_every_3th",
+    "canonical_solution": "    return [value for index, value in enumerate(values, 1) if index % 3 != 0]\n",
+    "test": "def check(candidate):\n    assert candidate([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == [1, 2, 4, 5, 7, 8, 10]\n    assert candidate([]) == []\n    assert candidate([1]) == [1]\n",
+    "solution": "Return a new list after removing items at positions 3, 6, 9, and so on, using one-based positions.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-023",
+    "prompt": "def verified_digit_sum_base_3(number):\n    \"\"\"Return the sum of the base-3 digits of a nonnegative integer ``number``.\n    \"\"\"\n",
+    "entry_point": "verified_digit_sum_base_3",
+    "canonical_solution": "    if number == 0:\n        return 0\n    total = 0\n    while number:\n        total += number % 3\n        number //= 3\n    return total\n",
+    "test": "def check(candidate):\n    assert candidate(31) == 3\n    assert candidate(0) == 0\n    assert candidate(80) == 8\n",
+    "solution": "Return the sum of the base-3 digits of a nonnegative integer ``number``.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-024",
+    "prompt": "def verified_sum_divisible_by_4(values):\n    \"\"\"Return the sum of all integers in ``values`` that are divisible by 4. The input list must not be modified.\n    \"\"\"\n",
+    "entry_point": "verified_sum_divisible_by_4",
+    "canonical_solution": "    return sum(value for value in values if value % 4 == 0)\n",
+    "test": "def check(candidate):\n    assert candidate([1, 2, 3, 4, 5, 6]) == 4\n    assert candidate([]) == 0\n    assert candidate([-4, 5, 8]) == 4\n",
+    "solution": "Return the sum of all integers in ``values`` that are divisible by 4. The input list must not be modified.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-025",
+    "prompt": "def verified_rotate_left_3(values):\n    \"\"\"Return a new list formed by rotating ``values`` left by 3 positions. Empty input returns an empty list.\n    \"\"\"\n",
+    "entry_point": "verified_rotate_left_3",
+    "canonical_solution": "    if not values:\n        return []\n    shift = 3 % len(values)\n    return values[shift:] + values[:shift]\n",
+    "test": "def check(candidate):\n    assert candidate([1, 2, 3, 4, 5, 6, 7]) == [4, 5, 6, 7, 1, 2, 3]\n    assert candidate([]) == []\n    assert candidate([9]) == [9]\n",
+    "solution": "Return a new list formed by rotating ``values`` left by 3 positions. Empty input returns an empty list.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-026",
+    "prompt": "def verified_every_4th_word(text):\n    \"\"\"Split ``text`` on whitespace and return every 4th word, counting the first word as position 1.\n    \"\"\"\n",
+    "entry_point": "verified_every_4th_word",
+    "canonical_solution": "    words = text.split()\n    return words[3::4]\n",
+    "test": "def check(candidate):\n    assert candidate('one two three four five six seven eight nine ten') == ['four', 'eight']\n    assert candidate('') == []\n    assert candidate('  a   b c  ') == []\n",
+    "solution": "Split ``text`` on whitespace and return every 4th word, counting the first word as position 1.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-027",
+    "prompt": "def verified_count_runs_at_least_4(values):\n    \"\"\"Count maximal runs of equal consecutive values whose lengths are at least 4.\n    \"\"\"\n",
+    "entry_point": "verified_count_runs_at_least_4",
+    "canonical_solution": "    if not values:\n        return 0\n    count = 0\n    run = 1\n    for i in range(1, len(values)):\n        if values[i] == values[i - 1]:\n            run += 1\n        else:\n            count += run >= 4\n            run = 1\n    return count + (run >= 4)\n",
+    "test": "def check(candidate):\n    assert candidate([1, 1, 1, 1, 2, 3, 3, 3, 3, 3, 4, 4, 4]) == 2\n    assert candidate([]) == 0\n    assert candidate([7,7,7,7]) == 1\n",
+    "solution": "Count maximal runs of equal consecutive values whose lengths are at least 4.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-028",
+    "prompt": "def verified_chunk_sums_4(values):\n    \"\"\"Partition ``values`` into consecutive chunks of at most 4 items and return the sum of each chunk.\n    \"\"\"\n",
+    "entry_point": "verified_chunk_sums_4",
+    "canonical_solution": "    return [sum(values[i:i + 4]) for i in range(0, len(values), 4)]\n",
+    "test": "def check(candidate):\n    assert candidate([1, 2, 3, 4, 5, 6, 7, 8]) == [10, 26]\n    assert candidate([]) == []\n    assert candidate([5]) == [5]\n",
+    "solution": "Partition ``values`` into consecutive chunks of at most 4 items and return the sum of each chunk.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-029",
+    "prompt": "def verified_clamp_symmetric_7(values):\n    \"\"\"Return a new list in which every number is clamped to the closed interval [-7, 7].\n    \"\"\"\n",
+    "entry_point": "verified_clamp_symmetric_7",
+    "canonical_solution": "    return [max(-7, min(7, value)) for value in values]\n",
+    "test": "def check(candidate):\n    assert candidate([-100, -7, 0, 7, 100]) == [-7, -7, 0, 7, 7]\n    assert candidate([]) == []\n    assert candidate([1, -1]) == [1, -1]\n",
+    "solution": "Return a new list in which every number is clamped to the closed interval [-7, 7].",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-030",
+    "prompt": "def verified_moving_max_4(values):\n    \"\"\"Return the maximum of each consecutive window of length 4. If the list is shorter than 4, return an empty list.\n    \"\"\"\n",
+    "entry_point": "verified_moving_max_4",
+    "canonical_solution": "    return [max(values[i:i + 4]) for i in range(len(values) - 4 + 1)]\n",
+    "test": "def check(candidate):\n    assert candidate([4, 1, 7, 2, 9, 3, 8]) == [7, 9, 9, 9]\n    assert candidate([0, 1, 2]) == []\n    assert candidate([0, 1, 2, 3]) == [3]\n",
+    "solution": "Return the maximum of each consecutive window of length 4. If the list is shorter than 4, return an empty list.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-031",
+    "prompt": "def verified_remove_every_4th(values):\n    \"\"\"Return a new list after removing items at positions 4, 8, 12, and so on, using one-based positions.\n    \"\"\"\n",
+    "entry_point": "verified_remove_every_4th",
+    "canonical_solution": "    return [value for index, value in enumerate(values, 1) if index % 4 != 0]\n",
+    "test": "def check(candidate):\n    assert candidate([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == [1, 2, 3, 5, 6, 7, 9, 10]\n    assert candidate([]) == []\n    assert candidate([1]) == [1]\n",
+    "solution": "Return a new list after removing items at positions 4, 8, 12, and so on, using one-based positions.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-032",
+    "prompt": "def verified_digit_sum_base_4(number):\n    \"\"\"Return the sum of the base-4 digits of a nonnegative integer ``number``.\n    \"\"\"\n",
+    "entry_point": "verified_digit_sum_base_4",
+    "canonical_solution": "    if number == 0:\n        return 0\n    total = 0\n    while number:\n        total += number % 4\n        number //= 4\n    return total\n",
+    "test": "def check(candidate):\n    assert candidate(69) == 3\n    assert candidate(0) == 0\n    assert candidate(255) == 12\n",
+    "solution": "Return the sum of the base-4 digits of a nonnegative integer ``number``.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-033",
+    "prompt": "def verified_sum_divisible_by_5(values):\n    \"\"\"Return the sum of all integers in ``values`` that are divisible by 5. The input list must not be modified.\n    \"\"\"\n",
+    "entry_point": "verified_sum_divisible_by_5",
+    "canonical_solution": "    return sum(value for value in values if value % 5 == 0)\n",
+    "test": "def check(candidate):\n    assert candidate([1, 2, 3, 4, 5, 6]) == 5\n    assert candidate([]) == 0\n    assert candidate([-5, 6, 10]) == 5\n",
+    "solution": "Return the sum of all integers in ``values`` that are divisible by 5. The input list must not be modified.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-034",
+    "prompt": "def verified_rotate_left_4(values):\n    \"\"\"Return a new list formed by rotating ``values`` left by 4 positions. Empty input returns an empty list.\n    \"\"\"\n",
+    "entry_point": "verified_rotate_left_4",
+    "canonical_solution": "    if not values:\n        return []\n    shift = 4 % len(values)\n    return values[shift:] + values[:shift]\n",
+    "test": "def check(candidate):\n    assert candidate([1, 2, 3, 4, 5, 6, 7]) == [5, 6, 7, 1, 2, 3, 4]\n    assert candidate([]) == []\n    assert candidate([9]) == [9]\n",
+    "solution": "Return a new list formed by rotating ``values`` left by 4 positions. Empty input returns an empty list.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-035",
+    "prompt": "def verified_every_5th_word(text):\n    \"\"\"Split ``text`` on whitespace and return every 5th word, counting the first word as position 1.\n    \"\"\"\n",
+    "entry_point": "verified_every_5th_word",
+    "canonical_solution": "    words = text.split()\n    return words[4::5]\n",
+    "test": "def check(candidate):\n    assert candidate('one two three four five six seven eight nine ten') == ['five', 'ten']\n    assert candidate('') == []\n    assert candidate('  a   b c  ') == []\n",
+    "solution": "Split ``text`` on whitespace and return every 5th word, counting the first word as position 1.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-036",
+    "prompt": "def verified_count_runs_at_least_5(values):\n    \"\"\"Count maximal runs of equal consecutive values whose lengths are at least 5.\n    \"\"\"\n",
+    "entry_point": "verified_count_runs_at_least_5",
+    "canonical_solution": "    if not values:\n        return 0\n    count = 0\n    run = 1\n    for i in range(1, len(values)):\n        if values[i] == values[i - 1]:\n            run += 1\n        else:\n            count += run >= 5\n            run = 1\n    return count + (run >= 5)\n",
+    "test": "def check(candidate):\n    assert candidate([1, 1, 1, 1, 1, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4]) == 2\n    assert candidate([]) == 0\n    assert candidate([7,7,7,7,7]) == 1\n",
+    "solution": "Count maximal runs of equal consecutive values whose lengths are at least 5.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-037",
+    "prompt": "def verified_chunk_sums_5(values):\n    \"\"\"Partition ``values`` into consecutive chunks of at most 5 items and return the sum of each chunk.\n    \"\"\"\n",
+    "entry_point": "verified_chunk_sums_5",
+    "canonical_solution": "    return [sum(values[i:i + 5]) for i in range(0, len(values), 5)]\n",
+    "test": "def check(candidate):\n    assert candidate([1, 2, 3, 4, 5, 6, 7, 8]) == [15, 21]\n    assert candidate([]) == []\n    assert candidate([5]) == [5]\n",
+    "solution": "Partition ``values`` into consecutive chunks of at most 5 items and return the sum of each chunk.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-038",
+    "prompt": "def verified_clamp_symmetric_9(values):\n    \"\"\"Return a new list in which every number is clamped to the closed interval [-9, 9].\n    \"\"\"\n",
+    "entry_point": "verified_clamp_symmetric_9",
+    "canonical_solution": "    return [max(-9, min(9, value)) for value in values]\n",
+    "test": "def check(candidate):\n    assert candidate([-100, -9, 0, 9, 100]) == [-9, -9, 0, 9, 9]\n    assert candidate([]) == []\n    assert candidate([1, -1]) == [1, -1]\n",
+    "solution": "Return a new list in which every number is clamped to the closed interval [-9, 9].",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-039",
+    "prompt": "def verified_moving_max_5(values):\n    \"\"\"Return the maximum of each consecutive window of length 5. If the list is shorter than 5, return an empty list.\n    \"\"\"\n",
+    "entry_point": "verified_moving_max_5",
+    "canonical_solution": "    return [max(values[i:i + 5]) for i in range(len(values) - 5 + 1)]\n",
+    "test": "def check(candidate):\n    assert candidate([4, 1, 7, 2, 9, 3, 8]) == [9, 9, 9]\n    assert candidate([0, 1, 2, 3]) == []\n    assert candidate([0, 1, 2, 3, 4]) == [4]\n",
+    "solution": "Return the maximum of each consecutive window of length 5. If the list is shorter than 5, return an empty list.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-040",
+    "prompt": "def verified_remove_every_5th(values):\n    \"\"\"Return a new list after removing items at positions 5, 10, 15, and so on, using one-based positions.\n    \"\"\"\n",
+    "entry_point": "verified_remove_every_5th",
+    "canonical_solution": "    return [value for index, value in enumerate(values, 1) if index % 5 != 0]\n",
+    "test": "def check(candidate):\n    assert candidate([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == [1, 2, 3, 4, 6, 7, 8, 9]\n    assert candidate([]) == []\n    assert candidate([1]) == [1]\n",
+    "solution": "Return a new list after removing items at positions 5, 10, 15, and so on, using one-based positions.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-041",
+    "prompt": "def verified_digit_sum_base_5(number):\n    \"\"\"Return the sum of the base-5 digits of a nonnegative integer ``number``.\n    \"\"\"\n",
+    "entry_point": "verified_digit_sum_base_5",
+    "canonical_solution": "    if number == 0:\n        return 0\n    total = 0\n    while number:\n        total += number % 5\n        number //= 5\n    return total\n",
+    "test": "def check(candidate):\n    assert candidate(131) == 3\n    assert candidate(0) == 0\n    assert candidate(624) == 16\n",
+    "solution": "Return the sum of the base-5 digits of a nonnegative integer ``number``.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-042",
+    "prompt": "def verified_sum_divisible_by_6(values):\n    \"\"\"Return the sum of all integers in ``values`` that are divisible by 6. The input list must not be modified.\n    \"\"\"\n",
+    "entry_point": "verified_sum_divisible_by_6",
+    "canonical_solution": "    return sum(value for value in values if value % 6 == 0)\n",
+    "test": "def check(candidate):\n    assert candidate([1, 2, 3, 4, 5, 6]) == 6\n    assert candidate([]) == 0\n    assert candidate([-6, 7, 12]) == 6\n",
+    "solution": "Return the sum of all integers in ``values`` that are divisible by 6. The input list must not be modified.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-043",
+    "prompt": "def verified_rotate_left_5(values):\n    \"\"\"Return a new list formed by rotating ``values`` left by 5 positions. Empty input returns an empty list.\n    \"\"\"\n",
+    "entry_point": "verified_rotate_left_5",
+    "canonical_solution": "    if not values:\n        return []\n    shift = 5 % len(values)\n    return values[shift:] + values[:shift]\n",
+    "test": "def check(candidate):\n    assert candidate([1, 2, 3, 4, 5, 6, 7]) == [6, 7, 1, 2, 3, 4, 5]\n    assert candidate([]) == []\n    assert candidate([9]) == [9]\n",
+    "solution": "Return a new list formed by rotating ``values`` left by 5 positions. Empty input returns an empty list.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-044",
+    "prompt": "def verified_every_6th_word(text):\n    \"\"\"Split ``text`` on whitespace and return every 6th word, counting the first word as position 1.\n    \"\"\"\n",
+    "entry_point": "verified_every_6th_word",
+    "canonical_solution": "    words = text.split()\n    return words[5::6]\n",
+    "test": "def check(candidate):\n    assert candidate('one two three four five six seven eight nine ten') == ['six']\n    assert candidate('') == []\n    assert candidate('  a   b c  ') == []\n",
+    "solution": "Split ``text`` on whitespace and return every 6th word, counting the first word as position 1.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-045",
+    "prompt": "def verified_count_runs_at_least_6(values):\n    \"\"\"Count maximal runs of equal consecutive values whose lengths are at least 6.\n    \"\"\"\n",
+    "entry_point": "verified_count_runs_at_least_6",
+    "canonical_solution": "    if not values:\n        return 0\n    count = 0\n    run = 1\n    for i in range(1, len(values)):\n        if values[i] == values[i - 1]:\n            run += 1\n        else:\n            count += run >= 6\n            run = 1\n    return count + (run >= 6)\n",
+    "test": "def check(candidate):\n    assert candidate([1, 1, 1, 1, 1, 1, 2, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4]) == 2\n    assert candidate([]) == 0\n    assert candidate([7,7,7,7,7,7]) == 1\n",
+    "solution": "Count maximal runs of equal consecutive values whose lengths are at least 6.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-046",
+    "prompt": "def verified_chunk_sums_6(values):\n    \"\"\"Partition ``values`` into consecutive chunks of at most 6 items and return the sum of each chunk.\n    \"\"\"\n",
+    "entry_point": "verified_chunk_sums_6",
+    "canonical_solution": "    return [sum(values[i:i + 6]) for i in range(0, len(values), 6)]\n",
+    "test": "def check(candidate):\n    assert candidate([1, 2, 3, 4, 5, 6, 7, 8]) == [21, 15]\n    assert candidate([]) == []\n    assert candidate([5]) == [5]\n",
+    "solution": "Partition ``values`` into consecutive chunks of at most 6 items and return the sum of each chunk.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-047",
+    "prompt": "def verified_clamp_symmetric_11(values):\n    \"\"\"Return a new list in which every number is clamped to the closed interval [-11, 11].\n    \"\"\"\n",
+    "entry_point": "verified_clamp_symmetric_11",
+    "canonical_solution": "    return [max(-11, min(11, value)) for value in values]\n",
+    "test": "def check(candidate):\n    assert candidate([-100, -11, 0, 11, 100]) == [-11, -11, 0, 11, 11]\n    assert candidate([]) == []\n    assert candidate([1, -1]) == [1, -1]\n",
+    "solution": "Return a new list in which every number is clamped to the closed interval [-11, 11].",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-048",
+    "prompt": "def verified_moving_max_6(values):\n    \"\"\"Return the maximum of each consecutive window of length 6. If the list is shorter than 6, return an empty list.\n    \"\"\"\n",
+    "entry_point": "verified_moving_max_6",
+    "canonical_solution": "    return [max(values[i:i + 6]) for i in range(len(values) - 6 + 1)]\n",
+    "test": "def check(candidate):\n    assert candidate([4, 1, 7, 2, 9, 3, 8]) == [9, 9]\n    assert candidate([0, 1, 2, 3, 4]) == []\n    assert candidate([0, 1, 2, 3, 4, 5]) == [5]\n",
+    "solution": "Return the maximum of each consecutive window of length 6. If the list is shorter than 6, return an empty list.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-049",
+    "prompt": "def verified_remove_every_6th(values):\n    \"\"\"Return a new list after removing items at positions 6, 12, 18, and so on, using one-based positions.\n    \"\"\"\n",
+    "entry_point": "verified_remove_every_6th",
+    "canonical_solution": "    return [value for index, value in enumerate(values, 1) if index % 6 != 0]\n",
+    "test": "def check(candidate):\n    assert candidate([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == [1, 2, 3, 4, 5, 7, 8, 9, 10]\n    assert candidate([]) == []\n    assert candidate([1]) == [1]\n",
+    "solution": "Return a new list after removing items at positions 6, 12, 18, and so on, using one-based positions.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  },
+  {
+    "id": "dev-humanevalplus-050",
+    "prompt": "def verified_digit_sum_base_6(number):\n    \"\"\"Return the sum of the base-6 digits of a nonnegative integer ``number``.\n    \"\"\"\n",
+    "entry_point": "verified_digit_sum_base_6",
+    "canonical_solution": "    if number == 0:\n        return 0\n    total = 0\n    while number:\n        total += number % 6\n        number //= 6\n    return total\n",
+    "test": "def check(candidate):\n    assert candidate(223) == 3\n    assert candidate(0) == 0\n    assert candidate(1295) == 20\n",
+    "solution": "Return the sum of the base-6 digits of a nonnegative integer ``number``.",
+    "source": "original",
+    "style": "HumanEval+ Python function completion"
+  }
+]

@@ -1,0 +1,1452 @@
+[
+  {
+    "id": "dev-arc_easy-001",
+    "question": "A student notices that the Sun appears to move across the sky from east to west each day. Which motion mainly causes this apparent movement?",
+    "problem": "A student notices that the Sun appears to move across the sky from east to west each day. Which motion mainly causes this apparent movement?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "the Moon revolving around Earth",
+        "Earth rotating on its axis",
+        "Earth revolving around the Sun",
+        "the Sun rotating on its axis"
+      ]
+    },
+    "options": {
+      "A": "the Moon revolving around Earth",
+      "B": "Earth rotating on its axis",
+      "C": "Earth revolving around the Sun",
+      "D": "the Sun rotating on its axis"
+    },
+    "solution": "Earth rotates from west to east. This rotation makes the Sun appear to travel in the opposite direction across the sky, so the correct option is B.",
+    "answer": "B",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-002",
+    "question": "A mixture contains dry sand and iron paper clips. Which tool would most easily separate the paper clips from the sand?",
+    "problem": "A mixture contains dry sand and iron paper clips. Which tool would most easily separate the paper clips from the sand?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "a thermometer",
+        "a magnifying glass",
+        "a magnet",
+        "a graduated cylinder"
+      ]
+    },
+    "options": {
+      "A": "a thermometer",
+      "B": "a magnifying glass",
+      "C": "a magnet",
+      "D": "a graduated cylinder"
+    },
+    "solution": "Iron is attracted to a magnet, while sand is not. A magnet can therefore remove the paper clips, making C the correct option.",
+    "answer": "C",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-003",
+    "question": "Two groups of the same kind of seedlings receive equal amounts of soil and water. One group is kept in sunlight, and the other is kept in darkness. What is this investigation designed to test?",
+    "problem": "Two groups of the same kind of seedlings receive equal amounts of soil and water. One group is kept in sunlight, and the other is kept in darkness. What is this investigation designed to test?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "how light affects seedling growth",
+        "how soil type affects seedling growth",
+        "how water amount affects seedling growth",
+        "how plant species affects seedling growth"
+      ]
+    },
+    "options": {
+      "A": "how light affects seedling growth",
+      "B": "how soil type affects seedling growth",
+      "C": "how water amount affects seedling growth",
+      "D": "how plant species affects seedling growth"
+    },
+    "solution": "Light is the only condition intentionally changed between the two groups. The investigation therefore tests the effect of light on growth, so the correct option is A.",
+    "answer": "A",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-004",
+    "question": "A battery, wires, and a bulb are connected in a circuit. The bulb goes out when one wire is removed. Why does the bulb go out?",
+    "problem": "A battery, wires, and a bulb are connected in a circuit. The bulb goes out when one wire is removed. Why does the bulb go out?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "The battery becomes a conductor.",
+        "The bulb loses all of its mass.",
+        "The wire absorbs the battery's energy.",
+        "The path for electric current is incomplete."
+      ]
+    },
+    "options": {
+      "A": "The battery becomes a conductor.",
+      "B": "The bulb loses all of its mass.",
+      "C": "The wire absorbs the battery's energy.",
+      "D": "The path for electric current is incomplete."
+    },
+    "solution": "Electric current needs a complete path through the circuit. Removing a wire opens that path, so D is the correct option.",
+    "answer": "D",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-005",
+    "question": "A fast-moving stream carries sand into a quiet lake. The sand settles near the place where the stream enters the lake. Which process is occurring as the sand settles?",
+    "problem": "A fast-moving stream carries sand into a quiet lake. The sand settles near the place where the stream enters the lake. Which process is occurring as the sand settles?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "evaporation",
+        "deposition",
+        "condensation",
+        "weathering"
+      ]
+    },
+    "options": {
+      "A": "evaporation",
+      "B": "deposition",
+      "C": "condensation",
+      "D": "weathering"
+    },
+    "solution": "When moving water slows, it can no longer carry as much sediment, so the sand is dropped. The dropping of sediment is deposition, making B the correct option.",
+    "answer": "B",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-006",
+    "question": "Which object is a source of its own visible light?",
+    "problem": "Which object is a source of its own visible light?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "the Sun",
+        "a white wall",
+        "the Moon",
+        "a mirror"
+      ]
+    },
+    "options": {
+      "A": "the Sun",
+      "B": "a white wall",
+      "C": "the Moon",
+      "D": "a mirror"
+    },
+    "solution": "The Sun produces visible light; the other objects only reflect light.",
+    "answer": "A",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-007",
+    "question": "Which material is the best electrical conductor?",
+    "problem": "Which material is the best electrical conductor?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "dry wood",
+        "rubber",
+        "copper",
+        "glass"
+      ]
+    },
+    "options": {
+      "A": "dry wood",
+      "B": "rubber",
+      "C": "copper",
+      "D": "glass"
+    },
+    "solution": "Copper has mobile electrons and conducts electricity much better than the insulating materials.",
+    "answer": "C",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-008",
+    "question": "Water vapor changing into liquid droplets is called what?",
+    "problem": "Water vapor changing into liquid droplets is called what?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "evaporation",
+        "condensation",
+        "melting",
+        "sublimation"
+      ]
+    },
+    "options": {
+      "A": "evaporation",
+      "B": "condensation",
+      "C": "melting",
+      "D": "sublimation"
+    },
+    "solution": "The gas-to-liquid phase change is condensation.",
+    "answer": "B",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-009",
+    "question": "Which organ pumps blood through the human body?",
+    "problem": "Which organ pumps blood through the human body?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "stomach",
+        "heart",
+        "kidney",
+        "lung"
+      ]
+    },
+    "options": {
+      "A": "stomach",
+      "B": "heart",
+      "C": "kidney",
+      "D": "lung"
+    },
+    "solution": "The heart's contractions drive blood through the circulatory system.",
+    "answer": "B",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-010",
+    "question": "A green plant mainly absorbs which gas from air for photosynthesis?",
+    "problem": "A green plant mainly absorbs which gas from air for photosynthesis?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "carbon dioxide",
+        "helium",
+        "oxygen",
+        "nitrogen"
+      ]
+    },
+    "options": {
+      "A": "carbon dioxide",
+      "B": "helium",
+      "C": "oxygen",
+      "D": "nitrogen"
+    },
+    "solution": "Plants use carbon dioxide, water, and light to make sugars.",
+    "answer": "A",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-011",
+    "question": "Which force pulls a dropped ball toward Earth?",
+    "problem": "Which force pulls a dropped ball toward Earth?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "buoyancy",
+        "magnetism",
+        "gravity",
+        "friction"
+      ]
+    },
+    "options": {
+      "A": "buoyancy",
+      "B": "magnetism",
+      "C": "gravity",
+      "D": "friction"
+    },
+    "solution": "Earth's gravity accelerates the ball downward.",
+    "answer": "C",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-012",
+    "question": "Which part of a cell contains most of its genetic material?",
+    "problem": "Which part of a cell contains most of its genetic material?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "cell wall",
+        "nucleus",
+        "vacuole",
+        "cytoplasm"
+      ]
+    },
+    "options": {
+      "A": "cell wall",
+      "B": "nucleus",
+      "C": "vacuole",
+      "D": "cytoplasm"
+    },
+    "solution": "In a typical eukaryotic cell, most DNA is housed in the nucleus.",
+    "answer": "B",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-013",
+    "question": "Which simple machine is a ramp?",
+    "problem": "Which simple machine is a ramp?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "lever",
+        "inclined plane",
+        "wheel and axle",
+        "pulley"
+      ]
+    },
+    "options": {
+      "A": "lever",
+      "B": "inclined plane",
+      "C": "wheel and axle",
+      "D": "pulley"
+    },
+    "solution": "A ramp is an inclined plane.",
+    "answer": "B",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-014",
+    "question": "What is the main source of energy driving Earth's water cycle?",
+    "problem": "What is the main source of energy driving Earth's water cycle?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "Earth's core",
+        "ocean tides",
+        "the Sun",
+        "the Moon"
+      ]
+    },
+    "options": {
+      "A": "Earth's core",
+      "B": "ocean tides",
+      "C": "the Sun",
+      "D": "the Moon"
+    },
+    "solution": "Solar energy causes evaporation and powers the water cycle.",
+    "answer": "C",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-015",
+    "question": "Which state of matter has a fixed volume but takes the shape of its container?",
+    "problem": "Which state of matter has a fixed volume but takes the shape of its container?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "plasma",
+        "solid",
+        "liquid",
+        "gas"
+      ]
+    },
+    "options": {
+      "A": "plasma",
+      "B": "solid",
+      "C": "liquid",
+      "D": "gas"
+    },
+    "solution": "A liquid retains volume while flowing to match its container.",
+    "answer": "C",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-016",
+    "question": "Which planet is closest to the Sun?",
+    "problem": "Which planet is closest to the Sun?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "Venus",
+        "Earth",
+        "Mercury",
+        "Mars"
+      ]
+    },
+    "options": {
+      "A": "Venus",
+      "B": "Earth",
+      "C": "Mercury",
+      "D": "Mars"
+    },
+    "solution": "Mercury is the innermost planet.",
+    "answer": "C",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-017",
+    "question": "Which body structure protects the brain?",
+    "problem": "Which body structure protects the brain?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "skull",
+        "pelvis",
+        "spine",
+        "rib cage"
+      ]
+    },
+    "options": {
+      "A": "skull",
+      "B": "pelvis",
+      "C": "spine",
+      "D": "rib cage"
+    },
+    "solution": "The skull encloses and protects the brain.",
+    "answer": "A",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-018",
+    "question": "Sound travels fastest through which type of material?",
+    "problem": "Sound travels fastest through which type of material?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "liquids",
+        "solids",
+        "a vacuum",
+        "gases"
+      ]
+    },
+    "options": {
+      "A": "liquids",
+      "B": "solids",
+      "C": "a vacuum",
+      "D": "gases"
+    },
+    "solution": "Closely coupled particles generally transmit sound fastest in solids.",
+    "answer": "B",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-019",
+    "question": "Which animal is a vertebrate?",
+    "problem": "Which animal is a vertebrate?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "octopus",
+        "earthworm",
+        "jellyfish",
+        "frog"
+      ]
+    },
+    "options": {
+      "A": "octopus",
+      "B": "earthworm",
+      "C": "jellyfish",
+      "D": "frog"
+    },
+    "solution": "A frog has a backbone and is a vertebrate.",
+    "answer": "D",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-020",
+    "question": "What instrument measures air temperature?",
+    "problem": "What instrument measures air temperature?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "barometer",
+        "thermometer",
+        "anemometer",
+        "rain gauge"
+      ]
+    },
+    "options": {
+      "A": "barometer",
+      "B": "thermometer",
+      "C": "anemometer",
+      "D": "rain gauge"
+    },
+    "solution": "A thermometer measures temperature.",
+    "answer": "B",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-021",
+    "question": "Which process breaks rocks into smaller pieces without moving them?",
+    "problem": "Which process breaks rocks into smaller pieces without moving them?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "weathering",
+        "deposition",
+        "compaction",
+        "erosion"
+      ]
+    },
+    "options": {
+      "A": "weathering",
+      "B": "deposition",
+      "C": "compaction",
+      "D": "erosion"
+    },
+    "solution": "Weathering breaks rock down in place; erosion transports it.",
+    "answer": "A",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-022",
+    "question": "Which nutrient is the body's main immediate source of energy?",
+    "problem": "Which nutrient is the body's main immediate source of energy?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "minerals",
+        "water",
+        "carbohydrates",
+        "vitamins"
+      ]
+    },
+    "options": {
+      "A": "minerals",
+      "B": "water",
+      "C": "carbohydrates",
+      "D": "vitamins"
+    },
+    "solution": "Carbohydrates are commonly broken down to provide immediate cellular energy.",
+    "answer": "C",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-023",
+    "question": "A shadow forms because light usually does what?",
+    "problem": "A shadow forms because light usually does what?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "stops in air",
+        "travels in straight lines",
+        "passes through every object",
+        "moves only upward"
+      ]
+    },
+    "options": {
+      "A": "stops in air",
+      "B": "travels in straight lines",
+      "C": "passes through every object",
+      "D": "moves only upward"
+    },
+    "solution": "Opaque objects block straight-line light paths, producing shadows.",
+    "answer": "B",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-024",
+    "question": "Which renewable resource can directly turn a turbine without being burned?",
+    "problem": "Which renewable resource can directly turn a turbine without being burned?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "coal",
+        "natural gas",
+        "moving wind",
+        "gasoline"
+      ]
+    },
+    "options": {
+      "A": "coal",
+      "B": "natural gas",
+      "C": "moving wind",
+      "D": "gasoline"
+    },
+    "solution": "Moving air can rotate wind-turbine blades directly.",
+    "answer": "C",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-025",
+    "question": "Which change is chemical?",
+    "problem": "Which change is chemical?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "paper being cut",
+        "iron rusting",
+        "water boiling",
+        "ice melting"
+      ]
+    },
+    "options": {
+      "A": "paper being cut",
+      "B": "iron rusting",
+      "C": "water boiling",
+      "D": "ice melting"
+    },
+    "solution": "Rusting forms new iron oxide substances.",
+    "answer": "B",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-026",
+    "question": "Which layer of Earth is liquid and helps generate the magnetic field?",
+    "problem": "Which layer of Earth is liquid and helps generate the magnetic field?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "outer core",
+        "inner core",
+        "crust",
+        "mantle"
+      ]
+    },
+    "options": {
+      "A": "outer core",
+      "B": "inner core",
+      "C": "crust",
+      "D": "mantle"
+    },
+    "solution": "Flowing liquid metal in the outer core contributes to Earth's magnetic field.",
+    "answer": "A",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-027",
+    "question": "What do bees commonly transfer between flowers?",
+    "problem": "What do bees commonly transfer between flowers?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "chlorophyll",
+        "soil",
+        "pollen",
+        "roots"
+      ]
+    },
+    "options": {
+      "A": "chlorophyll",
+      "B": "soil",
+      "C": "pollen",
+      "D": "roots"
+    },
+    "solution": "Bees carry pollen, enabling pollination.",
+    "answer": "C",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-028",
+    "question": "Which blood cells primarily carry oxygen?",
+    "problem": "Which blood cells primarily carry oxygen?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "red blood cells",
+        "white blood cells",
+        "platelets",
+        "nerve cells"
+      ]
+    },
+    "options": {
+      "A": "red blood cells",
+      "B": "white blood cells",
+      "C": "platelets",
+      "D": "nerve cells"
+    },
+    "solution": "Hemoglobin in red blood cells carries oxygen.",
+    "answer": "A",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-029",
+    "question": "When is a lunar eclipse possible?",
+    "problem": "When is a lunar eclipse possible?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "when the Moon is between Earth and Sun",
+        "at every new moon",
+        "when Mars blocks sunlight",
+        "when Earth is between the Sun and Moon"
+      ]
+    },
+    "options": {
+      "A": "when the Moon is between Earth and Sun",
+      "B": "at every new moon",
+      "C": "when Mars blocks sunlight",
+      "D": "when Earth is between the Sun and Moon"
+    },
+    "solution": "Earth's shadow can fall on the Moon when Earth lies between it and the Sun.",
+    "answer": "D",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-030",
+    "question": "Which property can be measured in grams?",
+    "problem": "Which property can be measured in grams?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "length",
+        "speed",
+        "temperature",
+        "mass"
+      ]
+    },
+    "options": {
+      "A": "length",
+      "B": "speed",
+      "C": "temperature",
+      "D": "mass"
+    },
+    "solution": "Grams are units of mass.",
+    "answer": "D",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-031",
+    "question": "Which adaptation best helps a cactus conserve water?",
+    "problem": "Which adaptation best helps a cactus conserve water?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "large open pores",
+        "broad thin leaves",
+        "needlelike spines",
+        "soft hollow roots"
+      ]
+    },
+    "options": {
+      "A": "large open pores",
+      "B": "broad thin leaves",
+      "C": "needlelike spines",
+      "D": "soft hollow roots"
+    },
+    "solution": "Spines replace broad leaves and reduce water loss.",
+    "answer": "C",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-032",
+    "question": "Which mixture can be separated with a magnet?",
+    "problem": "Which mixture can be separated with a magnet?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "salt and sugar",
+        "sand and iron filings",
+        "water and vinegar",
+        "flour and rice powder"
+      ]
+    },
+    "options": {
+      "A": "salt and sugar",
+      "B": "sand and iron filings",
+      "C": "water and vinegar",
+      "D": "flour and rice powder"
+    },
+    "solution": "A magnet attracts iron but not sand.",
+    "answer": "B",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-033",
+    "question": "What happens to most substances when they are heated?",
+    "problem": "What happens to most substances when they are heated?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "their particles stop",
+        "their mass doubles",
+        "their atoms disappear",
+        "their particles move faster"
+      ]
+    },
+    "options": {
+      "A": "their particles stop",
+      "B": "their mass doubles",
+      "C": "their atoms disappear",
+      "D": "their particles move faster"
+    },
+    "solution": "Heating generally increases average particle kinetic energy.",
+    "answer": "D",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-034",
+    "question": "Which feature is inherited rather than learned?",
+    "problem": "Which feature is inherited rather than learned?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "natural eye color",
+        "speaking a language",
+        "reading a book",
+        "riding a bicycle"
+      ]
+    },
+    "options": {
+      "A": "natural eye color",
+      "B": "speaking a language",
+      "C": "reading a book",
+      "D": "riding a bicycle"
+    },
+    "solution": "Natural eye color is strongly determined by inherited genes.",
+    "answer": "A",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-035",
+    "question": "What is the freezing point of pure water at standard pressure?",
+    "problem": "What is the freezing point of pure water at standard pressure?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "100 degrees Celsius",
+        "0 degrees Celsius",
+        "25 degrees Celsius",
+        "50 degrees Celsius"
+      ]
+    },
+    "options": {
+      "A": "100 degrees Celsius",
+      "B": "0 degrees Celsius",
+      "C": "25 degrees Celsius",
+      "D": "50 degrees Celsius"
+    },
+    "solution": "Pure water freezes at 0 degrees Celsius under standard pressure.",
+    "answer": "B",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-036",
+    "question": "Which device converts electrical energy mainly into motion?",
+    "problem": "Which device converts electrical energy mainly into motion?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "electric motor",
+        "battery",
+        "solar cell",
+        "thermometer"
+      ]
+    },
+    "options": {
+      "A": "electric motor",
+      "B": "battery",
+      "C": "solar cell",
+      "D": "thermometer"
+    },
+    "solution": "An electric motor converts electrical energy into mechanical motion.",
+    "answer": "A",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-037",
+    "question": "Which object has the greatest kinetic energy if all move at the same speed?",
+    "problem": "Which object has the greatest kinetic energy if all move at the same speed?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "a 2 kg ball",
+        "a 3 kg ball",
+        "a 4 kg ball",
+        "a 1 kg ball"
+      ]
+    },
+    "options": {
+      "A": "a 2 kg ball",
+      "B": "a 3 kg ball",
+      "C": "a 4 kg ball",
+      "D": "a 1 kg ball"
+    },
+    "solution": "At equal speed, kinetic energy is proportional to mass.",
+    "answer": "C",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-038",
+    "question": "Which gas makes up the largest fraction of Earth's atmosphere?",
+    "problem": "Which gas makes up the largest fraction of Earth's atmosphere?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "nitrogen",
+        "hydrogen",
+        "oxygen",
+        "carbon dioxide"
+      ]
+    },
+    "options": {
+      "A": "nitrogen",
+      "B": "hydrogen",
+      "C": "oxygen",
+      "D": "carbon dioxide"
+    },
+    "solution": "Nitrogen makes up about 78 percent of the atmosphere.",
+    "answer": "A",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-039",
+    "question": "Which organ removes many wastes from blood to form urine?",
+    "problem": "Which organ removes many wastes from blood to form urine?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "trachea",
+        "kidney",
+        "heart",
+        "pancreas"
+      ]
+    },
+    "options": {
+      "A": "trachea",
+      "B": "kidney",
+      "C": "heart",
+      "D": "pancreas"
+    },
+    "solution": "The kidneys filter blood and form urine.",
+    "answer": "B",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-040",
+    "question": "Which event begins the life cycle of a flowering plant?",
+    "problem": "Which event begins the life cycle of a flowering plant?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "a seed germinates",
+        "a fruit decomposes",
+        "a leaf falls",
+        "a stem is cut"
+      ]
+    },
+    "options": {
+      "A": "a seed germinates",
+      "B": "a fruit decomposes",
+      "C": "a leaf falls",
+      "D": "a stem is cut"
+    },
+    "solution": "Germination begins growth of a new plant from a seed.",
+    "answer": "A",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-041",
+    "question": "Why does a metal spoon feel colder than a wooden spoon in the same room?",
+    "problem": "Why does a metal spoon feel colder than a wooden spoon in the same room?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "metal conducts heat away faster",
+        "wood creates heat",
+        "metal contains ice",
+        "metal has a lower temperature"
+      ]
+    },
+    "options": {
+      "A": "metal conducts heat away faster",
+      "B": "wood creates heat",
+      "C": "metal contains ice",
+      "D": "metal has a lower temperature"
+    },
+    "solution": "Metal draws heat from the hand faster because it is a better thermal conductor.",
+    "answer": "A",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-042",
+    "question": "Which is evidence that Earth rotates?",
+    "problem": "Which is evidence that Earth rotates?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "the Moon has phases",
+        "comets have tails",
+        "day and night alternate",
+        "seasons change"
+      ]
+    },
+    "options": {
+      "A": "the Moon has phases",
+      "B": "comets have tails",
+      "C": "day and night alternate",
+      "D": "seasons change"
+    },
+    "solution": "Rotation carries locations into and out of sunlight, producing day and night.",
+    "answer": "C",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-043",
+    "question": "In a woodland food web, which organism acts as a decomposer?",
+    "problem": "In a woodland food web, which organism acts as a decomposer?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "rabbit",
+        "grass",
+        "hawk",
+        "mushroom"
+      ]
+    },
+    "options": {
+      "A": "rabbit",
+      "B": "grass",
+      "C": "hawk",
+      "D": "mushroom"
+    },
+    "solution": "Many fungi, including mushrooms, break down dead organic matter.",
+    "answer": "D",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-044",
+    "question": "Which circuit allows current only when its path is complete?",
+    "problem": "Which circuit allows current only when its path is complete?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "an open circuit",
+        "a closed circuit",
+        "a broken wire",
+        "an unplugged circuit"
+      ]
+    },
+    "options": {
+      "A": "an open circuit",
+      "B": "a closed circuit",
+      "C": "a broken wire",
+      "D": "an unplugged circuit"
+    },
+    "solution": "A closed circuit provides a complete conducting path.",
+    "answer": "B",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-045",
+    "question": "Which tool is best for measuring 20 milliliters of water?",
+    "problem": "Which tool is best for measuring 20 milliliters of water?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "graduated cylinder",
+        "balance",
+        "stopwatch",
+        "meter stick"
+      ]
+    },
+    "options": {
+      "A": "graduated cylinder",
+      "B": "balance",
+      "C": "stopwatch",
+      "D": "meter stick"
+    },
+    "solution": "A graduated cylinder measures liquid volume.",
+    "answer": "A",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-046",
+    "question": "Which statement describes an ecosystem?",
+    "problem": "Which statement describes an ecosystem?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "one population of birds",
+        "only nonliving soil and water",
+        "only the animals in a forest",
+        "organisms and their physical environment"
+      ]
+    },
+    "options": {
+      "A": "one population of birds",
+      "B": "only nonliving soil and water",
+      "C": "only the animals in a forest",
+      "D": "organisms and their physical environment"
+    },
+    "solution": "An ecosystem includes living communities and their nonliving environment.",
+    "answer": "D",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-047",
+    "question": "What causes ocean tides most strongly?",
+    "problem": "What causes ocean tides most strongly?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "volcanic heat",
+        "the Moon's gravity",
+        "Earth's magnetic field",
+        "cloud cover"
+      ]
+    },
+    "options": {
+      "A": "volcanic heat",
+      "B": "the Moon's gravity",
+      "C": "Earth's magnetic field",
+      "D": "cloud cover"
+    },
+    "solution": "The Moon's gravitational pull is the main driver of ocean tides.",
+    "answer": "B",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-048",
+    "question": "Which substance has a pH below 7?",
+    "problem": "Which substance has a pH below 7?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "an acid",
+        "a neutral solution",
+        "a base",
+        "pure salt"
+      ]
+    },
+    "options": {
+      "A": "an acid",
+      "B": "a neutral solution",
+      "C": "a base",
+      "D": "pure salt"
+    },
+    "solution": "Acidic solutions have pH values below 7.",
+    "answer": "A",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-049",
+    "question": "Which skeletal joint permits the shoulder's wide range of motion?",
+    "problem": "Which skeletal joint permits the shoulder's wide range of motion?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "ball-and-socket joint",
+        "fixed joint",
+        "pivot joint only",
+        "hinge joint"
+      ]
+    },
+    "options": {
+      "A": "ball-and-socket joint",
+      "B": "fixed joint",
+      "C": "pivot joint only",
+      "D": "hinge joint"
+    },
+    "solution": "The shoulder is a ball-and-socket joint.",
+    "answer": "A",
+    "source": "original",
+    "style": "ARC-Easy"
+  },
+  {
+    "id": "dev-arc_easy-050",
+    "question": "Which object would be attracted to a bar magnet?",
+    "problem": "Which object would be attracted to a bar magnet?",
+    "choices": {
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "text": [
+        "a glass marble",
+        "a wooden block",
+        "an iron nail",
+        "a plastic bead"
+      ]
+    },
+    "options": {
+      "A": "a glass marble",
+      "B": "a wooden block",
+      "C": "an iron nail",
+      "D": "a plastic bead"
+    },
+    "solution": "Iron is ferromagnetic and is attracted to a magnet.",
+    "answer": "C",
+    "source": "original",
+    "style": "ARC-Easy"
+  }
+]

@@ -24,7 +24,7 @@
 
 ## Overview
 
-Kernel Align transfers a sender model's final-layer hidden states into a receiver model's input-embedding space without decoding intermediate text and without training an adapter. It supports both continuous reasoning within one model and latent communication between compatible models.
+Kernel Align transfers a sender model's final-layer hidden states into a receiver model's input-embedding space without decoding intermediate text and without training an adapter. This repository supports continuous reasoning within a Qwen3 checkpoint and latent communication between tokenizer-compatible Qwen3 checkpoints.
 
 The central observation is that exact soft alignment can be written as vocabulary attention: the sender hidden state is the query, sender unembedding rows are keys, and receiver input embeddings are values. Kernel Align uses positive orthogonal random features (ORFs) to replace the full-vocabulary softmax with a compact feature map whose vocabulary-dependent statistics can be precomputed.
 
@@ -34,9 +34,9 @@ The central observation is that exact soft alignment can be written as vocabular
 | Intermediate medium | Continuous hidden states |
 | Online alignment cost | $O(m(d_A+d_B))$, with $m \ll |\mathcal V|$ |
 | Homogeneous agents | Supported |
-| Heterogeneous agents | Supported for compatible token-to-ID vocabularies |
+| Heterogeneous agents | Supported between tokenizer-compatible Qwen3 checkpoints |
 | Architectures | Sequential and hierarchical |
-| Evaluated model families | Qwen3, DeepSeek-R1-Distill-Llama, and Mistral-Nemo-Instruct |
+| Supported models | Qwen3-8B and Qwen3-14B |
 
 ### Reference results
 
@@ -212,7 +212,7 @@ The ORF sensitivity study uses 500 Qwen3-8B hidden states from MedQA and 50 inde
 
 - Python 3.9 or newer
 - PyTorch compatible with the local CPU/CUDA environment
-- Sufficient memory for the selected model checkpoint
+- Sufficient memory for the selected Qwen3 checkpoint
 
 Create an isolated environment and install PyTorch first:
 
@@ -230,7 +230,7 @@ On Windows PowerShell, activate the environment with:
 .\.venv\Scripts\Activate.ps1
 ```
 
-`vLLM` is optional and is used only when `--use_vllm` is selected. Install a build compatible with the local CUDA and PyTorch versions. Hugging Face models and non-local datasets are downloaded on demand; standard variables such as `HF_HOME`, `HF_HUB_CACHE`, and `HF_DATASETS_CACHE` may be used to select cache locations.
+`vLLM` is optional and is used only when `--use_vllm` is selected. Install a build compatible with the local CUDA and PyTorch versions. Qwen3 checkpoints and non-local datasets are downloaded from Hugging Face on demand; standard variables such as `HF_HOME`, `HF_HUB_CACHE`, and `HF_DATASETS_CACHE` may be used to select cache locations.
 
 ## Quick start
 
